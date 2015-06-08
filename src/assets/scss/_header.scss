@@ -1,0 +1,95 @@
+header {
+z-index: 999;
+position: fixed;
+top:0;
+  a:hover {border: none}
+}
+
+%light {
+  color: $dark;
+  background: $light;
+}
+
+%dark {
+  color: $dark;
+  background: $light;
+    @include skjerm {
+    text-align: left;
+    color: $light;
+    background: $dark;
+      &:hover {
+      color: $dark
+      }
+    }
+}
+
+%left {
+  width: 50%;
+  left:0;
+  display:block;
+  position:fixed;
+  padding:$padding;
+  }
+
+%right {
+  width: 50%;
+  //width: 50.15%;
+  top:0;
+  right:0;
+  display:block;
+  text-align: right;
+    @include skjerm {
+      text-align: left;
+    }
+  position:fixed;
+  padding:$padding;
+  }
+
+header nav a:first-child {
+  @extend %left;
+  @extend %light;
+}
+
+header nav a:last-child {
+  @extend %right;
+  @extend %dark;
+}
+
+/* .logo {
+  display: none;
+  position:fixed;
+  z-index:-1;
+  font-size: 20vw;
+  //color: blue;
+  left:0;
+  right:0;
+  top:40%;
+  bottom:0;
+  text-align: center;
+  -webkit-text-stroke: 2px $light;
+}
+ */
+
+/* span.title {
+  @include hide;;
+  float:right;
+  background: $light;
+  padding-left:1vmin;
+  -webkit-text-stroke: 0.03rem $light;
+  -webkit-text-fill-color: transparent;
+}
+span:before {
+  width: 44vw;
+  right: 3vw;
+  height: 2vw;
+  content: '';
+  border-bottom: 0.35vmin solid $light;
+  display: inline;
+  position: absolute;
+  z-index: -1;
+  top: 1.5vw;
+} */
+
+/* .frontpage span.title {
+  @include hide;
+} */

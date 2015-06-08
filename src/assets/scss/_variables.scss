@@ -1,0 +1,88 @@
+// colors
+   $light: #fcfcfc;
+   //$light: blue;
+   //$light: #fcfcfc;
+   $dark: #1c1c1c;
+   //$light: gold;
+   //$light: white;
+   //$light: #1c1c1c;
+
+
+   //$light: white;
+   //$light: blue;
+
+
+
+// Font-face
+    @font-face {
+        font-family: 'RT Obligat';
+        src: url('fonts/rt_obligat.woff2') format('woff2'),
+             url('fonts/rt_obligat.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+
+// Font-stacks
+   $sans-serif:"RT Obligat", "Helvetica Neue", sans-serif;
+   $serif:"Times New Roman", serif;
+
+   %underlined {
+      border-bottom: 0.2rem solid $light;
+      display:inline;
+   }
+
+@mixin hide {
+   position: absolute;
+   clip: rect(0, 0, 0, 0);
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+
+// Breakpoints
+   $mobile-width: 500px;
+   $tablet-width: 800px;
+   $screen-width: 960px;
+
+   @mixin mobil {
+     @media (min-width: $mobile-width) {
+       @content;
+     }
+   }
+
+   @mixin tablet {
+     @media (min-width: $tablet-width) {
+       @content;
+     }
+   }
+
+   @mixin skjerm {
+     @media (min-width: $screen-width) {
+       @content;
+     }
+   }
+
+
+   // universal padding (grid etc.)
+      $padding:2vw;
+      $top:25vh;

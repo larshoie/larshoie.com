@@ -1,0 +1,57 @@
+.quote {
+  padding:$padding;
+  font-size:20vw;
+  -webkit-text-stroke:red 10px;
+  color:gold;
+  color:transparent;
+}
+
+//horizontal grid
+
+.full {
+/*   width: 100vw - $padding * 2;
+padding:0;
+margin: 0 auto;
+float:none; */
+
+  width: 96%;
+  padding: 0;
+  margin: 0 auto -1rem auto;
+  float: none;
+}
+
+
+.half {
+  width: 100vw - $padding * 2;
+  margin: 0 auto;
+}
+
+.half--left {
+  width: 50%;
+  float:left;
+  padding-left:$padding;
+  //height:100%;
+}
+
+.half--right {
+  width: 50%;
+  float:right;
+  padding-right:$padding;
+  color:$light;
+  padding:$padding;
+  //height:100%;
+}
+
+//vertical grid
+
+.vertical-half {
+  height: 50vh;
+  float:left;
+  padding:$padding;
+}
+
+.vertical-full {
+  height: 100vh;
+  float:left;
+  padding:$padding;
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Gulpy",
+  "version": "1.0.0",
+  "description": "Work in progress",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "gulp",
+    "scss",
+    "js",
+    "images"
+  ],
+  "author": "Lars Hoie",
+  "license": "MIT",
+  "bugs": {
+    "url": "/issues"
+  },
+  "homemorphbutton": "https://github.com/dope/gulp-starter",
+  "devDependencies": {
+    "browser-sync": "^2.0.0",
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-combine-media-queries": "^0.2.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-jade": "^1.0.1",
+    "gulp-kit": "^0.1.1",
+    "gulp-minify-css": "^1.1.6",
+    "gulp-plumber": "^0.6.6",
+    "gulp-pretty-url": "^0.1.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-responsive": "^1.1.1",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.1.0",
+    "gulp-webp": "^2.3.0",
+    "imagemin-pngquant": "^4.0.0",
+    "vinyl": "^0.4.6"
+  }
+}

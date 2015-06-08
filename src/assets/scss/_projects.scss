@@ -1,0 +1,141 @@
+h2.project {
+  //mobil
+  font-size: inherit;
+  line-height: 4;
+  @extend %underlined;
+  //skjerm
+  @include skjerm {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 99999;
+  color: $dark;
+  opacity: 1;
+  overflow: hidden;
+  line-height: 2;
+  width: 50%;
+  display: block;
+  background-color: $light;
+  padding: 2vw;
+  border-color: transparent;
+  }
+}
+
+
+ul.project {
+  //@include hide;
+}
+
+.project {
+  overflow: hidden;
+  width: 100%;
+  //height:50vh;
+  display: block;
+  &:nth-child(even) {
+    //background:$light;
+  }
+  &:nth-child(odd) {
+    //background:$light;
+  }
+}
+
+.project:hover .project-image {
+  @include skjerm {
+  //background:yellow;
+  opacity:1!important;
+  display:block;
+  position:fixed!important;
+  }
+}
+
+.project-image {
+  display:none;
+  @include skjerm {
+  opacity:0; //!!!!OMG WTF
+  padding:0;
+  margin:0;
+  position: fixed;
+  overflow:hidden;
+  top:15vmin;
+  left:10vmin;
+  bottom:10vmin;
+  right:10vmin;
+  right:50%;
+  right:50%;
+  pointer-events:none;
+     img {
+      min-height:70vmin;
+      width:auto;
+    }
+  }
+}
+
+.vertical-half, .ingress {
+  height: 50vh;
+  float: left;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+    @include skjerm {
+    position:static;
+    //margin-left:-50%;
+    height: auto!important;
+    padding-top:$top;
+    }
+}
+
+.project-list {
+    order: 2;
+    flex: 0 1 auto;
+    align-self: auto;
+  background: $light;
+  color:$dark;
+  padding:0 6vw 20vh;
+  margin-top:50vh;
+  min-height:50vh;
+  //h2 {border-color:$light;}
+  a {
+    color:$dark;
+    &:hover {
+      //border: 2px solid $light;
+      //color:$light;
+    }
+  }
+  @extend .right-page;
+    @include skjerm {
+      min-height:110vh;
+      margin-top:0;
+      padding:$padding;
+      padding-top:$top;
+      //top: -10vh;
+      //padding-top: 35vh;
+      color: $light;
+    //padding-top: $top;
+    }
+
+    li {
+      display: inline;
+    }
+  }
+
+.coming-soon {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.project-meta {
+
+  :first-child {
+    width:100%;
+    @include skjerm {
+    width:60%;
+    }
+  }
+  :not(:first-child) {
+    //@include hide;
+    display:none;
+    @include skjerm {
+    display:inline;
+    }
+  }
+}

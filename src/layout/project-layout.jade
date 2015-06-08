@@ -1,0 +1,35 @@
+doctype html
+html
+  block vars
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width')
+    link(rel="stylesheet", href="/css/style.css")
+    title #{Title}
+    include includes/mixins.jade
+  body
+  
+    include includes/header
+            
+    .project-main-photo
+      block main-photo
+
+    ul.project-content
+      block project
+      
+      .project-background-white
+        a(href='/') Previous project
+      .project-background-black
+        a(href='/') Next project
+    
+    .project-info
+      ul.meta
+        li
+          h2.project-title #{Title}
+        li
+          h3.project-type #{Type}
+        li
+          time.project-year(datetime='') #{Year}
+        p
+          block blurb
