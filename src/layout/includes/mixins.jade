@@ -1,16 +1,26 @@
 mixin main_image(project,image)
-  img(src="images/#{project}/#{image}-500.jpg")(srcset="/images/#{project}/#{image}-1500.jpg 1500w, /images/#{project}/#{image}-1000.jpg 1000w, /images/#{project}/#{image}-500.jpg 500w ")(sizes="100vw")(class=mainimage) 
-    
+  img(src="/images/#{project}/#{image}-1000.jpg", srcset="/images/#{project}/#{image}-1500.jpg 1500w, /images/#{project}/#{image}-1000.jpg 1000w, /images/#{project}/#{image}-500.jpg 500w ", sizes="100vw", class="mainimage") 
+  
+  
+  
+  
+//- mixin project_image(project,image,caption,layout)
+//-  li(class="#{layout}")
+//-   figure
+//-     img(src="/images/#{project}/#{image}-1000.jpg", srcset="/images/#{project}/#{image}-1500.jpg 1500w, /images/#{project}/#{image}-1000.jpg 1000w, /images/#{project}/#{image}-500.jpg 500w", sizes="100vw", alt= caption) 
+//-     //-figcaption= caption
+//-   
 mixin project_image(project,image,caption,layout)
  li(class="#{layout}")
   figure
-    img(src="images/#{project}/#{image}-500.jpg")(srcset="/images/#{project}/#{image}-1500.jpg 1500w, /images/#{project}/#{image}-1000.jpg 1000w, /images/#{project}/#{image}-500.jpg 500w")(sizes="100vw")(alt= caption) 
+    img(src="/images/#{project}/#{image}-1000.jpg", srcset="/images/#{project}/#{image}-1500.jpg, /images/#{project}/#{image}-1000.jpg, /images/#{project}/#{image}-500.jpg", alt= caption) 
     //-figcaption= caption
-    
+        
+        
 mixin project_nav(project,url,type,year,image)
   a.project(href='projects/#{url}')
     .project-image
-      img(src="images/#{url}/#{image}-1000.jpg")(srcset="/images/#{url}/#{image}-1500.jpg 1500w, /images/#{url}/#{image}-1000.jpg 1000w, /images/#{url}/#{image}-500.jpg 500w ")(sizes="100vw")
+      img(src="/images/#{url}/#{image}-1000.jpg", srcset="/images/#{url}/#{image}-1500.jpg 1500w, /images/#{url}/#{image}-1000.jpg 1000w, /images/#{url}/#{image}-500.jpg 500w", sizes="100vw")
     ul.project-meta
       li.project-title #{project}
       li.project-type #{type}

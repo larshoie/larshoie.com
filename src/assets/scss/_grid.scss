@@ -42,15 +42,18 @@ float:none; */
   //height:100%;
 }
 
+
+
+
 //vertical grid
 
-.vertical-half {
+%vertical-half {
   height: 50vh;
   float:left;
   padding:$padding;
 }
 
-.vertical-full {
+%vertical-full {
   height: 100vh;
   float:left;
   padding:$padding;

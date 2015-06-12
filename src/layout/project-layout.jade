@@ -8,6 +8,7 @@ html
     link(rel="stylesheet", href="/css/style.css")
     title #{Title}
     include includes/mixins.jade
+    
   body
   
     include includes/header
@@ -15,14 +16,6 @@ html
     .project-main-photo
       block main-photo
 
-    ul.project-content
-      block project
-      
-      .project-background-white
-        a(href='/') Previous project
-      .project-background-black
-        a(href='/') Next project
-    
     .project-info
       ul.meta
         li
@@ -33,3 +26,13 @@ html
           time.project-year(datetime='') #{Year}
         p
           block blurb
+
+    ul.project-content
+      block project
+      
+      .project-background-white
+        a(href='/') Previous project
+      .project-background-black
+        a(href='/') Next project
+    
+    include includes/footer

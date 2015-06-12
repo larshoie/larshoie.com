@@ -2,13 +2,15 @@
 // Not using gulp-load-plugins as it is nice to see whats here.
 var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
-//  kit          = require('gulp-kit'),
+  //takana       = require('takana'),
     jade         = require('gulp-jade'),
     pretty       = require('gulp-pretty-url'),
     browserSync  = require('browser-sync'),
     autoprefix   = require('gulp-autoprefixer'),
     plumber      = require('gulp-plumber'),
-//  concat       = require('gulp-concat'),
+    concat       = require('gulp-concat'),
+    order        = require("gulp-order"),
+    jshint       = require('gulp-jshint'),
     uglify       = require('gulp-uglify'),
     rename       = require('gulp-rename'),
     cleanup      = require('gulp-combine-media-queries'),
@@ -40,6 +42,13 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('build/css'));
 });
 
+gulp.task('takana', function() {
+  takana.run({
+    path:         __dirname,
+    includePaths: [] // Optional
+  });
+});
+
 gulp.task('html', function() {
     gulp.src([
       'src/**/*.jade',
@@ -55,14 +64,65 @@ gulp.task('html', function() {
 // Javascript
 // Uglify/minify
 // Coming soon, fuckin' concat those files!
-gulp.task('scripts', function() {
-  gulp.src('src/assets/js/*.js')
-  .pipe(uglify())
-  .pipe(rename({
-    suffix: '.min',
-  }))
-  .pipe(gulp.dest('build/js'))
+
+// gulp.task('scripts', function() {
+//   gulp.src('src/assets/js/*.js')
+//   .pipe(uglify())
+//   .pipe(rename({
+//     suffix: '.min',
+//   }))
+//   .pipe(gulp.dest('build/js'))
+// });
+
+
+
+
+
+
+gulp.task('scripts', function () {
+    return gulp.src('src/assets/js/**/*.js')
+        .pipe(plumber())
+        .pipe(sourcemaps.init({
+            loadMaps: false,
+        }))
+
+        .pipe(order([
+                'js/_libs/jquery-2.1.4.min.js',
+                //'js/_libs/jquery.panelSnap.js',
+                'jquery.scrollsnap.js',
+                'jquery.scrollstop.js',
+                'js/scripts.js'
+            ], { base: '/' }))
+
+        .pipe(concat('scripts.js', {
+            newLine:'\n;' // the newline is needed in case the file ends with a line comment, the semi-colon is needed if the last statement wasn't terminated
+        }))
+        .pipe(jshint())
+        .pipe(uglify())
+        .pipe(sourcemaps.write('.', {
+            includeContent: true,
+            sourceRoot: '/',
+        }))
+        .pipe(plumber.stop())
+        .pipe(gulp.dest('build/js'))
 });
+
+//
+// gulp.task('scripts', function() {
+//     gulp.src('src/js/scripts.js')
+//         .pipe(jshint())
+//         //.pipe(jshint.reporter('default'))
+//         .pipe(addsrc('src/js/_libs/*.js'))
+//         .pipe(order([
+//                 'js/_libs/jquery-2.1.4.min.js',
+//                 'js/_libs/jquery.panelSnap.js',
+//                 'js/scripts.js'
+//             ], { base: '/' }))
+//         .pipe(concat('scripts.min.js'))
+//         .pipe(uglify())
+//         .pipe(gulp.dest('/build/js'));
+// });
+
 
 // Images
 // Fuckin' generate images for srcset!!!
@@ -91,6 +151,9 @@ gulp.task('images', function () {
 
       })
     )
+    errorOnEnlargement: false
+    //withoutEnlargement: true
+    .pipe(plumber())
     .pipe(gulp.dest('build/images'));
 });
 
@@ -124,6 +187,7 @@ gulp.task
 ('default',
   [
   'sass',
+  //'takana',
   'html',
   'scripts',
   //'webp',
