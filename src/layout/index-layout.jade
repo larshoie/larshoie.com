@@ -9,6 +9,9 @@ html
     meta(name='viewport', content='width=device-width')
     link(rel="stylesheet", href="/css/style.css")
     title #{Title}
+    script(src="http://localhost:48626/takana.js")
+    script.
+      takanaClient.run({host: 'localhost:48626'});
     include includes/mixins.jade
     
   body
@@ -19,7 +22,8 @@ html
     
     block project-list
       #projects.project-list
-        h2.project Projects
+        header
+          a(href="/", class="projects") Projects
         include includes/project_nav.jade
     
     block about

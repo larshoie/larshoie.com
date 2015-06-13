@@ -9,7 +9,7 @@ object-fit: cover;
   }
 }
 
-.featured {
+/* .featured {
   //display:none;
   @include skjerm {
     li {
@@ -32,15 +32,13 @@ object-fit: cover;
       opacity: 1;
       }
   }
-}
+} */
 
 .project-info {
     width:100%;
     float:left;
-    //background: $dark;
     background: $light;
     color:$dark;
-
   @include skjerm {
     padding-top: $top;
     padding-left: $padding;
@@ -63,8 +61,10 @@ object-fit: cover;
 .meta { //li
   float:left;
   width:100%;
-  padding-bottom: 3rem;
   //font-size: 2vw; //resten arver størrelsen
+  & > p {
+    padding-top: 5vmax;
+  }
 }
 
 
@@ -77,17 +77,6 @@ object-fit: cover;
   text-align:left;
   font-size: inherit;
   }
-  //radical, man!
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    font-size: 10vw;
-    background-color: #1c1c1c;
-    width: 100%;
-    padding: 40% 1% 0;
-    color: #fff;
-    height: 100vh;
-    text-align: center; */
 }
 
 .project-type {
@@ -96,7 +85,7 @@ object-fit: cover;
     display: block;
     font-size: inherit;
     float: left;
-    margin-right:5%;
+    margin-right:2%;
     width: 25%;
   }
 }
@@ -106,9 +95,9 @@ object-fit: cover;
   @include skjerm {
     display: block;
     font-size: inherit;
-    width: 10%;
-    float: right;
-    text-align: right;
+    width: 9%;
+    float: left;
+    text-align: left;
   }
 }
 
@@ -137,9 +126,9 @@ object-fit: cover;
 
 }
 
-@keyframes project-slide-up {
+ @keyframes project-slide-up {
   from {margin-top:100vh;}
-  to {margin-top: $top * 2;}
+  to {margin-top: $top * 2.5;}
 }
 
 .project-content {
@@ -154,14 +143,14 @@ object-fit: cover;
     margin:0;
     animation: project-slide-up 1s 1;
     //margin-top: $top * 3.5; //HHHHHEEEYYYYY
-    margin-top: $top * 2; //HHHHHEEEYYYYY
+    margin-top: $top * 2.5; //HHHHHEEEYYYYY
     padding-bottom:10vmin;
     // chidren
     & li {
       //background: yellow;
       height:100%;
     //object-fit: contain;
-      width:100%;
+      width:96%;
     //  margin-top: 20%;
     }
 

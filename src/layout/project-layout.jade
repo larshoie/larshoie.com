@@ -7,16 +7,23 @@ html
     meta(name='viewport', content='width=device-width')
     link(rel="stylesheet", href="/css/style.css")
     title #{Title}
+    script(src="http://localhost:48626/takana.js")
+    script.
+      takanaClient.run({host: 'localhost:48626'});
     include includes/mixins.jade
     
   body
   
     include includes/header
+      //-a(href='/') Projects
+
             
     .project-main-photo
       block main-photo
 
     .project-info
+      header
+        a(href="/", class="projects") Projects
       ul.meta
         li
           h2.project-title #{Title}

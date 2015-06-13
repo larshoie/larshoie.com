@@ -1,9 +1,25 @@
 header {
 z-index: 99; //999
 position: fixed;
-top:0;
+//top:0;
+  a.logo {
+    @extend %left;
+    color: $light;
+  }
+  a.projects {
+    @extend %right;
+    color: $dark;
+  }
+
+  /* nav a:last-of-type {
+    //display:none;
+    @extend %right;
+    color: $dark;
+  } */
   a:hover {border: none}
 }
+
+
 
 %light {
   color: $dark;
@@ -33,7 +49,6 @@ top:0;
 
 %right {
   width: 50%;
-  //width: 50.15%;
   top:0;
   right:0;
   display:block;
@@ -44,52 +59,3 @@ top:0;
   position:fixed;
   padding:$padding;
   }
-
-header nav a:first-child {
-  @extend %left;
-  @extend %light;
-}
-
-header nav a:last-child {
-  @extend %right;
-  @extend %dark;
-}
-
-/* .logo {
-  display: none;
-  position:fixed;
-  z-index:-1;
-  font-size: 20vw;
-  //color: blue;
-  left:0;
-  right:0;
-  top:40%;
-  bottom:0;
-  text-align: center;
-  -webkit-text-stroke: 2px $light;
-}
- */
-
-/* span.title {
-  @include hide;;
-  float:right;
-  background: $light;
-  padding-left:1vmin;
-  -webkit-text-stroke: 0.03rem $light;
-  -webkit-text-fill-color: transparent;
-}
-span:before {
-  width: 44vw;
-  right: 3vw;
-  height: 2vw;
-  content: '';
-  border-bottom: 0.35vmin solid $light;
-  display: inline;
-  position: absolute;
-  z-index: -1;
-  top: 1.5vw;
-} */
-
-/* .frontpage span.title {
-  @include hide;
-} */

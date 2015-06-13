@@ -1,7 +1,7 @@
 $(document).scrollsnap({
         snaps: '.project-content > li',
-        proximity: 1000,
-        duration: 100
+        proximity: 500,
+        duration: 80
     });
 
 // jQuery(function($) {

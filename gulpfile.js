@@ -2,7 +2,7 @@
 // Not using gulp-load-plugins as it is nice to see whats here.
 var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
-  //takana       = require('takana'),
+    takana       = require('takana'),
     jade         = require('gulp-jade'),
     pretty       = require('gulp-pretty-url'),
     browserSync  = require('browser-sync'),
@@ -34,9 +34,9 @@ gulp.task('sass', function() {
     })
     .pipe(autoprefix('last 2 versions', '> 1%'))
     .pipe(plumber())
-    .pipe(cleanup())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('build/css'))
+    .pipe(cleanup())
+    //.pipe(gulp.dest('build/css'))
     .pipe(minifyCss())
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css'));
@@ -52,9 +52,9 @@ gulp.task('takana', function() {
 gulp.task('html', function() {
     gulp.src([
       'src/**/*.jade',
-      '!src/includes/*.jade',
-      '!src/layout/*.jade',
-      '!src/layout/includes/*.jade'
+      '!src/includes/*.jade',         //! Ignore
+      '!src/layout/*.jade',           //! Ignore
+      '!src/layout/includes/*.jade'   //! Ignore
       ])
      .pipe(jade())
      .pipe(pretty())
@@ -82,23 +82,22 @@ gulp.task('html', function() {
 gulp.task('scripts', function () {
     return gulp.src('src/assets/js/**/*.js')
         .pipe(plumber())
+        .pipe(jshint())
+        .pipe(uglify())
         .pipe(sourcemaps.init({
             loadMaps: false,
         }))
 
         .pipe(order([
-                'js/_libs/jquery-2.1.4.min.js',
-                //'js/_libs/jquery.panelSnap.js',
+                'js/jquery-2.1.4.min.js',
+                'js/jquery.scrollstop.js',
                 'jquery.scrollsnap.js',
-                'jquery.scrollstop.js',
-                'js/scripts.js'
+                'scripts.js'
             ], { base: '/' }))
 
         .pipe(concat('scripts.js', {
             newLine:'\n;' // the newline is needed in case the file ends with a line comment, the semi-colon is needed if the last statement wasn't terminated
         }))
-        .pipe(jshint())
-        .pipe(uglify())
         .pipe(sourcemaps.write('.', {
             includeContent: true,
             sourceRoot: '/',
@@ -187,7 +186,7 @@ gulp.task
 ('default',
   [
   'sass',
-  //'takana',
+  'takana',
   'html',
   'scripts',
   //'webp',
