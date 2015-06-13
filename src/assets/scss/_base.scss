@@ -1,12 +1,11 @@
 body {
-
-  // Layout
-    //display:flex;
-    //flex-direction: column;
-    //flex-wrap: wrap;
-    //justify-content: flex-start;
-    //align-content: flex-start;
-    //align-items: center;
+// Layout
+  //display:flex;
+  //flex-direction: column;
+  //flex-wrap: wrap;
+  //justify-content: flex-start;
+  //align-content: flex-start;
+  //align-items: center;
 
   overflow-x:hidden;
   box-sizing: border-box;
@@ -43,93 +42,106 @@ body {
   text-rendering: optimizeLegibility; /* optional: for older browsers */
   -webkit-font-variant-ligatures: common-ligatures; /* for iOS and Safari 6 */
   font-variant-ligatures: common-ligatures; /* for up-to-date browsers, including IE10 and Opera 21 */
+}
 
+@include scrollbars(0.30rem, $dark);
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin:0;
+  padding:0;
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: $light;
+  border-bottom: 0.15rem solid transparent;
+}
+
+a:hover, .active  {
+  text-decoration: none;
+  color: $dark;
+  border-bottom: 0.15rem solid $light;
+}
+
+// Lists
+
+ul {
+
+}
+
+li {
+  list-style: none;
+}
+
+// Table
+table {
+  color: $light;
+  td {
+    padding: 0 1.5rem;
+    font-size: 2vw;
   }
+}
 
-    @include scrollbars(0.30rem, $dark);
+// Bilder
 
-  *, *:before, *:after {
-    box-sizing: inherit;
-    margin:0;
-    padding:0;
+figure { //kanskje slett og flytt til normalize-ish
+  margin:0;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+// Page
+.left-page {
+  background:$dark;
+  color:$light;
+  padding:$padding;
+  width:100%;
+  float:none;
+  @include skjerm {
+    width:50%;
+    float:none;
+    //margin-left:-50%;
   }
+}
 
-  // Links
-  a {
-    text-decoration: none;
-    color: $light;
-    border-bottom: 0.15rem solid transparent;
-  }
-
-  a:hover, .active  {
-    text-decoration: none;
-    color: $dark;
-    border-bottom: 0.15rem solid $light;
-  }
-
-  // Lists
-
-  ul {
-
-  }
-
-  li {
-    list-style: none;
-  }
-
-  // Table
-  table {
-    color: $light;
-    td {
-      padding: 0 1.5rem;
-      font-size: 2vw;
-    }
-  }
-
-  // Bilder
-
-  figure { //kanskje slett og flytt til normalize-ish
-    margin:0;
-  }
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-
-
-
-  // Page
-  .left-page {
-    background:$dark;
+.right-page {
+  color:$dark;
+  padding:$padding;
+  width:100%;
+  float:none;
+  overflow:hidden;
+  @include skjerm {
     color:$light;
-    padding:$padding;
-    width:100%;
-    float:none;
-    @include skjerm {
-      width:50%;
-      float:none;
-      //margin-left:-50%;
-    }
+    background:$light;
+    position: fixed;
+    overflow:visible;
+    z-index:1;
+    width:50%;
+    min-height:100vh;
+    top:0;
+    right:0;
   }
+}
 
-  .right-page {
-    color:$dark;
-    padding:$padding;
-    width:100%;
-    float:none;
-    overflow:hidden;
-    @include skjerm {
-      color:$light;
-      background:$light;
-      position: fixed;
-      overflow:visible;
-      z-index:1;
-      width:50%;
-      min-height:100vh;
-      top:0;
-      right:0;
-    }
-  }
+.m-scene .scene_element {
+  animation-duration: 0.25s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.m-scene.is-exiting .scene_element {
+  animation-direction: alternate-reverse;
+}
+
+/*
+ * Keyframes
+ */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

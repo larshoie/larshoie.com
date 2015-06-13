@@ -92,6 +92,7 @@ gulp.task('scripts', function () {
                 'js/jquery-2.1.4.min.js',
                 'js/jquery.scrollstop.js',
                 'jquery.scrollsnap.js',
+                'jquery.smoothState.js',
                 'scripts.js'
             ], { base: '/' }))
 

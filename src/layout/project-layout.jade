@@ -13,38 +13,37 @@ html
     include includes/mixins.jade
     
   body
-    #main
-      include includes/header
+    include includes/header
 
-      .project-main-photo
-        block main-photo
+    .project-main-photo
+      block main-photo
 
-      .project-info
-        header
-          //- a(href="/", class="projects") Projects
-          .group
-            a(href="/") Projects 
-            span &#8594; 
-            a(href="/", class="title") #{Title}
-            a(href="/", class="type") #{Type}
-            a(href="/", class="year") #{Year}
-          
-        ul.meta
-          li
-            h2.project-title #{Title}
-          li
-            h3.project-type #{Type}
-          li
-            time.project-year(datetime='') #{Year}
-          p
-            block blurb
-
-      ul.project-content
-        block project
+    .project-info
+      header
+        //- a(href="/", class="projects") Projects
+        .group
+          a(href="/") Projects 
+          span &#8594; 
+          a(href="/", class="title") #{Title}
+          a(href="/", class="type") #{Type}
+          a(href="/", class="year") #{Year}
         
-        .project-background-white
-          a(href='/') Previous project
-        .project-background-black
-          a(href='/') Next project
+      ul.meta
+        li
+          h2.project-title #{Title}
+        li
+          h3.project-type #{Type}
+        li
+          time.project-year(datetime='') #{Year}
+        p
+          block blurb
+
+    ul.project-content
+      block project
       
-      include includes/footer
+      .project-background-white
+        a(href='/') Previous project
+      .project-background-black
+        a(href='/') Next project
+    
+    include includes/footer

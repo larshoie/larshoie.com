@@ -160,11 +160,11 @@ object-fit: cover;
 
 }
 
- @keyframes project-slide-up {
-  from {margin-top:100vh;}
-  to {margin-top: $top * 2.5;}
+/*  @keyframes project-slide-up {
+ from {margin-top:100vh; opacity:0;}
+ to {margin-top: $top * 2; opacity:1;}
 }
-
+*/
 .project-content {
   //background: orange;
   @include skjerm {
@@ -175,9 +175,10 @@ object-fit: cover;
     float:left;
     padding:0;
     margin:0;
-    animation: project-slide-up 1s 1;
+    //opacity:0;
+    //animation: project-slide-up 1s 1;
     //margin-top: $top * 3.5; //HHHHHEEEYYYYY
-    margin-top: $top * 2.5; //HHHHHEEEYYYYY
+    margin-top: $top * 2; //HHHHHEEEYYYYY
     padding-bottom:10vmin;
     // chidren
     & li {
