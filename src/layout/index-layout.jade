@@ -15,17 +15,17 @@ html
     include includes/mixins.jade
     
   body
-  
-    include includes/header
-    
-    block ingress
-    
-    block project-list
-      #projects.project-list
-        header
-          a(href="/", class="projects") Projects
-        include includes/project_nav.jade
-    
-    block about
-    
-    include includes/footer
+    #main
+      include includes/header
+      
+      block ingress
+      
+      block project-list
+        #projects.project-list
+          header
+            a(href="/", class="projects") Projects
+          include includes/project_nav.jade
+      
+      block about
+      
+      include includes/footer
