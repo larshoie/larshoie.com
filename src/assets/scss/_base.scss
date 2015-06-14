@@ -128,7 +128,7 @@ img {
 }
 
 .m-scene .scene_element {
-  animation-duration: 0.25s;
+  animation-duration: 0.55s;
   transition-timing-function: ease-in;
   animation-fill-mode: both;
   animation-name: fadeIn;
@@ -137,6 +137,11 @@ img {
 .m-scene.is-exiting .scene_element {
   animation-direction: alternate-reverse;
 }
+
+/* .m-scene.is-loading {
+  //opacity:0;
+  background:red;
+} */
 
 /*
  * Keyframes

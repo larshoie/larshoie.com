@@ -8,17 +8,6 @@
 
 //horizontal grid
 
-.full {
-/*   width: 100vw - $padding * 2;
-padding:0;
-margin: 0 auto;
-float:none; */
-
-  width: 96%;
-  padding: 0;
-  margin: 0 auto -1rem auto;
-  float: none;
-}
 
 
 .half {
@@ -43,6 +32,17 @@ float:none; */
 }
 
 
+/* .half--right {
+  width: 50%!Important;
+  float: right;
+  color: #fcfcfc;
+  padding: 2vw;
+  background-color: red;
+  height: 100vh!important;
+  margin-right: 50%;
+  margin-top: 7rem;
+}
+ */
 
 
 //vertical grid

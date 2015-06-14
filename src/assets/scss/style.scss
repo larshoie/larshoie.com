@@ -2,9 +2,14 @@
 @import "normalize";
 @import "normalize-opentype";
 @import "base";
+@import "grid";
+@import "single-project/single-project";
+@import "single-project/photo-grid";
 @import "typography";
 @import "header";
 @import "about";
 @import "projects";
-@import "single-project";
-@import "grid";
+
+#__bs_notify__ {
+  display:none!important;
+}

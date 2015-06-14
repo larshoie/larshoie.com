@@ -18,7 +18,7 @@ mixin project_image(project,image,caption,layout)
         
         
 mixin project_nav(project,url,type,year,image)
-  a.project(href='projects/#{url}')
+  a.project(href='/projects/#{url}')
     .project-image
       img(src="/images/#{url}/#{image}-1000.jpg", srcset="/images/#{url}/#{image}-1500.jpg 1500w, /images/#{url}/#{image}-1000.jpg 1000w, /images/#{url}/#{image}-500.jpg 500w", sizes="100vw")
     ul.project-meta

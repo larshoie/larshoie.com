@@ -36,33 +36,6 @@ object-fit: cover;
   }
 }
 
-/* .featured {
-  //display:none;
-  @include skjerm {
-    li {
-      @extend h1;
-      color: transparent;
-      -webkit-text-stroke: 0.2rem $light;
-      }
-    figure {
-      opacity:0;
-      padding:0;
-      z-index:9999;
-      position: fixed;
-      width:60%;
-      left:50%;
-      top:-100vh;
-      margin: 0 0 0 -30%;
-      pointer-events:none;
-      }
-    li:hover figure {
-      opacity: 1;
-      }
-  }
-} */
-
-
-
 .project-info {
     width:100%;
     float:left;
@@ -181,22 +154,6 @@ object-fit: cover;
     margin-top: $top * 2; //HHHHHEEEYYYYY
     padding-bottom:10vmin;
     // chidren
-    & li {
-      //background: yellow;
-      height:100%;
-    //object-fit: contain;
-      width:96%;
-    //  margin-top: 20%;
-    }
-
-    & img {
-      object-fit: contain;
-      height: 80vh;
-      pointer-events: initial;
-      pointer-events: none;
-      margin-top: 10vh;
-      margin-bottom: 10vh;
-    }
   }
 }
 
