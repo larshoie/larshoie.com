@@ -85,19 +85,18 @@ ul.project {
 }
 
 .project-list {
-    //order: 2;
-    //flex: 0 1 auto;
-    //align-self: auto;
   background: $light;
   color:$dark;
-  padding:0 6vw 20vh;
+  padding:6vw 0;
   margin-top:50vh;
   min-height:50vh;
-  //h2 {border-color:$light;}
+  //@include skjerm {padding:0 6vw 20vh;}
   a {
     color:$dark;
+    //border: 4px solid transparent;
+    //padding: 1vw 0 1vw 1vw;
     &:hover {
-      //border: 2px solid $light;
+      //border: 4px solid $dark;
       //color:$light;
     }
   }
@@ -106,36 +105,11 @@ ul.project {
       min-height:110vh;
       margin-top:0;
       padding:$padding;
-      padding-top:$top;
-      //top: -10vh;
-      //padding-top: 35vh;
+      padding-top:calc(25vh + 2vw)!important; //$top 25vh
       color: $light;
-    //padding-top: $top;
     }
 
     li {
       display: inline;
     }
   }
-
-.coming-soon {
-  text-decoration: line-through;
-  color: #999;
-}
-
-.project-meta {
-
-  :first-child {
-    width:100%;
-    @include skjerm {
-    width:60%;
-    }
-  }
-  :not(:first-child) {
-    //@include hide;
-    display:none;
-    @include skjerm {
-    display:inline;
-    }
-  }
-}
