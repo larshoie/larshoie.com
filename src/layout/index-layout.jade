@@ -17,16 +17,17 @@ html
   body
     #main.container
       .content
-        include includes/header
         
         block ingress
         
         block project-list
           #projects.project-list
-            header
+            header.project-header
               a(href="/", class="projects") Projects
             include includes/project_nav.jade
         
         block about
+        
+        include includes/header
         
     include includes/footer

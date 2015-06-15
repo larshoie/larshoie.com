@@ -5,20 +5,20 @@ h2.project {
   @extend %underlined;
   //skjerm
   @include skjerm {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  z-index: 99999;
-  color: $dark;
-  opacity: 1;
-  overflow: hidden;
-  line-height: 2;
-  width: 50%;
-  display: block;
-  background-color: $light;
-  padding: 2vw;
-  border-color: transparent;
-  }
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 99999;
+    color: $dark;
+    opacity: 1;
+    overflow: hidden;
+    line-height: 2;
+    width: 50%;
+    display: block;
+    background-color: $light;
+    padding: 2vw;
+    border-color: transparent;
+    }
 }
 
 
@@ -69,20 +69,6 @@ ul.project {
     }
   }
 }
-
-/* .vertical-half, .ingress {
-  height: 50vh;
-  float: left;
-  position: fixed;
-  top: 0;
-  z-index: -1;
-    @include skjerm {
-    position:static;
-    //margin-left:-50%;
-    height: auto!important;
-    padding-top:$top;
-    }
-} */
 
 .project-list {
   background: $light;

@@ -1,8 +1,9 @@
-$(document).scrollsnap({
-    snaps: '.item',
-    proximity: 200,
-    duration: 100
-});
+ $(document).scrollsnap({
+     snaps: '.item',
+     proximity: 1000,
+     duration: 450,
+     latency: 1000
+ });
 
 // $(function() {
 //     $('#main').smoothState();

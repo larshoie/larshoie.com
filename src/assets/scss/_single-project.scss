@@ -1,0 +1,242 @@
+.group {
+  @include skjerm {
+    display:block;
+    position: fixed;
+    top:0;
+    left:50%;
+    padding:2vw;
+    width: 50%;
+    }
+    //mobil
+    //display:none;
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items: flex-start;
+    align-content: space-between;
+
+    margin-bottom:1rem;
+    position: static;
+    width: 100%;
+    //float: none;
+    //
+    .arrow:after {
+      content:"\2193";
+      @include skjerm {content:"\2192";}
+    }
+    a, span {
+    float:left;
+    color:$dark;
+    padding-right:1rem;
+    @include skjerm {
+    float:left;
+    color:$dark;
+    padding-right:3rem;
+    }
+  }
+.title {
+  float: left;
+  padding: 0;
+  text-align:center;
+  }
+.type {
+  display:none;
+  @include skjerm {
+    display:block;
+    float: right;
+    padding: 0;
+    }
+  }
+.year {
+  display:none;
+  float: right;
+  padding: 0;
+  }
+}
+
+img {
+width: 100%;
+height: 52vh;
+//height: 100%;
+object-fit: cover;
+  @include skjerm {
+  //object-fit: cover;
+  //height: 100%;
+  }
+}
+
+.project-info {
+    margin-top:50vh;
+    width:100%;
+    float:left;
+    background: $light;
+    color:$dark;
+    padding:6vw;
+  @include skjerm {
+    margin-top:0;
+    padding-top: $top;
+    padding-left: $padding;
+    padding-right: $padding;
+    min-height: 100vh;
+    position:fixed;
+    top:0;
+    right:0;
+    width:50%;
+    overflow: hidden;
+    background: $light;
+    color: $dark;
+    z-index: 0;
+      &:hover {
+        z-index: 99999;
+      }
+  }
+}
+
+.meta { //li
+  & :not(p) {
+    display: none;
+  }
+  //float:left;
+  //width:100%;
+  //font-size: 2vw; //resten arver størrelsen
+    //& > p {
+      //display:block;
+      //padding-top: 5vmax;
+      //margin-top: 3rem;
+    //}
+}
+
+
+.project-title {
+  //display:none;
+@include skjerm {
+  display: block;
+  float:left;
+  width:60%;
+  text-align:left;
+  font-size: inherit;
+  }
+}
+
+.project-type {
+  //display:none;
+  @include skjerm {
+    display: block;
+    font-size: inherit;
+    float: left;
+    margin-right:2%;
+    width: 25%;
+  }
+}
+
+.project-year {
+  //display:none;
+  @include skjerm {
+    display: block;
+    font-size: inherit;
+    width: 9%;
+    float: right; //hmm? kanskje left?
+    text-align: left;
+  }
+}
+
+.project-main-photo {
+  position: fixed;
+  z-index:-1; //
+    @include skjerm {
+      //display:none;
+      padding:0;
+      margin:0;
+      z-index:-999;
+      position: fixed;
+      overflow:hidden;
+      top:15vmin;
+      left:10vmin;
+      bottom:10vmin;
+      //right:10vmin;
+      right:50%;
+      //margin: 0 0 0 -25vmin;
+      pointer-events:none;
+         img {
+          object-fit: cover;
+          min-height: 70vmin;
+          width:auto;
+          //margin-left:-25vmin;
+        }
+    }
+
+}
+
+@keyframes project-slide-up {
+ from {margin-top:100vh; opacity:0;}
+ to {margin-top: $top * 1.5; opacity:1;}
+}
+
+.project-content {
+  @include skjerm {
+    pointer-events:none;
+    position:relative;
+    z-index:99;
+    width: 100%;
+    float:left;
+    padding:0;
+    margin:0;
+    animation: project-slide-up 0.5s 1;
+    margin-top: $top * 1.5; //HHHHHEEEYYYYY
+    padding-bottom:10vmin;
+  }
+}
+
+.project-background-white {
+  display: none;
+  @include skjerm {
+    height:100%;
+    width:50%;
+    background:$dark;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:-1;
+    a {
+      position:absolute;
+      left:$padding;
+      bottom:2vmin;
+      color: $light;
+    }
+  }
+}
+.project-background-black {
+  display: none;
+  @include skjerm {
+    height:100%;
+    width:50%;
+    background:$light;
+    position:absolute;
+    right:0;
+    top:0;
+    z-index:-1;
+    a {
+      position:absolute;
+      right:$padding;
+      bottom:2vmin;
+      color: $dark;
+      &hover {border-color:$dark;}
+    }
+  }
+
+}
+
+.other-projects {
+    position: static;
+    background-color: red;
+    width: 100%;
+    height: 50vh;
+    z-index: 9999999;
+    overflow: hidden;
+    float: none;
+    top:80vh;
+  @include skjerm {
+    position: relative;
+  }
+}

@@ -1,18 +1,45 @@
-header {
-  position:relative;
+.call, .goodtime {
+  display:none;
   @include skjerm {
-  z-index: 99; //999
-  position: fixed;
+    display:inline;
+    color:$light;
   }
-  a.logo {
-    display:none;
+}
+.me {
+  float:right;
+  @include skjerm {
+    display:inline;
+    float:none;
+  }
+}
+
+header.contact {
+  padding:6vw;
+  position:relative;
+
+  color:$dark;
+  background:$light;
+
+  @include skjerm {
+  background:transparent;
+  padding:0;
+  z-index: 9; //999
+  position: fixed;
+  top:0;
+  }
+  .logo {
+    a {
+      color:$dark;
+      @include skjerm {color:$light;}
+    }
+    //display:none;
     @include skjerm {
       width: 50%;
       left:0;
       display:block;
       position:fixed;
       padding:$padding;
-      color:$light;
+      //color:$light;
       background:$dark;
     }
 
@@ -44,6 +71,48 @@ header {
   a:hover {border: none}
 
 }
+
+
+header.project-header {
+  padding:2vw;
+  position:relative;
+  color:$dark;
+  background:$light;
+
+  @include skjerm {
+  background:transparent;
+  padding:0;
+  z-index: 99; //999
+  position: fixed;
+  }
+  a.projects {
+    display:inline;
+    text-align:left;
+    position:static;
+    line-height: 4;
+    padding:0;
+    top:0;
+    right:0;
+    border-top:0;
+    border-right:0;
+    border-left:0;
+    @extend %underlined;
+    border-color:$dark;
+      @include skjerm {
+      line-height: inherit;
+      width:50%;
+      display:block;
+      position:fixed;
+      padding:$padding;
+      border: none;
+      }
+  }
+  a:hover {border: none}
+}
+
+
+
+
 
 %light {
   color: $dark;

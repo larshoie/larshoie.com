@@ -15,17 +15,17 @@ html
   body
     #main.container
       .content
-        include includes/header
+        //-include includes/header
 
         .project-main-photo
           block main-photo
 
         .project-info
-          header
+          header.project-header
             //- a(href="/", class="projects") Projects
             .group
               a(href="/") Projects 
-              span &#8594; 
+              span.arrow 
               a(href="/", class="title") #{Title}
               a(href="/", class="type") #{Type}
               a(href="/", class="year") #{Year}
@@ -36,8 +36,11 @@ html
 
         ul.project-content
           block project
-          
-          .project-background-white
-            a(href='/') Previous project
+        
+        .other-projects  
           .project-background-black
+            a(href='/') Previous project
+          .project-background-white
             a(href='/') Next project
+      
+        //include includes/header
