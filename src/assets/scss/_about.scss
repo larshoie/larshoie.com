@@ -13,9 +13,6 @@ h1 {
 }
 
 .about {
-  //order: 2;
-  //flex: 0 1 auto;
-  //align-self: auto;
   padding:6vw;
     @include skjerm {
       padding:$padding;
@@ -24,39 +21,42 @@ h1 {
     h2 {
       font-size: inherit;
       line-height: 4;
-      //padding-bottom: 2.5vmin;
       @extend %underlined;
     @include skjerm {
-      //padding:$padding;
     h2 {
       font-size: 1.5vw;
-      //padding-bottom: 2.5vmin;
       }
     }
   }
 }
 
 .ingress {
-    //order: 0;
-    //flex: 0 1 auto;
-    //align-self: auto;
   @extend .left-page;
   @extend  %dark-outline;
+  @extend %vertical-half;
   display:block;
-  //margin-top: $top; //viktig
   font-size: 4rem;
   font-size: 13.5vw;
   font-size: 6.5vmax;
   line-height: 1.2;
   color: $light;
   padding-bottom:10vmin;
-  @extend %vertical-half;
+  padding-left:6vw;
+  padding-top:4vh;
+  //padding-right:6vw;
+
+    position: fixed;
+    z-index: -1;
+    top: 0;
+
   @include skjerm {
-    line-height: 1.255;
-    font-size: 6.2vw;
-    //margin:-0.253vw;
-    //margin-top: $top; //viktig
-    padding-top: $top!important;
+      position:static;
+      padding-left:$padding;
+  line-height: 1.255;
+  font-size: 6.2vw;
+  padding-top: $top!important;
+  height:auto;
+    span {display:none;}
   }
 }
 

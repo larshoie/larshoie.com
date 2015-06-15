@@ -70,7 +70,7 @@ ul.project {
   }
 }
 
-.vertical-half, .ingress {
+/* .vertical-half, .ingress {
   height: 50vh;
   float: left;
   position: fixed;
@@ -82,21 +82,22 @@ ul.project {
     height: auto!important;
     padding-top:$top;
     }
-}
+} */
 
 .project-list {
   background: $light;
   color:$dark;
-  padding:6vw 0;
+  padding:0 6vw 15vw;
   margin-top:50vh;
-  min-height:50vh;
+  min-height:105vh;
   //@include skjerm {padding:0 6vw 20vh;}
   a {
     color:$dark;
-    //border: 4px solid transparent;
-    //padding: 1vw 0 1vw 1vw;
+    margin-left:-1vw;
+    border: 0.3vw solid transparent;
+    padding: 0.1vw 0.2vw 0.2vw 0.6vw;
     &:hover {
-      //border: 4px solid $dark;
+      border-color: $dark;
       //color:$light;
     }
   }
@@ -110,6 +111,6 @@ ul.project {
     }
 
     li {
-      display: inline;
+      //display: inline;
     }
   }

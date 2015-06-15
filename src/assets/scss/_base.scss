@@ -127,18 +127,18 @@ img {
   }
 }
 
-.m-scene .scene_element {
+.container .content {
   animation-duration: 0.55s;
   transition-timing-function: ease-in;
   animation-fill-mode: both;
   animation-name: fadeIn;
 }
 
-.m-scene.is-exiting .scene_element {
+.container.is-exiting .content {
   animation-direction: alternate-reverse;
 }
 
-/* .m-scene.is-loading {
+/* .container.is-loading {
   //opacity:0;
   background:red;
 } */

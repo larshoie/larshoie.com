@@ -1,25 +1,49 @@
 header {
-z-index: 99; //999
-position: fixed;
-//top:0;
+  position:relative;
+  @include skjerm {
+  z-index: 99; //999
+  position: fixed;
+  }
   a.logo {
-    @extend %left;
-    color: $light;
+    display:none;
+    @include skjerm {
+      width: 50%;
+      left:0;
+      display:block;
+      position:fixed;
+      padding:$padding;
+      color:$light;
+      background:$dark;
+    }
+
   }
   a.projects {
-    @extend %right;
-    color: $dark;
+    display:inline;
+    text-align:left;
+    position:static;
+    line-height: 4;
+    padding:0;
+    top:0;
+    right:0;
+    border-top:0;
+    border-right:0;
+    border-left:0;
+    @extend %underlined;
+    border-color:$dark;
+
+      @include skjerm {
+      line-height: inherit;
+      width:50%;
+      display:block;
+      position:fixed;
+      padding:$padding;
+      border: none;
+      }
   }
 
-  /* nav a:last-of-type {
-    //display:none;
-    @extend %right;
-    color: $dark;
-  } */
   a:hover {border: none}
+
 }
-
-
 
 %light {
   color: $dark;

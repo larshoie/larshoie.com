@@ -103,7 +103,7 @@ object-fit: cover;
     display: block;
     font-size: inherit;
     width: 9%;
-    float: left;
+    float: right; //hmm? kanskje left?
     text-align: left;
   }
 }
@@ -139,7 +139,6 @@ object-fit: cover;
 }
 
 .project-content {
-  //background: orange;
   @include skjerm {
     pointer-events:none;
     position:relative;
@@ -148,12 +147,9 @@ object-fit: cover;
     float:left;
     padding:0;
     margin:0;
-    //opacity:0;
     animation: project-slide-up 0.5s 1;
-    //margin-top: $top * 3.5; //HHHHHEEEYYYYY
     margin-top: $top * 1.5; //HHHHHEEEYYYYY
     padding-bottom:10vmin;
-    // chidren
   }
 }
 
