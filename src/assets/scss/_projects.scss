@@ -1,4 +1,4 @@
-h2.project {
+  h2.project {
   //mobil
   font-size: inherit;
   line-height: 4;
@@ -73,6 +73,7 @@ bottom:10%; */
 
   top: 10%;
   left: -40%;
+  left: -20%;
   right: 50%;
   bottom: 10%;
      img {
@@ -84,7 +85,7 @@ bottom:10%; */
 
       //min-height:70vmin;
       //width:auto;
-      //object-fit: cover;
+      object-fit: contain;
       //height: 80vh;
       //pointer-events: none;
       //margin-top: 10vh;

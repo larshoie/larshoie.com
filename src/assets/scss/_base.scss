@@ -98,24 +98,23 @@ body[data-direction='down'] {
 
 .control {
 /*   width:50%;
-height:100%;
+
 margin-bottom: 80vh;
 color:transparent;
 background:transparent;
 //mix-blend-mode:multiply;
 position:fixed;
 z-index:9; */
-
 width: 50%!important;
-height: calc(100% - 86vh);
-/* margin-bottom: 86vh; */
+height:100%!important;
+//height: calc(100% - 86vh);
 color: transparent;
 background: transparent;
-position: absolute;
-z-index: 9;
+position: fixed;
+z-index: 999999;
 top: 0;
 left: 0;
-overflow: hidden;
+//overflow: hidden;
 }
 
 /*
