@@ -1,8 +1,8 @@
 // colors
    $light: #fcfcfc;
-   //$light: blue;
+   //$dark: blue;
    //$light: #fcfcfc;
-   $dark: #1c1c1c;
+   $dark: #1a1a1a;
    //$light: gold;
    //$light: white;
    //$light: #1c1c1c;
@@ -25,6 +25,11 @@
 // Font-stacks
    $sans-serif:"RT Obligat", "Helvetica Neue", sans-serif;
    $serif:"Times New Roman", serif;
+
+
+  .absolute {
+    position:absolute!important;
+  }
 
    %underlined {
       border-bottom: 0.2rem solid $light;
@@ -84,4 +89,7 @@
 
    // universal padding (grid etc.)
       $padding:2vw;
-      $top:25vh;
+      //$top:25vh;
+      $top:14vh;
+      $top:10vw;
+      //$top:4vh;

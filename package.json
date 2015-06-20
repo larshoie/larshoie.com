@@ -1,28 +1,29 @@
 {
-  "name": "Gulpy",
+  "name": "larshoie.com",
   "version": "1.0.0",
-  "description": "Work in progress",
+  "description": "Gulpfile for larshoie.com",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/larshoie/larshoie.com"
   },
   "keywords": [
     "gulp",
     "scss",
     "js",
-    "images"
+    "responsive-images"
   ],
-  "author": "Lars Hoie",
+  "author": "Lars Høie",
   "license": "MIT",
   "bugs": {
-    "url": "/issues"
+    "url": "https://github.com/larshoie/larshoie.com/issues"
   },
-  "homemorphbutton": "https://github.com/dope/gulp-starter",
+  "homemorphbutton": "https://github.com/larshoie/larshoie.com",
   "devDependencies": {
+    "bower": "^1.4.1",
     "browser-sync": "^2.0.0",
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "^1.0.1",

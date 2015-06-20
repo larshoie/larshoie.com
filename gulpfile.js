@@ -91,9 +91,9 @@ gulp.task('scripts', function () {
         .pipe(order([
                 'js/jquery-2.1.4.min.js',
                 'js/jquery.scrollstop.js',
-                'jquery.scrollsnap.js',
-                'jquery.smoothState.js',
-                'scripts.js'
+                'js/jquery.scrollsnap.js',
+                'js/jquery.smoothState.js',
+                'js/scripts.js'
             ], { base: '/' }))
 
         .pipe(concat('scripts.js', {
@@ -131,7 +131,7 @@ gulp.task('scripts', function () {
   gulp.task('webp', function () {
      gulp.src('src/assets/images/**/*.*')
     .pipe(webp())
-    .pipe(gulp.dest('src/assets/images'));
+    .pipe(gulp.dest('build/images'));
     });
 
 gulp.task('images', function () {
@@ -151,9 +151,9 @@ gulp.task('images', function () {
 
       })
     )
-    errorOnEnlargement: false
+    //errorOnEnlargement: false
     //withoutEnlargement: true
-    .pipe(plumber())
+    //.pipe(plumber())
     .pipe(gulp.dest('build/images'));
 });
 
@@ -187,7 +187,7 @@ gulp.task
 ('default',
   [
   'sass',
-  'takana',
+  //'takana',
   'html',
   'scripts',
   //'webp',

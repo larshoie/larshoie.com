@@ -8,10 +8,16 @@
  * 3. Hard-codes fallback text selection for issue #18, color is Chrome’s per via http://stackoverflow.com/a/16094931/864799
  */
 
+/* ::selection {
+  color: inherit; 1.
+  text-shadow: inherit; 2.
+  background-color: #ACCEF7; 3.
+} */
+
 ::selection {
-  color: inherit; /* 1. */
+  color: $light; /* 1. */
   text-shadow: inherit; /* 2. */
-  background-color: #ACCEF7; /* 3. */
+  background-color: $dark; /* 3. */
 }
 
 html,

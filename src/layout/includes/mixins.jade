@@ -1,21 +1,11 @@
 mixin main_image(project,image)
   img(src="/images/#{project}/#{image}-1000.jpg", srcset="/images/#{project}/#{image}-1500.jpg 1500w, /images/#{project}/#{image}-1000.jpg 1000w, /images/#{project}/#{image}-500.jpg 500w ", sizes="100vw", class="mainimage") 
   
-  
-  
-  
-//- mixin project_image(project,image,caption,layout)
-//-  li(class="#{layout}")
-//-   figure
-//-     img(src="/images/#{project}/#{image}-1000.jpg", srcset="/images/#{project}/#{image}-1500.jpg 1500w, /images/#{project}/#{image}-1000.jpg 1000w, /images/#{project}/#{image}-500.jpg 500w", sizes="100vw", alt= caption) 
-//-     //-figcaption= caption
-//-   
 mixin project_image(project,image,caption,layout)
  li(class="#{layout}")
   figure
     img(src="/images/#{project}/#{image}-1000.jpg", srcset="/images/#{project}/#{image}-1500.jpg, /images/#{project}/#{image}-1000.jpg, /images/#{project}/#{image}-500.jpg", alt= caption) 
     //-figcaption= caption
-        
         
 mixin project_nav(project,url,type,year,image)
   a.project(href='/projects/#{url}')
@@ -26,6 +16,14 @@ mixin project_nav(project,url,type,year,image)
       li.project-type #{type}
       li.project-year #{year}        
 
+mixin image_link(project,title,image,lightordark)
+  a.project-link(href='/projects/#{project}', class="#{lightordark}")
+    img(src="/images/#{project}/#{image}-1000.jpg", srcset="/images/#{project}/#{image}-1500.jpg 1500w, /images/#{project}/#{image}-1000.jpg 1000w, /images/#{project}/#{image}-500.jpg 500w ", sizes="100vw", class="mainimage") 
+  .absolute
+    a(href="/") Projects
+    span.arrow
+    a(href="/projects/#{project}", class="title") #{title}
+      
 mixin video(video_url,layout,caption)
   figure(class="#{layout}")
     video(width='100%', height='100%', autoplay, controls, poster='#{poster_url}')

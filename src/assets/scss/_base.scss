@@ -56,14 +56,76 @@ body {
 a {
   text-decoration: none;
   color: $light;
-  border-bottom: 0.15rem solid transparent;
+  //border-bottom: 0.15rem solid transparent;
+  border-bottom: 0.20vw solid transparent;
 }
 
 a:hover, .active  {
   text-decoration: none;
   color: $dark;
-  border-bottom: 0.15rem solid $light;
+  //border-bottom: 0.15rem solid $light;
+  border-color: $dark;
+
 }
+
+//cursor
+
+body[data-direction='meh'] {
+    cursor: default
+}
+
+body[data-direction='up'] {
+    cursor: url("fonts/up-42.svg"),n-resize
+}
+
+body[data-direction='down'] {
+    cursor: url("fonts/down-42.svg"),s-resize
+}
+
+
+
+.control[data-direction='meh'] {
+    cursor: default
+}
+
+.control[data-direction='up'] {
+    cursor: url("fonts/up-80.svg"),n-resize
+}
+
+.control[data-direction='down'] {
+    cursor: url("fonts/down-80.svg"),s-resize
+}
+
+.control {
+/*   width:50%;
+height:100%;
+margin-bottom: 80vh;
+color:transparent;
+background:transparent;
+//mix-blend-mode:multiply;
+position:fixed;
+z-index:9; */
+
+width: 50%!important;
+height: calc(100% - 86vh);
+/* margin-bottom: 86vh; */
+color: transparent;
+background: transparent;
+position: absolute;
+z-index: 9;
+top: 0;
+left: 0;
+overflow: hidden;
+}
+
+/*
+body[data-cursor='up_i'] {
+    cursor: url("/cursor/up_i.png"),n-resize
+}
+
+body[data-cursor='down_i'] {
+    cursor: url("/cursor/down_i.png"),s-resize
+} */
 
 // Lists
 

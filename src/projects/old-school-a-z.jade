@@ -1,0 +1,29 @@
+extends ../layout/project-layout.jade
+
+block vars
+  - var Title = 'Old School A—Z'
+  - var Type =  'Lettering'
+  - var Year =  '2014'
+  
+block main-photo
+  +main_image('old-school-a-z', '1')
+
+block project
+  +project_image("old-school-a-z","1","This is an image", "item")
+  +project_image("old-school-a-z","2","This is an image", "item")
+  +project_image("old-school-a-z","6","This is an image", "item")
+  +project_image("old-school-a-z","3","This is an image", "item")
+  //+project_image("old-school-a-z","4","This is an image", "item")
+  //.half--right Lorum ipsum solor sit amet. Lorum ipsum solor sit amet. Lorum ipsum solor sit amet. Lorum ipsum solor sit amet. Lorum ipsum solor sit amet. 
+  //.quote Bold t
+  //.quote Editorial
+  
+
+block blurb
+  | Most alphabet books are aimed at children. This book is not aimed at teaching letterforms but instead to be a vehicle for typographic experimentation. The varying letterforms were inspired by a combination of the aesthetics of Suprematism, Constructivism and De Stijl (and a little hint of Roy Lichtenstein).
+
+block prev
+  +image_link('news-for-our-generation', 'News for our generation', '1', 'dark')
+
+block next
+  +image_link('haandbryggeriet', 'Haandbryggeriet', '1', 'light')

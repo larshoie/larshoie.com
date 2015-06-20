@@ -9,9 +9,15 @@ html
     meta(name='viewport', content='width=device-width')
     link(rel="stylesheet", href="/css/style.min.css")
     title #{Title}
-    script(src="http://localhost:48626/takana.js")
+    //- script(src="http://localhost:48626/takana.js")
+    //- script.
+    //-   takanaClient.run({host: 'localhost:48626'});
     script.
-      takanaClient.run({host: 'localhost:48626'});
+      function loadJS(u){var r = document.getElementsByTagName( "script" )[ 0 ], s = document.createElement( "script" );s.src = u;r.parentNode.insertBefore( s, r );}
+      if(!window.HTMLPictureElement){
+          document.createElement('picture');
+          loadJS("https://rawgit.com/aFarkas/respimage/gh-pages/respimage.min.js");
+      }
     include includes/mixins.jade
     
   body
@@ -27,7 +33,5 @@ html
             include includes/project_nav.jade
         
         block about
-        
-        include includes/header
-        
+                
     include includes/footer

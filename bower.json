@@ -1,0 +1,20 @@
+{
+  "name": "larshoie.com",
+  "version": "1.0.0",
+  "homepage": "https://github.com/larshoie/larshoie.com",
+  "authors": [
+    "Lars Høie <larshoie@gmail.com>"
+  ],
+  "description": "Bower dependencies",
+  "keywords": [
+    "frontend"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

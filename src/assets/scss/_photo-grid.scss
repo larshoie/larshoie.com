@@ -25,7 +25,8 @@
      margin: 0 auto -1rem auto;
      //float: none;
      //overflow: hidden;
-     height: 100%;
+     //height: 100%;
+     height: 100vh;
    }
    img {
      object-fit: cover;
@@ -40,40 +41,76 @@
    }
  }
 
+%page-light {
+  background:$light;
+  color: $dark;
+}
 
+%page-dark {
+  background:$dark;
+  color: $light;
+}
 
-
-
-.page {
-  //height:3000px;
-  height:auto;
-  width:100%;
-  //width:49.85%;
-  //width:75%;
+%page-left {
+  float:left;
+}
+%page-right {
   float:right;
-  padding-left:$padding;;
-  padding-right:$padding;
-  padding-top: $top;
-  padding-bottom: 10vh;
-  margin: 50vh 0;
-  background:lightyellow;
-  //z-index:-99999999;
-  //position:relative;
+}
+%page-half {
+  width:50%!important;
+}
+.page-single-right {
+  @extend %page;
+  @extend %page-half;
+  @extend %page-right;
+  @extend %page-light;
+  margin-left:50%!important;
+}
+.page-single-left {
+  @extend %page;
+  @extend %page-half;
+  @extend %page-left;
+  @extend %page-dark;
+  margin-right:50%!important;
+}
+
+.page-double-left {
+  @extend %page;
+  @extend %page-half;
+  @extend %page-left;
+  @extend %page-dark;
+}
+
+.page-double-right {
+  @extend %page;
+  @extend %page-half;
+  @extend %page-left;
+  @extend %page-light;
+}
+
+%page {
+  width:100%;
+  height:100vh;
+  padding-left:$padding!important;
+  padding-right:$padding!important;
+  padding-top: $top!important;
+  padding-bottom: 10vh!important;
   & > * {
     //pointer-events: initial;
   }
 }
 
-.quote {
+/* .quote {
   padding:$padding;
   font-size:7vw;
   font-size:20vw;
   line-height:1;
-  -webkit-text-stroke:$dark 0.4vw;
+  //-webkit-text-stroke:$dark 0.4vw;
   //color:gold;
   width: 90vw;
-  color:transparent;
-}
+  //color:transparent;
+} */
 
 
 /* .two-up {

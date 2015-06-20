@@ -22,18 +22,24 @@
     //float: none;
     //
     .arrow:after {
+      font-family:inherit;
       content:"\2193";
       @include skjerm {content:"\2192";}
     }
     a, span {
     float:left;
     color:$dark;
-    padding-right:1rem;
+    margin-right:1rem;
     @include skjerm {
     float:left;
     color:$dark;
-    padding-right:3rem;
+    margin-right:2rem;
     }
+  }
+  a:hover {
+    //color: red!important;
+    //border-color: $dark!important;
+    //border-bottom: 3px solid red;
   }
 .title {
   float: left;
@@ -67,9 +73,10 @@ object-fit: cover;
 }
 
 .project-info {
+    position:relative;
     margin-top:50vh;
     width:100%;
-    float:left;
+    float:none;
     background: $light;
     color:$dark;
     padding:6vw;
@@ -120,7 +127,7 @@ object-fit: cover;
 }
 
 .project-type {
-  //display:none;
+  display:none;
   @include skjerm {
     display: block;
     font-size: inherit;
@@ -131,7 +138,7 @@ object-fit: cover;
 }
 
 .project-year {
-  //display:none;
+  display:none;
   @include skjerm {
     display: block;
     font-size: inherit;
@@ -141,9 +148,10 @@ object-fit: cover;
   }
 }
 
-.project-main-photo {
+/* .project-main-photo {
   position: fixed;
-  z-index:-1; //
+  //z-index:-1; //
+  top:0;
     @include skjerm {
       //display:none;
       padding:0;
@@ -166,31 +174,70 @@ object-fit: cover;
         }
     }
 
-}
+} */
 
 @keyframes project-slide-up {
  from {margin-top:100vh; opacity:0;}
- to {margin-top: $top * 1.5; opacity:1;}
+ to {margin-top: $top * 3; opacity:1;}
 }
 
 .project-content {
+    position: relative;
   @include skjerm {
+    //background: $light;
+    //box-shadow: 0 0 0 2038px quotes: ;
     pointer-events:none;
-    position:relative;
+    //position:relative;
     z-index:99;
     width: 100%;
     float:left;
     padding:0;
     margin:0;
-    animation: project-slide-up 0.5s 1;
-    margin-top: $top * 1.5; //HHHHHEEEYYYYY
+    //animation: project-slide-up 0.5s 1;
+    //margin-top: $top * 3; //HHHHHEEEYYYYY
     padding-bottom:10vmin;
   }
+  /* &:before {
+    content:'hei';
+    width: 50%;
+    position:absolute;
+    //top: $top;
+    background:red;
+    height:100%;
+    bottom:0;
+    left:0;
+    z-index:-1;
+    } */
+    &:before {
+      @include skjerm {
+        content:'';
+        //height:100%;
+        width:50%;
+        background:$dark;
+        position:absolute;
+        left:0;
+        top:$top;
+        z-index:-1;
+      }
+    }
+    &:after {
+      @include skjerm {
+        content:'';
+        //height:100%;
+        width:50%;
+        background:$light;
+        position:absolute;
+        right:0;
+        top:$top;
+        z-index:-1;
+      }
+    }
 }
 
-.project-background-white {
-  display: none;
+/* .project-background-white {
+  //display: none;
   @include skjerm {
+    //display: block;
     height:100%;
     width:50%;
     background:$dark;
@@ -198,16 +245,10 @@ object-fit: cover;
     left:0;
     top:0;
     z-index:-1;
-    a {
-      position:absolute;
-      left:$padding;
-      bottom:2vmin;
-      color: $light;
-    }
   }
 }
 .project-background-black {
-  display: none;
+  //display: none;
   @include skjerm {
     height:100%;
     width:50%;
@@ -216,27 +257,5 @@ object-fit: cover;
     right:0;
     top:0;
     z-index:-1;
-    a {
-      position:absolute;
-      right:$padding;
-      bottom:2vmin;
-      color: $dark;
-      &hover {border-color:$dark;}
-    }
   }
-
-}
-
-.other-projects {
-    position: static;
-    background-color: red;
-    width: 100%;
-    height: 50vh;
-    z-index: 9999999;
-    overflow: hidden;
-    float: none;
-    top:80vh;
-  @include skjerm {
-    position: relative;
-  }
-}
+} */

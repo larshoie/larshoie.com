@@ -9,6 +9,7 @@ block main-photo
   +main_image('design-is-everything', '1')
 
 block project
+  +project_image("design-is-everything","1","This is an image", "item")
   +project_image("design-is-everything","4","This is an image", "item")
   //.half--right Lorum ipsum solor sit amet. Lorum ipsum solor sit amet. Lorum ipsum solor sit amet. Lorum ipsum solor sit amet. Lorum ipsum solor sit amet. 
   +project_image("design-is-everything","3","This is an image", "item")
@@ -18,7 +19,12 @@ block project
   +project_image("design-is-everything","7","This is an image", "item")
   //.quote Bold
   //.quote Editorial
-  
 
 block blurb
   | An exploration of design and interaction, with some reflections on the role of the designer in a contemporary context. The loose form of the book facilitated interesting experimentation with the physicality of the book, and all its inherent qualities.
+
+block prev
+  +image_link('bold', 'Bold', '1', 'light')
+
+block next
+  +image_link('news-for-our-generation', 'News for our generation', '1', 'dark')
