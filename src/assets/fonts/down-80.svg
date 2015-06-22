@@ -3,5 +3,11 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="80px" height="80px" viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve">
-<text transform="matrix(1 0 0 1 6.1156 62.1422)" fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" font-family="'RTObligat-Regular'" font-size="94">↓</text>
+<g enable-background="new    ">
+	<g>
+		<path fill="#FFFFFF" d="M40.33,79.163L14.027,60.856l7.028-9.84l13.232,9.271V0h12.083v60.288l13.232-9.271l7.029,9.84
+			L40.33,79.163z M19.635,59.885L40.33,74.29l20.694-14.404l-2.371-3.318L42.371,67.973V4h-4.083v63.973L22.006,56.567
+			L19.635,59.885z"/>
+	</g>
+</g>
 </svg>
