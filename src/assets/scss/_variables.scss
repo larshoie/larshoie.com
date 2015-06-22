@@ -22,9 +22,21 @@
 
     }
 
+    @font-face {
+        font-family: 'RT Obligat Outlined';
+        src: url('fonts/rt_obligat_outlined.woff2') format('woff2'),
+             url('fonts/rt_obligat_outlined.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+
+
+
 // Font-stacks
    $sans-serif:"RT Obligat", "Helvetica Neue", sans-serif;
    $serif:"Times New Roman", serif;
+   $outlined: "RT Obligat Outlined", "Helvetica Neue", sans-serif;
 
 
   .absolute {

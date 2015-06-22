@@ -34,8 +34,9 @@ h1 {
 
 .ingress {
   @extend .left-page;
-  @extend %dark-outline;
+//  @extend %dark-outline;
   @extend %vertical-half;
+    font-family: $outlined;
     display:block;
     font-size: 4rem;
     //font-size: 13.5vw;
@@ -43,7 +44,7 @@ h1 {
     line-height: 1.3;
     letter-spacing:0.5vw;
     word-spacing:0.1vw;
-    -webkit-text-stroke-width: 0.25vw;
+    //-webkit-text-stroke-width: 0.25vw;
     color: $light;
     //padding-bottom:10vmin;
     padding-left:6vw;
@@ -58,7 +59,7 @@ h1 {
     line-height: 1.16;
     letter-spacing:0.2vw;
     word-spacing:0;
-    -webkit-text-stroke-width: 0.15vw;
+    //-webkit-text-stroke-width: 0.15vw;
     font-size: 6.2vw;
     font-size:5.4vw;
     //padding-top: $top!important;
@@ -94,6 +95,12 @@ h1 {
         opacity:0;
       }
   }
+  a {color:$light;}
+  a:hover {
+    //@extend %underlined;
+    font-family: $sans-serif;
+    //text-decoration:underline;
+    }
   //p {text-indent:4rem;}
 }
 

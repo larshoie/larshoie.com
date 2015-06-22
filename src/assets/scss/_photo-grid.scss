@@ -20,23 +20,64 @@
      height: 50vh;
      width: 100%;
    @include skjerm {
-     width: 96%;
+     width: 100%;
      padding: 0;
-     margin: 0 auto -1rem auto;
-     //float: none;
-     //overflow: hidden;
-     //height: 100%;
-     height: 100vh;
+     //pointer-events: none;
+     //height: 100vh;
+     height:100vh;
+
+
+     //because fucking firefuckingbuggyfox
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: stretch;
+      align-items: center;
+     //padding-bottom:10vh;
+
+   }
+   figure {
+      order: 0;
+      flex: 0 1 auto;
+      align-self: auto;
+
+     //margin:20vh 0;
+     //margin-left:25vw;
+
+     //margin:auto;
+     //height:initial;
+     //width:initial;
+     //pointer-events: none;
+     //margin: 0 auto -1rem auto;
+     //height:100%;
+     //margin-top: 10vh; //FIRESHITTTTTBUG
    }
    img {
+
      object-fit: cover;
+
      @include skjerm {
-       object-fit: contain;
        height: 80vh;
-       pointer-events: initial;
-       pointer-events: none;
-       margin-top: 10vh;
-       margin-bottom: 10vh;
+       //height:auto;
+       width:auto;
+       object-fit: contain;
+       //margin:auto;
+       //float:none;
+       //padding: 20vh 0;
+
+       //pointer-events: none;
+       //pointer-events: none;
+       //padding-top:20vh;
+       //padding-bottom:10vh;
+
+       //margin-left:10vmin;
+       //margin-right:10vmin;
+       //margin: 10vh auto;
+       //pointer-events: initial;
+       //pointer-events: none;
+       //margin-top: 10vh; //FIRESHITTTTTBUG
+       //margin-bottom: 10vh; //FIRESHITTTTTBUG
      }
    }
  }

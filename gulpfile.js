@@ -42,12 +42,12 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('takana', function() {
-  takana.run({
-    path:         __dirname,
-    includePaths: [] // Optional
-  });
-});
+// gulp.task('takana', function() {
+//   takana.run({
+//     path:         __dirname,
+//     includePaths: [] // Optional
+//   });
+// });
 
 gulp.task('html', function() {
     gulp.src([
@@ -93,8 +93,6 @@ gulp.task('scripts', function () {
                 'js/jquery.scrollstop.js',
                 'js/jquery.scrollsnap.js',
                 'js/jquery.smoothState.js',
-                '/bower_components/viewport-units-buggyfill/viewport-units-buggyfill.js',
-                '/bower_components/object-fit/dist/object-fit.js',
                 'js/scripts.js'
             ], { base: '/' }))
 
@@ -106,25 +104,21 @@ gulp.task('scripts', function () {
             sourceRoot: '/',
         }))
         .pipe(plumber.stop())
+        .pipe(rename('scripts.min.js'))
         .pipe(gulp.dest('build/js'))
 });
 
-//
-// gulp.task('scripts', function() {
-//     gulp.src('src/js/scripts.js')
-//         .pipe(jshint())
-//         //.pipe(jshint.reporter('default'))
-//         .pipe(addsrc('src/js/_libs/*.js'))
-//         .pipe(order([
-//                 'js/_libs/jquery-2.1.4.min.js',
-//                 'js/_libs/jquery.panelSnap.js',
-//                 'js/scripts.js'
-//             ], { base: '/' }))
-//         .pipe(concat('scripts.min.js'))
-//         .pipe(uglify())
-//         .pipe(gulp.dest('/build/js'));
-// });
+gulp.task('polyfill-js', function() {
+   gulp.src('src/assets/polyfill/*.js')
+   .pipe(uglify())
+   .pipe(gulp.dest('build/polyfill/'));
+});
 
+gulp.task('polyfill-css', function() {
+   gulp.src('src/assets/polyfill/*.css')
+   .pipe(minifyCss())
+   .pipe(gulp.dest('build/polyfill/'));
+});
 
 // Images
 // Fuckin' generate images for srcset!!!
@@ -192,6 +186,8 @@ gulp.task
   //'takana',
   'html',
   'scripts',
+  'polyfill-js',
+  'polyfill-css',
   //'webp',
   'images',
   'fonts',
@@ -202,6 +198,8 @@ function () {
   gulp.watch('src/assets/scss/**/*.scss', ['sass']);
   gulp.watch('src/assets/fonts', ['fonts']);
   gulp.watch('src/assets/js/**/*.js', ['scripts']);
+  gulp.watch('src/assets/polyfill/**/*.js', ['polyfill-js']);
+  gulp.watch('src/assets/polyfill/**/*.css', ['polyfill-css']);
   //gulp.watch('src/assets/images/**/*.jpg', ['webp']);
   gulp.watch('src/assets/images/**/*.jpg', ['images']);
   gulp.watch('src/**/*.jade', ['html']);
