@@ -16,5 +16,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "viewport-units-buggyfill": "~0.5.3",
+    "object-fit": "~0.4.2"
+  }
 }

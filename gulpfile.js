@@ -93,6 +93,8 @@ gulp.task('scripts', function () {
                 'js/jquery.scrollstop.js',
                 'js/jquery.scrollsnap.js',
                 'js/jquery.smoothState.js',
+                '/bower_components/viewport-units-buggyfill/viewport-units-buggyfill.js',
+                '/bower_components/object-fit/dist/object-fit.js',
                 'js/scripts.js'
             ], { base: '/' }))
 

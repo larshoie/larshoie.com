@@ -10,12 +10,14 @@ html
     //- script(src="http://localhost:48626/takana.js")
     //- script.
     //-   takanaClient.run({host: 'localhost:48626'});
-    script.
-      function loadJS(u){var r = document.getElementsByTagName( "script" )[ 0 ], s = document.createElement( "script" );s.src = u;r.parentNode.insertBefore( s, r );}
-      if(!window.HTMLPictureElement){
-          document.createElement('picture');
-          loadJS("https://rawgit.com/aFarkas/respimage/gh-pages/respimage.min.js");
-      }
+    
+    //- script.
+    //-   function loadJS(u){var r = document.getElementsByTagName( "script" )[ 0 ], s = document.createElement( "script" );s.src = u;r.parentNode.insertBefore( s, r );}
+    //-   if(!window.HTMLPictureElement){
+    //-       document.createElement('picture');
+    //-       loadJS("https://rawgit.com/aFarkas/respimage/gh-pages/respimage.min.js");
+    //-   }
+    
     include includes/mixins.jade
     
   body
@@ -39,11 +41,12 @@ html
 
         ul.project-content
           block project
+          li.other-projects  
+            div.prev
+              block prev
+            div.next
+              block next
         
-        .control          
-        
-        ul.other-projects  
-          li.prev
-            block prev
-          li.next
-            block next
+        .control 
+
+    include includes/footer
