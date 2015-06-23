@@ -22,7 +22,7 @@
    @include skjerm {
      width: 100%;
      padding: 0;
-     //pointer-events: none;
+     pointer-events: none;
      //height: 100vh;
      height:100vh;
 
@@ -48,7 +48,7 @@
      //margin:auto;
      //height:initial;
      //width:initial;
-     //pointer-events: none;
+     pointer-events: none;
      //margin: 0 auto -1rem auto;
      //height:100%;
      //margin-top: 10vh; //FIRESHITTTTTBUG
@@ -66,7 +66,7 @@
        //float:none;
        //padding: 20vh 0;
 
-       //pointer-events: none;
+       pointer-events: none;
        //pointer-events: none;
        //padding-top:20vh;
        //padding-bottom:10vh;

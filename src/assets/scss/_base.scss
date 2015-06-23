@@ -1,12 +1,4 @@
 body {
-// Layout
-  //display:flex;
-  //flex-direction: column;
-  //flex-wrap: wrap;
-  //justify-content: flex-start;
-  //align-content: flex-start;
-  //align-items: center;
-
   overflow-x:hidden;
   box-sizing: border-box;
   margin: 0 auto;
@@ -17,13 +9,12 @@ body {
   font-family: $sans-serif;
   font-style: condenced;
   letter-spacing: 0.07rem;
-  //letter-spacing: 0.05rem;
-  //letter-spacing: 0.2vmin;
-  line-height: 1.4;
-  font-size: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.8em;
   font-size: 7vw;
   @include skjerm {
     padding: $padding;
+    line-height: 1.4;
     font-size: 1.8vw;
     padding: 0;
   }
@@ -42,6 +33,16 @@ body {
   text-rendering: optimizeLegibility; /* optional: for older browsers */
   -webkit-font-variant-ligatures: common-ligatures; /* for iOS and Safari 6 */
   font-variant-ligatures: common-ligatures; /* for up-to-date browsers, including IE10 and Opera 21 */
+}
+
+
+  // Windows Phone/Tablet/Metro responsive tags
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
 }
 
 @include scrollbars(0.30rem, $dark);
@@ -97,34 +98,15 @@ body[data-direction='down'] {
 }
 
 .control {
-/*   width:50%;
-
-margin-bottom: 80vh;
-color:transparent;
-background:transparent;
-//mix-blend-mode:multiply;
-position:fixed;
-z-index:9; */
 width: 50%!important;
 height:100%!important;
-//height: calc(100% - 86vh);
 color: transparent;
 background: transparent;
 position: fixed;
 z-index: 9;
 top: 0;
 left: 0;
-//overflow: hidden;
 }
-
-/*
-body[data-cursor='up_i'] {
-    cursor: url("/cursor/up_i.png"),n-resize
-}
-
-body[data-cursor='down_i'] {
-    cursor: url("/cursor/down_i.png"),s-resize
-} */
 
 // Lists
 

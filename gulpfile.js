@@ -93,7 +93,9 @@ gulp.task('scripts', function () {
                 'js/jquery.scrollstop.js',
                 'js/jquery.scrollsnap.js',
                 'js/jquery.smoothState.js',
-                'js/scripts.js'
+                'js/jquery.cycle.lite.js',
+                'js/scripts.js',
+                'js/respimage.min.js'
             ], { base: '/' }))
 
         .pipe(concat('scripts.js', {
@@ -186,8 +188,8 @@ gulp.task
   //'takana',
   'html',
   'scripts',
-  'polyfill-js',
-  'polyfill-css',
+  //'polyfill-js',
+  //'polyfill-css',
   //'webp',
   'images',
   'fonts',
@@ -198,8 +200,8 @@ function () {
   gulp.watch('src/assets/scss/**/*.scss', ['sass']);
   gulp.watch('src/assets/fonts', ['fonts']);
   gulp.watch('src/assets/js/**/*.js', ['scripts']);
-  gulp.watch('src/assets/polyfill/**/*.js', ['polyfill-js']);
-  gulp.watch('src/assets/polyfill/**/*.css', ['polyfill-css']);
+  //gulp.watch('src/assets/polyfill/**/*.js', ['polyfill-js']);
+  //gulp.watch('src/assets/polyfill/**/*.css', ['polyfill-css']);
   //gulp.watch('src/assets/images/**/*.jpg', ['webp']);
   gulp.watch('src/assets/images/**/*.jpg', ['images']);
   gulp.watch('src/**/*.jade', ['html']);

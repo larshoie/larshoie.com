@@ -82,8 +82,12 @@ ul.project {
   a {
     color:$dark;
     margin-left:-1vw;
-    border: 0.3vw solid transparent;
-    padding: 0.1vw 0.2vw 0.2vw 0.6vw;
+    line-height: 1.6;
+    @include skjerm {
+      line-height: 1.4;
+      border: 0.3vw solid transparent;
+      padding: 0.1vw 0.2vw 0.2vw 0.6vw;
+    }
     &:hover, &:focus {
       outline: none;
       border-color: $dark;

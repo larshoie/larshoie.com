@@ -13,11 +13,12 @@ h1 {
 }
 
 .about {
+  padding: 2em;
   padding:6vw;
   overflow: hidden;
     @include skjerm {
       padding:$padding;
-      padding-bottom: 10rem;
+      padding-bottom: 10em;
     }
   @extend .left-page;
     h2 {
@@ -38,7 +39,7 @@ h1 {
   @extend %vertical-half;
     font-family: $outlined;
     display:block;
-    font-size: 4rem;
+    font-size: 4em;
     //font-size: 13.5vw;
     font-size: 5.7vmax;
     line-height: 1.3;

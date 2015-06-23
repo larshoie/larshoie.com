@@ -103,3 +103,9 @@ $(function(){
 });
 
 //console.log('OK');
+
+$('.gif').cycle({
+  speed:  1 
+});
+
+console.log('GIF, OK');

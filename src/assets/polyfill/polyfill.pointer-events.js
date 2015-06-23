@@ -66,3 +66,8 @@ PointerEventsPolyfill.prototype.register_mouse_events = function(){
         return true;
     });
 };
+
+
+$(document).ready(function(){
+  PointerEventsPolyfill.initialize({});
+});

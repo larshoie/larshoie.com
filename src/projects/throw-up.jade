@@ -1,0 +1,31 @@
+extends ../layout/project-layout.jade
+
+block vars
+  - var Title = 'Throw up'
+  - var Type =  'Publication'
+  - var Year =  '2015'
+  
+block project
+  ul.gif
+    +project_image("throw-up","1","This is an image", "item")
+    +project_image("throw-up","2","This is an image", "item")
+    +project_image("throw-up","3","This is an image", "item")
+    +project_image("throw-up","4","This is an image", "item")
+    +project_image("throw-up","5","This is an image", "item")
+    +project_image("throw-up","6","This is an image", "item")
+  +project_image("throw-up","8","This is an image", "item")
+  +project_image("throw-up","7","This is an image", "item")
+  +project_image("throw-up","9","This is an image", "item")
+  +project_image("throw-up","10","This is an image", "item")
+  +project_image("throw-up","11","This is an image", "item")
+  
+
+block blurb
+  | An exploration of design and interaction, with some reflections on the role of the designer in a contemporary context. The loose form of the book facilitated interesting experimentation with the physicality of the book, and all its inherent qualities.
+
+block prev
+  +image_link('old-school-a-z', 'Old School A—Z', '1', 'light')
+
+block next
+  +image_link('design-is-everything', 'Design is everything', '2', 'light')
+  

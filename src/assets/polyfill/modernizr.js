@@ -15,5 +15,5 @@ Modernizr.load({
 
 Modernizr.load({
   test: Modernizr.css-vhunit,
-  nope: '/polyfill/polyfill.viewport-units.js'
+  nope: '/polyfill/vminpoly.js'
 });
