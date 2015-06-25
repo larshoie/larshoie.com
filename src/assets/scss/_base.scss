@@ -71,18 +71,18 @@ a:hover, .active  {
 
 //cursor
 
-body[data-direction='meh'] {
+/* body[data-direction='meh'] {
     cursor: default
 }
 
 body[data-direction='up'] {
-    cursor: url("fonts/up-42.svg"),n-resize
+    cursor: url("css/fonts/up-42.svg"),n-resize
 }
 
 body[data-direction='down'] {
-    cursor: url("fonts/down-42.svg"),s-resize
+    cursor: url("css/fonts/down-42.svg"),s-resize
 }
-
+ */
 
 
 .control[data-direction='meh'] {
@@ -90,11 +90,11 @@ body[data-direction='down'] {
 }
 
 .control[data-direction='up'] {
-    cursor: url("fonts/up-80.svg"),n-resize
+    cursor: url("css/fonts/up-80.svg"),n-resize
 }
 
 .control[data-direction='down'] {
-    cursor: url("fonts/down-80.svg"),s-resize
+    cursor: url("css/fonts/down-80.svg"),s-resize
 }
 
 .control {

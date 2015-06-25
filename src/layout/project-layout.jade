@@ -9,36 +9,24 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=device-width')
-    link(rel="stylesheet", href="/css/style.min.css")
-    
-    //include includes/polyfill
     title Lars Høie — #{Title}
-        
-    //- script(src="http://localhost:48626/takana.js")
-    //- script.
-    //-   takanaClient.run({host: 'localhost:48626'});   
-     
+    include includes/assets.jade
     include includes/mixins.jade
-    
   body
     #main.container
       section.content
-
         article.project-info
           header.project-header
-
             .group
               a(href="/") Projects
               span.arrow 
               span #{Title}
-              //a(href="/", class="type") #{Type}
-              //a(href="/", class="year") #{Year}
-              //&nbsp;&nbsp;
-              
+              //-a(href="/", class="type") #{Type}
+              //-a(href="/", class="year") #{Year}
+              //-&nbsp;&nbsp;
           ul.meta
             p
               block blurb
-
         ul.project-content
           block project
           li.other-projects  
@@ -46,7 +34,5 @@ html
               block prev
             div.next
               block next
-        
         .control 
-
     include includes/footer

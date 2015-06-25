@@ -1,9 +1,13 @@
-$(document).scrollsnap({
-    snaps: '.item',
-    proximity: 400,
-    duration: 450,
-    latency: 1000
-});
+// $(document).scrollsnap({
+//     snaps: '.item',
+//     proximity: 400,
+//     duration: 450,
+//     latency: 1000
+// });
+
+$('.gif').tcycle();
+
+//console.log('GIF, OK');
 
 function scroll_to_nearest_li(e, t) {
     "undefined" == typeof e && (e = $(window).scrollTop()), "undefined" == typeof t && (t = !1), $("li").each(function() {
@@ -68,7 +72,6 @@ $(document).keydown(function(e) {
 });
 
 //console.log('hey');
-
 //viewport units buggyfill
 // require('viewport-units-buggyfill').init();
 
@@ -77,6 +80,7 @@ $(function(){
   var options = {
     prefetch: true,
     cacheLength: 20,
+
     onStart: {
       duration: 250, // Duration of our animation
       render: function ($container) {
@@ -97,15 +101,13 @@ $(function(){
       }
     },
 
+    onAfter: function($container, $newContent) {
+      $('.gif').tcycle();
+      //$('body').hide();
+    }
 
   },
   smoothState = $('#main').smoothState(options).data('smoothState');
 });
 
 //console.log('OK');
-
-$('.gif').cycle({
-  speed:  1 
-});
-
-console.log('GIF, OK');

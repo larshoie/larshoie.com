@@ -15,9 +15,12 @@ var gulp         = require('gulp'),
     rename       = require('gulp-rename'),
     cleanup      = require('gulp-combine-media-queries'),
     minifyCss    = require('gulp-minify-css'),
+    inlineCss    = require('gulp-inline-css'),
     sourcemaps   = require('gulp-sourcemaps'),
     responsive   = require('gulp-responsive'),
-    webp         = require('gulp-webp');
+    webp         = require('gulp-webp'),
+    minifyHTML   = require('gulp-minify-html'),
+    critical     = require('critical').stream;
 
 // Sass
 // Compile
@@ -35,7 +38,7 @@ gulp.task('sass', function() {
     .pipe(autoprefix('last 2 versions', '> 1%'))
     .pipe(plumber())
     .pipe(sourcemaps.write())
-    .pipe(cleanup())
+    //.pipe(cleanup())
     //.pipe(gulp.dest('build/css'))
     .pipe(minifyCss())
     .pipe(rename('style.min.css'))
@@ -58,6 +61,13 @@ gulp.task('html', function() {
       ])
      .pipe(jade())
      .pipe(pretty())
+      // .pipe(inlineCss({
+      //            applyStyleTags: true,
+      //            applyLinkTags: true,
+      //            removeStyleTags: true,
+      //            removeLinkTags: true
+      //    }))
+     .pipe(minifyHTML())
      .pipe(gulp.dest('build'))
  });
 
@@ -93,7 +103,7 @@ gulp.task('scripts', function () {
                 'js/jquery.scrollstop.js',
                 'js/jquery.scrollsnap.js',
                 'js/jquery.smoothState.js',
-                'js/jquery.cycle.lite.js',
+                'js/jquery.tcycle.js',
                 'js/scripts.js',
                 'js/respimage.min.js'
             ], { base: '/' }))
@@ -112,13 +122,13 @@ gulp.task('scripts', function () {
 
 gulp.task('polyfill-js', function() {
    gulp.src('src/assets/polyfill/*.js')
-   .pipe(uglify())
+   //.pipe(uglify())
    .pipe(gulp.dest('build/polyfill/'));
 });
 
 gulp.task('polyfill-css', function() {
    gulp.src('src/assets/polyfill/*.css')
-   .pipe(minifyCss())
+   //.pipe(minifyCss())
    .pipe(gulp.dest('build/polyfill/'));
 });
 
@@ -178,6 +188,49 @@ gulp.task('browser-sync', function() {
   });
 });
 
+// Generate & Inline Critical-path CSS
+// gulp.task('critical', function () {
+//     return gulp.src('build/*.html')
+//         .pipe(critical({base: 'build/', inline: true, css: 'build/css/style.min.css'}))
+//         .pipe(gulp.dest('build'));
+// });
+
+gulp.task('copystyles', function () {
+    return gulp.src(['build/css/style.min.css'])
+        .pipe(rename({
+            basename: "site" // site.css
+        }))
+        .pipe(gulp.dest('build/css'));
+});
+
+gulp.task('critical', ['build', 'copystyles'], function () {
+  critical.generateInline({
+      base: 'build/',
+      src: 'index.html',
+      styleTarget: 'css/style.min.css',
+      htmlTarget: 'index.html',
+      width: 1000,
+      height: 800,
+      minify: true
+  });
+});
+
+
+
+
+gulp.task
+('build',
+  [
+  'sass',
+  'html',
+  'scripts'
+  ],
+function () {
+
+});
+
+
+
 // Default task
 // Runs sass, browser-sync, scripts and image tasks
 // Watchs for file changes for images, scripts and sass/css
@@ -188,20 +241,21 @@ gulp.task
   //'takana',
   'html',
   'scripts',
-  //'polyfill-js',
-  //'polyfill-css',
+  'polyfill-js',
+  'polyfill-css',
   //'webp',
   'images',
   'fonts',
   'CNAME',
+  //'critical',
   'browser-sync'
   ],
 function () {
   gulp.watch('src/assets/scss/**/*.scss', ['sass']);
   gulp.watch('src/assets/fonts', ['fonts']);
   gulp.watch('src/assets/js/**/*.js', ['scripts']);
-  //gulp.watch('src/assets/polyfill/**/*.js', ['polyfill-js']);
-  //gulp.watch('src/assets/polyfill/**/*.css', ['polyfill-css']);
+  gulp.watch('src/assets/polyfill/**/*.js', ['polyfill-js']);
+  gulp.watch('src/assets/polyfill/**/*.css', ['polyfill-css']);
   //gulp.watch('src/assets/images/**/*.jpg', ['webp']);
   gulp.watch('src/assets/images/**/*.jpg', ['images']);
   gulp.watch('src/**/*.jade', ['html']);

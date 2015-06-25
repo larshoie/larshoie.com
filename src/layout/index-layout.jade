@@ -9,30 +9,18 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=device-width')
-    link(rel="stylesheet", href="/css/style.min.css")
-    //include includes/polyfill
     title #{Title}
-    
-    //- script(src="https://cdn.polyfill.io/v1/polyfill.min.js")
-
-    //- script(src="http://localhost:48626/takana.js")
-    //- script.
-    //-   takanaClient.run({host: 'localhost:48626'});
-  
+    //link(href="/css/style.min.css", rel="stylesheet")
+    include includes/assets.jade
     include includes/mixins.jade
-    
   body
     #main.container
       .content
-        
         block ingress
-        
         block project-list
           #projects.project-list
             header.project-header
               a(href="/", class="projects") Projects
             include includes/project_nav.jade
-        
         block about
-                
     include includes/footer

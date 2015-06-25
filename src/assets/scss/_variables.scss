@@ -15,21 +15,21 @@
 // Font-face
     @font-face {
         font-family: 'RT Obligat';
-        src: url('fonts/rt_obligat.woff2') format('woff2'),
-             url('fonts/rt_obligat.woff') format('woff');
+        src: url('/css/fonts/rt_obligat.woff2') format('woff2'),
+             url('/css/fonts/rt_obligat.woff') format('woff');
         font-weight: normal;
         font-style: normal;
 
     }
 
-    @font-face {
-        font-family: 'RT Obligat Outlined';
-        src: url('fonts/rt_obligat_outlined.woff2') format('woff2'),
-             url('fonts/rt_obligat_outlined.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
+  @font-face {
+    font-family: 'RT Obligat Outlined';
+    src: url('/css/fonts/rt_obligat_outlined.woff2') format('woff2'),
+         url('/css/fonts/rt_obligat_outlined.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-    }
+}
 
 
 

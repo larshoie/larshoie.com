@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'RT Obligat Outlined';
+  src: url('/css/fonts/rt_obligat_outlined.woff2') format('woff2'),
+       url('/css/fonts/rt_obligat_outlined.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ingress {
+  color: yellow!important;
+/*   -webkit-text-fill-color: transparent; FF/IE Fuck-fix... Override color (regardless of order)
+-webkit-text-stroke-width: 0.15vw!important;
+-webkit-text-stroke-color: #fcfcfc!imp; */
+  font-family: 'RT Obligat Outlined'!important;
+}

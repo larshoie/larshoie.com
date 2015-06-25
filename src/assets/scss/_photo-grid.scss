@@ -16,6 +16,42 @@
 }
  */
 
+.gif {
+  height: 50vh;
+  width: 100%;
+@include skjerm {
+  width: 100%;
+  padding: 0;
+  pointer-events: none;
+  height:100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  }
+/*   .item {
+  width:100%!important;
+  height:100%!important;
+  left:0!important;
+  object-fit: contain!important;
+  right:0!important;
+  position:relative!important;
+  bottom:0!important;
+  top:0!important;
+} */
+  img {
+      object-fit: cover;
+        @include skjerm {
+          height: 80vh;
+          width:auto;
+          object-fit: contain;
+          pointer-events: none;
+      }
+    }
+}
+
  .item {
      height: 50vh;
      width: 100%;
