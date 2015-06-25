@@ -10,13 +10,13 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=device-width')
     title #{Title}
-    //link(href="/css/style.min.css", rel="stylesheet")
     include includes/assets.jade
     include includes/mixins.jade
   body
     #main.container
       .content
-        block ingress
+        .ingress
+          include includes/ingress.jade
         block project-list
           #projects.project-list
             header.project-header
