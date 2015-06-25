@@ -82,12 +82,12 @@ $(function(){
     cacheLength: 20,
 
     onStart: {
-      duration: 250, // Duration of our animation
+      duration: 0, // Duration of our animation
       render: function ($container) {
         // Add your CSS animation reversing class
-        $container.addClass('is-exiting');
+        //$container.addClass('is-exiting');
         // Restart your animation
-        smoothState.restartCSSAnimations();
+        //smoothState.restartCSSAnimations();
       }
     },
 
@@ -95,7 +95,7 @@ $(function(){
       duration: 0,
       render: function ($container, $newContent) {
         // Remove your CSS animation reversing class
-        $container.removeClass('is-exiting');
+        //$container.removeClass('is-exiting');
         // Inject the new content
         $container.html($newContent);
       }

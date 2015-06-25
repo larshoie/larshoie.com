@@ -170,7 +170,8 @@ img {
   }
 }
 
-.container .content {
+//cutting animations for v6
+/* .container .content {
   animation-duration: 0.55s;
   transition-timing-function: ease-in;
   animation-fill-mode: both;
@@ -181,15 +182,14 @@ img {
   animation-direction: alternate-reverse;
 }
 
-/* .container.is-loading {
+.container.is-loading {
   //opacity:0;
   background:red;
-} */
+}
 
-/*
- * Keyframes
- */
+* Keyframes
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+ */
