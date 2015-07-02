@@ -42,6 +42,7 @@ header.contact {
     a {
       color:$dark;
       @include skjerm {color:$light;}
+      &:hover {transition: 0.25s;}
     }
     //display:none;
     @include skjerm {
@@ -55,33 +56,7 @@ header.contact {
     }
 
   }
-  a.projects {
-    display:inline;
-    text-align:left;
-    position:static;
-    line-height: 4;
-    padding:0;
-    top:0;
-    right:0;
-    border-top:0;
-    border-right:0;
-    border-left:0;
-    @extend %underlined;
-    border-color:$dark;
 
-      @include skjerm {
-      line-height: inherit;
-      width:50%;
-      display:block;
-      position:fixed;
-      padding:$padding;
-      border: none;
-      }
-  }
-
-  a:hover {
-    //border: none;
-    }
 
 }
 
@@ -91,14 +66,13 @@ header.project-header {
   position:relative;
   color:$dark;
   background:$light;
-
-  @include skjerm {
-  background:transparent;
-  padding:0;
-  z-index: 99; //999
-  position: fixed;
-  }
-  a.projects {
+    @include skjerm {
+    background:transparent;
+    padding:0;
+    z-index: 99; //999
+    position: fixed;
+    }
+  /* a.projects {
     display:inline;
     text-align:left;
     position:static;
@@ -111,19 +85,20 @@ header.project-header {
     border-left:0;
     @extend %underlined;
     border-color:$dark;
+    transition: 0.25s;
       @include skjerm {
+      border-bottom:0.3rem solid transparent;
       line-height: inherit;
       width:50%;
       display:block;
       position:fixed;
       padding:$padding;
-      border: none;
+      //border: none;
+      //transition: 0.25s;
+      &:hover {border-color: $dark;}
       }
-  }
-  a:hover {
-    //border: none;
-    border-color: $dark;
-    }
+    } */
+
 }
 
 
@@ -168,3 +143,52 @@ header.project-header {
   position:fixed;
   padding:$padding;
   }
+
+.toggle-list:before {
+  content:"(";
+  position:relative;
+  //margin-left: 3rem;
+  left:0;
+  right:1rem;
+}
+
+.toggle-list:after {
+  content:"/";
+  //position:relative;
+  //margin-left: 3rem;
+  //left:1rem;
+  padding:0.5rem;
+}
+
+.toggle-index:after {
+  content:")";
+  //position:relative;
+  //margin-left: 3rem;
+  //left:1rem;
+  //padding:0.5rem;
+}
+ .projects {
+   display:inline;
+   text-align:left;
+   position:static;
+   line-height: 4;
+   padding:0;
+   top:0;
+   right:0;
+   border-top:0;
+   border-right:0;
+   border-left:0;
+   @extend %underlined;
+   border-color:$dark;
+     @include skjerm {
+     left:50%;
+     line-height: inherit;
+     //width:50%;
+     display:block;
+     position:fixed;
+     padding:$padding;
+     border: none;
+     }
+     //span {margin:0 1.5rem 0 3rem;}
+     a:hover {}
+ }

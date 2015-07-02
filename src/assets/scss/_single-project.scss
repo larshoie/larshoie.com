@@ -73,6 +73,7 @@ object-fit: cover;
 }
 
 .project-info {
+    //animation: fadeIn .025s;
     position:relative;
     margin-top:50vh;
     width:100%;
@@ -94,11 +95,30 @@ object-fit: cover;
     background: $light;
     color: $dark;
     z-index: 0;
+    //animation: fadeIn .35s;
       &:hover {
         z-index: 99999;
+        opacity:1!important;
+        //animation: infoFade .5s;
       }
   }
 }
+
+.project-info.bottom {
+  //pointer-events:none;
+  //opacity:1!important;
+  z-index: -1;
+  //animation: fadeIn .25s reverse;
+}
+
+/* @keyframes infoFade {
+  from {
+    z-index: 0;
+  }
+  to {
+    z-index: 99999;
+    }
+} */
 
 .meta { //li
   & :not(p) {

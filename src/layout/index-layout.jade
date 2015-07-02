@@ -20,7 +20,10 @@ html
         block project-list
           #projects.project-list
             header.project-header
-              a(href="/", class="projects") Projects
+              .projects
+                a(href="/") Project
+                a(href="/", class="toggle-list") list
+                a(href="/index", class="toggle-index") index
             include includes/project_nav.jade
         block about
     include includes/footer

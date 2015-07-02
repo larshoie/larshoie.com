@@ -16,6 +16,19 @@
 }
  */
 
+#powerTip {
+  cursor: default;
+	background-color: #333;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 20px;
+	color: #fff;
+	display: none;
+	padding: 10px;
+	position: absolute;
+	white-space: nowrap;
+	z-index: 2147483647;
+}
+
 .gif {
   height: 50vh;
   width: 100%;
@@ -28,8 +41,10 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  align-content: stretch;
-  align-items: center;
+  align-content: center;
+  //align-items: center;
+  align-items: flex-start;
+  //top: 10vh!important;
   }
 /*   .item {
   width:100%!important;
@@ -46,6 +61,7 @@
         @include skjerm {
           height: 80vh;
           width:auto;
+          max-width:calc(80vw - 0.25rem);
           object-fit: contain;
           pointer-events: none;
       }
@@ -68,9 +84,11 @@
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: center;
-      align-content: stretch;
-      align-items: center;
+      align-content: center;
+      //align-items: center;
      //padding-bottom:10vh;
+     align-items: flex-start;
+     padding-top: 10vh;
 
    }
    figure {
@@ -90,11 +108,10 @@
      //margin-top: 10vh; //FIRESHITTTTTBUG
    }
    img {
-
      object-fit: cover;
-
      @include skjerm {
        height: 80vh;
+       max-width:calc(80vw - 0.25rem);
        //height:auto;
        width:auto;
        object-fit: contain;
@@ -128,6 +145,21 @@
   color: $light;
 }
 
+.page {
+  @extend %page;
+  max-height:80vh;
+  max-width: 80vw;
+}
+
+.quote {
+  @extend %page;
+  background-color: yellow;
+  color: red;
+  font-size: 4vw;
+  -webkit-text-stroke: 0.15vw red;
+  -webkit-text-fill-color: transparent;
+}
+
 %page-left {
   float:left;
 }
@@ -151,14 +183,12 @@
   @extend %page-dark;
   margin-right:50%!important;
 }
-
 .page-double-left {
   @extend %page;
   @extend %page-half;
   @extend %page-left;
   @extend %page-dark;
 }
-
 .page-double-right {
   @extend %page;
   @extend %page-half;
@@ -236,3 +266,61 @@
   }
 }
  */
+
+
+
+
+
+
+
+//ul.index! bildeindex
+.index {
+  background: #fff;
+  padding: 10px;
+  overflow: hidden;
+  li ul:hover li {
+    opacity:1;
+    //background:red;
+    //box-shadow: red 100px 100px 200px;
+  }
+  li ul li {
+  float:left;
+  width:25%;
+  padding:10px;
+  opacity:0.3
+  }
+  img {
+    object-fit:cover;
+    //width:50%;
+    height:20vh;
+  }
+}
+
+
+
+
+/*
+.index .throw-up:not(:hover) {
+  opacity:0.1;
+}
+
+.index .bold:not(:hover) {
+  opacity:0.1;
+}
+
+
+.group1:hover .throw-up {
+  opacity:1;
+  //background:$light;
+}
+
+.group2:hover .bold {
+  opacity:1;
+  //background:$light;
+}
+
+
+.group2:hover .haandbryggeriet {
+  opacity:1;
+  //background:$light;
+} */

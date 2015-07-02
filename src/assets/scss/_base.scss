@@ -3,6 +3,8 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   //padding: $padding;
+  background: yellow;
+  background: blue;
   background: $dark;
 
   // Font
@@ -45,7 +47,7 @@ body {
   width: device-width;
 }
 
-@include scrollbars(0.30rem, $dark);
+@include scrollbars(0.25rem, $dark);
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -90,11 +92,13 @@ body[data-direction='down'] {
 }
 
 .control[data-direction='up'] {
-    cursor: url("css/fonts/up-80.svg"),n-resize
+    //cursor: url("css/fonts/up-80.svg"),n-resize;
+    cursor: url("fonts/up-80.svg"),n-resize
 }
 
 .control[data-direction='down'] {
-    cursor: url("css/fonts/down-80.svg"),s-resize
+    //cursor: url("css/fonts/down-80.svg"),s-resize;
+    cursor: url("fonts/down-80.svg"),s-resize;
 }
 
 .control {
@@ -171,13 +175,20 @@ img {
 }
 
 //cutting animations for v6
-/* .container .content {
-  animation-duration: 0.55s;
-  transition-timing-function: ease-in;
-  animation-fill-mode: both;
-  animation-name: fadeIn;
+.container .content {
+animation-duration: 0.25s;
+transition-timing-function: ease-in;
+animation-fill-mode: both;
+animation-name: fadeIn;
 }
 
+/* .container .content .project-info {
+animation-duration: .35s;
+transition-timing-function: ease-in;
+animation-fill-mode: both;
+animation-name: fadeIn;
+}
+ */
 .container.is-exiting .content {
   animation-direction: alternate-reverse;
 }
@@ -187,9 +198,8 @@ img {
   background:red;
 }
 
-* Keyframes
+//Keyframes
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
- */
