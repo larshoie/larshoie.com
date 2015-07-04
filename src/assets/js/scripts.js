@@ -1,33 +1,21 @@
-// function setHover() {
-//   if ($('.project-list a.active').next().length) {
-//       $('.project-list a.active').next().addClass('active').end().removeClass('active');
-//   } else {
-//       $('.project-list a.active').removeClass('active');
-//       $('.project-list a:first-of-type').addClass('active');
-//       //$('.project-list .project').first().addClass('active');
-//   }
-// }
-//
-// //setInterval(setHover, 1000);
-// function initList_test() {
-// //$('.project-list a.active').removeClass('active');
-// var initList = setInterval(function(){ setHover();}, 3000) ;
-//  $('.project-list, .ingress').mouseover(function(){
-//     clearInterval(initList);
-//     $('.project-list a.active').removeClass('active');
-//  }).mouseout(function(){
-//     initList = setInterval(function(){ setHover();}, 3000) ;
-//  })
-// }
-//
-
-
-
-
-
-
 function init() {
 
+
+
+
+
+  // (function($) {
+  //     $('.ingress-project').addClass('stacking-transition');
+  //     $('.item').first().addClass('stacking-transition');
+  //     $('.project-info').addClass('stacking-transition');
+  //
+  //     setTimeout(function () {
+  //      $('.ingress-project').removeClass('stacking-transition'); //then after all that go back to normal
+  //      $('.item').first().removeClass('stacking-transition');
+  //      $('.project-info').removeClass('stacking-transition');
+  //    }, 450);
+  //
+  // })(jQuery);
 
 
 
@@ -41,7 +29,14 @@ function init() {
     .css({'display' : 'block', 'opacity': '1'
   });
   $('.about .project-image').wrapAll("<div class='slides'><div class='inner'></div></div>");
-  $('.inner').attr('data-timeout', '4000').tcycle();
+  $('.inner').attr('data-timeout', '3000').tcycle();
+
+  $('.project, .about').mouseenter(function() {
+    $('.inner').addClass('hide');
+  });
+  $('.project, .about').mouseleave(function() {
+    $('.inner').removeClass('hide');
+  });
 
 
 
@@ -70,67 +65,6 @@ function init() {
 
 
 
-  //   setInterval(scroll_to_next_screen, 10000);
-
-  //   //WAYPOINTS STUFF -- _fluff.scss
-  //   var waypoints = $('.other-projects').waypoint({
-  //     //console.log('heyyyyyyyy!!!!');
-  //     console.log(this.element.id + ' hit' + direction)
-  //     //$('.project-info').toggleClass('bottom', direction === 'down');
-  // })
-
-
-  // var waypoints = $('img').waypoint(function(direction) {
-  //   //console.log('hey' + ' hit' + direction)
-  //   if (direction === 'down') {
-  //     $('.ingress-project').removeClass('fade-up').addClass('fade-down');
-  //   }
-  //   if (direction === 'up') {
-  //     $('.ingress-project').removeClass('fade-down').addClass('fade-up');
-  //   }
-  //   //$('.ingress-project').toggleClass('fade-down', direction === 'down');
-  // })
-
-
-  // var waypoints = $('li.other-projects').waypoint({
-  //   handler: function() {
-  //     console.log('Hit midpoint of my context')
-  //   },
-  //   context: 'ul.project-content',
-  //   offset: '50%'
-  // })
-
-
-  // var waypoints = $('.other-projects').waypoint(function(direction) {
-  //   console.log('heyyyyyyyy!!!!');
-  //   offset: '50%'
-  //   //console.log(this.element.id + ' hit' + direction)
-  //   //$('.ingress-project').addClass('fade-down');
-  //   //$('.ingress-project').toggleClass('fade-up', direction === 'up');
-  //   //$('img:last-of-type').toggleClass('fade', direction === 'down');
-  //   //console.log(this.element.id + ' hit' + direction)
-  // })
-
-  //var waypoints = $('img').waypoint(function(direction) {
-  //  console.log(this.element.id + ' hit' + direction)
-  //})
-
-
-  //   $(window).scroll(function() {
-  //     if(($(document).scrollTop() + window.innerHeight)>($(document).innerHeight() * 0.99)){
-  //         //Bottom Reached
-  //         //console.log('BOTTOM!!!');
-  //         $('.project-info').addClass('bottom');
-  //         //$('.project-info').css('pointer-events','none');
-  //     }
-  //     else {
-  //         //console.log('NOT BOTTOM!!!');
-  //         $('.project-info').removeClass('bottom');
-  //         //$('.project-info').css('pointer-events','initial');
-  //     }
-  // });
-
-
   // scrollfadeshit
   $(window).bind('scroll', function(){
 
@@ -153,9 +87,6 @@ function init() {
 
 
 
-
-
-
   // $(document).scrollsnap({
   //     snaps: '.item',
   //     proximity: 400,
@@ -168,6 +99,10 @@ function init() {
   //     closeDelay: 9999,
   //     intentSensitivity:100000
   // });
+
+
+
+
 
 
   function scroll_to_nearest_li(e, t) {
