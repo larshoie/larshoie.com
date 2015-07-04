@@ -297,30 +297,20 @@
 }
 
 
-
-
-/*
-.index .throw-up:not(:hover) {
-  opacity:0.1;
+.slides {
+  display: block;
+  //width: 100vw;
+  //height: 100vw;
+  /* z-index: 99999999; */
+  position: fixed;
+  top: 10vh;
+  left: 10vw;
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
 }
 
-.index .bold:not(:hover) {
-  opacity:0.1;
+.inner {
+  width: 100%;
+  height: 100%;
 }
-
-
-.group1:hover .throw-up {
-  opacity:1;
-  //background:$light;
-}
-
-.group2:hover .bold {
-  opacity:1;
-  //background:$light;
-}
-
-
-.group2:hover .haandbryggeriet {
-  opacity:1;
-  //background:$light;
-} */

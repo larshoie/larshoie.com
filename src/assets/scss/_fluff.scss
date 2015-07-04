@@ -1,0 +1,85 @@
+.container .project-info {
+  animation-duration: 0.250s;
+  animation-delay:0.450s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.item.stacking-transition img {
+  pointer-events:initial;
+  z-index:999999999999!important;
+}
+
+.ingress-project.stacking-transition {
+  z-index:999999999999!important;
+}
+
+.project-info.stacking-transition {
+  z-index:-1;
+}
+
+/* .stack-one img {
+  pointer-events:initial;
+  z-index:999999999999!important;
+  //animation:fadeIn 0.5s;
+}
+
+.stack-two {
+  z-index:999999999999!important;
+  //animation:fadeIn 0.5s;
+} */
+
+//cutting animations for v6
+.container .content {
+/* animation-duration: 0.25s;
+transition-timing-function: ease-in;
+animation-fill-mode: both;
+animation-name: fadeIn; */
+}
+
+/* .container .content .project-info {
+animation-duration: .35s;
+transition-timing-function: ease-in;
+animation-fill-mode: both;
+animation-name: fadeIn;
+}
+ */
+.container.is-exiting .content {
+  /* animation-direction: alternate-reverse; */
+}
+
+.container.is-loading {
+  opacity:1;
+  background:red;
+}
+
+//Keyframes
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* .fade {
+  animation:fadeIn 0.5s;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity:1;
+  }
+  to {
+    opacity:0;
+  }
+}
+
+.fade-down {
+  animation:fadeDown 3s;
+  opacity:0;
+}
+
+.fade-up {
+  animation:fadeDown 3s reverse;
+  //opacity:1;
+}
+ */

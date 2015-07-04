@@ -86,7 +86,8 @@ gulp.task('html', function() {
 
 
 
-
+//'js/jquery.scrollstop.js',
+//'js/jquery.scrollsnap.js',
 
 
 gulp.task('scripts', function () {
@@ -100,12 +101,11 @@ gulp.task('scripts', function () {
 
         .pipe(order([
                 'js/jquery-2.1.4.min.js',
-                'js/jquery.scrollstop.js',
-                'js/jquery.scrollsnap.js',
                 'js/jquery.smoothState.js',
                 'js/jquery.tcycle.js',
-                'js/scripts.js',
-                'js/respimage.min.js'
+                'js/jquery.waypoints.min.js',
+                'js/respimage.min.js',
+                'js/scripts.js'
             ], { base: '/' }))
 
         .pipe(concat('scripts.js', {

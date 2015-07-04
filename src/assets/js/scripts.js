@@ -1,26 +1,25 @@
-function setHover() {
-  if ($('.project-list a.active').next().length) {
-      $('.project-list a.active').next().addClass('active').end().removeClass('active');
-  } else {
-      $('.project-list a.active').removeClass('active');
-      $('.project-list a:first-of-type').addClass('active');
-      //$('.project-list .project').first().addClass('active');
-  }
-}
-
-//setInterval(setHover, 1000);
-function initList_test() {
-//$('.project-list a.active').removeClass('active');
-var initList = setInterval(function(){ setHover();}, 3000) ;
- $('.project-list, .ingress').mouseover(function(){
-    clearInterval(initList);
-    $('.project-list a.active').removeClass('active');
- }).mouseout(function(){
-    initList = setInterval(function(){ setHover();}, 3000) ;
- })
-}
-
-
+// function setHover() {
+//   if ($('.project-list a.active').next().length) {
+//       $('.project-list a.active').next().addClass('active').end().removeClass('active');
+//   } else {
+//       $('.project-list a.active').removeClass('active');
+//       $('.project-list a:first-of-type').addClass('active');
+//       //$('.project-list .project').first().addClass('active');
+//   }
+// }
+//
+// //setInterval(setHover, 1000);
+// function initList_test() {
+// //$('.project-list a.active').removeClass('active');
+// var initList = setInterval(function(){ setHover();}, 3000) ;
+//  $('.project-list, .ingress').mouseover(function(){
+//     clearInterval(initList);
+//     $('.project-list a.active').removeClass('active');
+//  }).mouseout(function(){
+//     initList = setInterval(function(){ setHover();}, 3000) ;
+//  })
+// }
+//
 
 
 
@@ -28,36 +27,117 @@ var initList = setInterval(function(){ setHover();}, 3000) ;
 
 
 function init() {
-//setInterval(scroll_to_next_screen, 10000);
 
-  //gifshit
-  $('.gif').tcycle();
 
-  // if(($(document).scrollTop() + window.innerHeight)>($(document).innerHeight() * 0.85)){
-  //   body.css('display:none;');
-  // }
 
-  $(window).scroll(function() {
-    if(($(document).scrollTop() + window.innerHeight)>($(document).innerHeight() * 0.99)){
-        //Bottom Reached
-        //console.log('BOTTOM!!!');
-        $('.project-info').addClass('bottom');
-        //$('.project-info').css('pointer-events','none');
-    }
-    else {
-        //console.log('NOT BOTTOM!!!');
-        $('.project-info').removeClass('bottom');
-        //$('.project-info').css('pointer-events','initial');
-    }
-});
 
-  //scrollfadeshit
+
+  //slides på forsiden
+  $('.project-list')
+    .find('.project-image')
+    .clone()
+    .wrapAll("<div class='wrap'></div>")
+    .appendTo('.about')
+    .css({'display' : 'block', 'opacity': '1'
+  });
+  $('.about .project-image').wrapAll("<div class='slides'><div class='inner'></div></div>");
+  $('.inner').attr('data-timeout', '4000').tcycle();
+
+
+
+
+
+
+  $('.gif').tcycle(); //gifshit
+
+
+
+
+
+
+  (function($) {
+    //$('.project-content:nth-last-child(2)').waypoint(function (direction) {
+    $('.other-projects').waypoint(function (direction) {
+      //$('.project-info').addClass('bottom');
+      //console.log(this.element.id + ' hit' + direction);
+      $('.project-info').toggleClass('bottom', direction === 'down');
+      }, { offset: 'bottom-in-view'
+    });
+  })(jQuery);
+
+
+
+
+
+
+  //   setInterval(scroll_to_next_screen, 10000);
+
+  //   //WAYPOINTS STUFF -- _fluff.scss
+  //   var waypoints = $('.other-projects').waypoint({
+  //     //console.log('heyyyyyyyy!!!!');
+  //     console.log(this.element.id + ' hit' + direction)
+  //     //$('.project-info').toggleClass('bottom', direction === 'down');
+  // })
+
+
+  // var waypoints = $('img').waypoint(function(direction) {
+  //   //console.log('hey' + ' hit' + direction)
+  //   if (direction === 'down') {
+  //     $('.ingress-project').removeClass('fade-up').addClass('fade-down');
+  //   }
+  //   if (direction === 'up') {
+  //     $('.ingress-project').removeClass('fade-down').addClass('fade-up');
+  //   }
+  //   //$('.ingress-project').toggleClass('fade-down', direction === 'down');
+  // })
+
+
+  // var waypoints = $('li.other-projects').waypoint({
+  //   handler: function() {
+  //     console.log('Hit midpoint of my context')
+  //   },
+  //   context: 'ul.project-content',
+  //   offset: '50%'
+  // })
+
+
+  // var waypoints = $('.other-projects').waypoint(function(direction) {
+  //   console.log('heyyyyyyyy!!!!');
+  //   offset: '50%'
+  //   //console.log(this.element.id + ' hit' + direction)
+  //   //$('.ingress-project').addClass('fade-down');
+  //   //$('.ingress-project').toggleClass('fade-up', direction === 'up');
+  //   //$('img:last-of-type').toggleClass('fade', direction === 'down');
+  //   //console.log(this.element.id + ' hit' + direction)
+  // })
+
+  //var waypoints = $('img').waypoint(function(direction) {
+  //  console.log(this.element.id + ' hit' + direction)
+  //})
+
+
+  //   $(window).scroll(function() {
+  //     if(($(document).scrollTop() + window.innerHeight)>($(document).innerHeight() * 0.99)){
+  //         //Bottom Reached
+  //         //console.log('BOTTOM!!!');
+  //         $('.project-info').addClass('bottom');
+  //         //$('.project-info').css('pointer-events','none');
+  //     }
+  //     else {
+  //         //console.log('NOT BOTTOM!!!');
+  //         $('.project-info').removeClass('bottom');
+  //         //$('.project-info').css('pointer-events','initial');
+  //     }
+  // });
+
+
+  // scrollfadeshit
   $(window).bind('scroll', function(){
 
     var fadeStart=300,
         fadeUntil=500,
         //fading = $('.ingress-project, .project-header ~ *');
-        fading = $('.ingress-project');
+        fading = $('.ingress-project p');
 
       var offset = $(document).scrollTop(),
           opacity=0.03;
@@ -68,6 +148,13 @@ function init() {
       }
       fading.css('opacity',opacity);
   });
+
+
+
+
+
+
+
 
   // $(document).scrollsnap({
   //     snaps: '.item',
@@ -82,7 +169,6 @@ function init() {
   //     intentSensitivity:100000
   // });
 
-  //console.log('GIF, OK');
 
   function scroll_to_nearest_li(e, t) {
       "undefined" == typeof e && (e = $(window).scrollTop()), "undefined" == typeof t && (t = !1), $("li").each(function() {
@@ -152,13 +238,8 @@ function init() {
 
 
 
-
 // go and init shit
 init();
-initList_test();
-
-
-
 
 
 
@@ -167,7 +248,7 @@ $(function(){
   'use strict';
   var options = {
     prefetch: true,
-    cacheLength: 20,
+    cacheLength: 25,
 
     onStart: {
       duration: 0, // Duration of our animation
@@ -180,7 +261,7 @@ $(function(){
     },
 
     onReady: {
-      duration: 250,
+      duration: 0,
       render: function ($container, $newContent) {
         // Remove your CSS animation reversing class
         $container.removeClass('is-exiting');
@@ -193,9 +274,35 @@ $(function(){
 
     onAfter: function($container, $newContent) {
 
-      // on ajax load, go and init that shit again
-      init();
-      //initList_test();
+
+
+
+
+      init(); // on ajax load, go and init that shit again
+
+
+
+
+      (function($) {
+          $('.ingress-project').addClass('stacking-transition');
+          $('.item').first().addClass('stacking-transition');
+          $('.project-info').addClass('stacking-transition');
+
+          setTimeout(function () {
+           $('.ingress-project').removeClass('stacking-transition'); //then after all that go back to normal
+           $('.item').first().removeClass('stacking-transition');
+           $('.project-info').removeClass('stacking-transition');
+         }, 450);
+
+      })(jQuery);
+
+
+
+
+      $('.project-info').removeClass('bottom');
+
+
+
 
       // go back to square one on esc
       $(document).keydown(function(event) {
@@ -213,7 +320,3 @@ $(function(){
   },
   smoothState = $('#main').smoothState(options).data('smoothState');
 });
-
-
-
-console.log('OK');

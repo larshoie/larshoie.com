@@ -1,3 +1,7 @@
+/* .project-info, .project-list, .item {
+  box-shadow: -5vw 0 25vw 0 blue;
+} */
+
 body {
   overflow-x:hidden;
   box-sizing: border-box;
@@ -5,7 +9,7 @@ body {
   //padding: $padding;
   background: yellow;
   background: blue;
-  background: $dark;
+  background: $light;
 
   // Font
   font-family: $sans-serif;
@@ -172,34 +176,4 @@ img {
     top:0;
     right:0;
   }
-}
-
-//cutting animations for v6
-.container .content {
-animation-duration: 0.25s;
-transition-timing-function: ease-in;
-animation-fill-mode: both;
-animation-name: fadeIn;
-}
-
-/* .container .content .project-info {
-animation-duration: .35s;
-transition-timing-function: ease-in;
-animation-fill-mode: both;
-animation-name: fadeIn;
-}
- */
-.container.is-exiting .content {
-  animation-direction: alternate-reverse;
-}
-
-.container.is-loading {
-  //opacity:0;
-  background:red;
-}
-
-//Keyframes
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
 }
