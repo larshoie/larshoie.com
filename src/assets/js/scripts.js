@@ -26,16 +26,17 @@ function init() {
     .clone()
     .wrapAll("<div class='wrap'></div>")
     .appendTo('.about')
-    .css({'display' : 'block', 'opacity': '1'
-  });
+    .css({'display' : 'block', 'opacity': '1'})
+
   $('.about .project-image').wrapAll("<div class='slides'><div class='inner'></div></div>");
   $('.inner').attr('data-timeout', '3000').tcycle();
+  //$('.inner').hide().attr('data-timeout', '3000').tcycle().fadeIn('fast');
 
-  $('.project, .about').mouseenter(function() {
-    $('.inner').addClass('hide');
+  $('.project, .about, .ingress').mouseenter(function() {
+    $('.slides').addClass('hide');
   });
-  $('.project, .about').mouseleave(function() {
-    $('.inner').removeClass('hide');
+  $('.project, .about, .ingress').mouseleave(function() {
+    $('.slides').removeClass('hide');
   });
 
 

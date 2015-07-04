@@ -61,6 +61,8 @@ h1 {
     z-index: -1;
     top: 0;
   @include skjerm {
+    z-index: 999;
+    pointer-events:initial;
     position:static;
     float:none;
     padding-left:$padding;
@@ -94,7 +96,7 @@ h1 {
   a {color:$light;}
   a:hover {
     //@extend %underlined;
-    //color:red;
+    color:red;
     //font-family: $sans-serif;
     //text-decoration:underline;
     }
@@ -110,6 +112,8 @@ h1 {
 }
 
 .contact {
+  font-size: 10vw;
+  padding-bottom: 2rem;
   @include skjerm {display:none;}
 }
 
