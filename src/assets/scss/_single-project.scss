@@ -26,6 +26,7 @@
       content:"\2193";
       @include skjerm {content:"\2192";}
     }
+    a:hover {border-bottom: 0.3vw solid $dark;}
     a, span {
     float:left;
     color:$dark;
@@ -35,11 +36,6 @@
     color:$dark;
     margin-right:2rem;
     }
-  }
-  a:hover {
-    //color: red!important;
-    //border-color: $dark!important;
-    //border-bottom: 3px solid red;
   }
 .title {
   float: left;

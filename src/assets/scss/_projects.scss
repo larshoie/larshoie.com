@@ -21,11 +21,6 @@
     }
 }
 
-
-ul.project {
-  //@include hide;
-}
-
 .project {
   overflow: hidden;
   width: 100%;
@@ -73,7 +68,29 @@ ul.project {
     }
   }
 }
-
+.projects h1 {
+  color: $dark;
+  //border:0!important;
+  display:inline;
+  border-top: 0.2vw solid transparent;
+  border-bottom: 0.3vw solid $dark;
+  padding: 0!important;
+  margin: 0;
+  font-size: inherit;
+  //margin-left:-0.15vw;
+  //border-color: transparent;
+}
+/* a:hover.project-nav-link {
+    //color:red!important;
+    border:0;
+    padding:0!important;
+    margin:0!important;
+    //margin-left:-0.15vw;
+    //border-color: transparent;
+    //border-bottom: 0.3vw solid;
+    //border-bottom-color:$dark;
+    border-bottom: 0.3vw solid transparent;
+} */
 .project-list {
   background: $light;
   color:$dark;

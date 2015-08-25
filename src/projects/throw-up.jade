@@ -1,10 +1,11 @@
 extends ../layout/project-layout.jade
 
-block vars
+block variables
   - var Title = 'Throw up'
   - var Type =  'Publication'
   - var Year =  '2015'
-  
+  - var Description = 'Graphic designer studying at CSM.'
+
 block project
   +project_image("throw-up","3"," ", "item")
   +project_image("throw-up","1"," ", "item")
@@ -28,7 +29,7 @@ block project
   
 
 block blurb
-  | An exploration of design and interaction, with some reflections on the role of the designer in a contemporary context. The loose form of the book facilitated interesting experimentation with the physicality of the book, and all its inherent qualities.
-
+  | Simultaniously a reflection on the act of debating, and an attempt to encourage a more inclusive and fun debate format. The content was drawn from each transcribed sentence from the various conversations and debates after the debates. 
+  
 block prev
   +image_link('old-school-a-z', 'Old School A—Z', '1', 'light')

@@ -20,6 +20,7 @@ var gulp         = require('gulp'),
     responsive   = require('gulp-responsive'),
     webp         = require('gulp-webp'),
     minifyHTML   = require('gulp-minify-html'),
+    run          = require('gulp-npm-run'),
     critical     = require('critical').stream;
 
 // Sass
@@ -100,13 +101,13 @@ gulp.task('scripts', function () {
         }))
 
         .pipe(order([
-                'js/jquery-2.1.4.min.js',
-                'js/jquery.smoothState.js',
-                'js/jquery.tcycle.js',
-                'js/jquery.waypoints.min.js',
-                'js/respimage.min.js',
-                'js/scripts.js'
-            ], { base: '/' }))
+          'js/jquery-2.1.4.min.js',
+          'js/jquery.smoothState.js',
+          'js/jquery.tcycle.js',
+          'js/jquery.waypoints.min.js',
+          'js/respimage.min.js',
+          'js/scripts.js'
+        ], { base: '/' }))
 
         .pipe(concat('scripts.js', {
             newLine:'\n;' // the newline is needed in case the file ends with a line comment, the semi-colon is needed if the last statement wasn't terminated
@@ -119,6 +120,8 @@ gulp.task('scripts', function () {
         .pipe(rename('scripts.min.js'))
         .pipe(gulp.dest('build/js'))
 });
+
+
 
 gulp.task('polyfill-js', function() {
    gulp.src('src/assets/polyfill/*.js')
@@ -188,6 +191,12 @@ gulp.task('browser-sync', function() {
   });
 });
 
+
+var gulp = require('gulp-npm-run')(require('gulp'), {
+  require: ['surge']
+});
+
+
 // Generate & Inline Critical-path CSS
 // gulp.task('critical', function () {
 //     return gulp.src('build/*.html')
@@ -218,6 +227,7 @@ gulp.task('critical', ['build', 'copystyles'], function () {
 
 
 
+
 gulp.task
 ('build',
   [
@@ -241,21 +251,22 @@ gulp.task
   //'takana',
   'html',
   'scripts',
-  'polyfill-js',
-  'polyfill-css',
+  //'polyfill-js',
+  //'polyfill-css',
   //'webp',
   'images',
   'fonts',
   'CNAME',
   //'critical',
   'browser-sync'
+  //'deploy'
   ],
 function () {
   gulp.watch('src/assets/scss/**/*.scss', ['sass']);
   gulp.watch('src/assets/fonts', ['fonts']);
   gulp.watch('src/assets/js/**/*.js', ['scripts']);
-  gulp.watch('src/assets/polyfill/**/*.js', ['polyfill-js']);
-  gulp.watch('src/assets/polyfill/**/*.css', ['polyfill-css']);
+  //gulp.watch('src/assets/polyfill/**/*.js', ['polyfill-js']);
+  //gulp.watch('src/assets/polyfill/**/*.css', ['polyfill-css']);
   //gulp.watch('src/assets/images/**/*.jpg', ['webp']);
   gulp.watch('src/assets/images/**/*.jpg', ['images']);
   gulp.watch('src/**/*.jade', ['html']);

@@ -1,0 +1,137 @@
+.page-content {
+  @include print {
+    font-size:12pt;
+    width:210mm;
+    height:297mm;
+  }
+
+
+  h2 {
+    @extend %underlined-dark;
+  }
+  dl {
+    color: $dark;
+    //background:lightyellow;
+    overflow: hidden;
+    @include skjerm {
+      padding: 10vw;
+    }
+    a {
+      color: $dark;
+    }
+  }
+  dt {
+    @include skjerm {
+      width: 50%;
+      float: left;
+        @include print {
+          width:105mm;
+        }
+    }
+  }
+  dd {
+    @include skjerm {
+      width: 50%;
+        @include print {
+          width:105mm;
+        }
+      float: left;
+      margin-bottom: 6rem;
+    }
+    ul {
+      margin-bottom: 1rem;
+      dl {
+        padding: 0;
+        dt {
+          //width: 50%;
+        }
+        dd {
+          //width: 50%;
+        }
+      }
+    }
+  }
+}
+
+/* .nav-language {
+  float: left;
+  width:50%;
+  margin-left:50%;
+   a {
+     color:$dark;
+     margin-right:2rem;
+   }
+} */
+
+
+
+.small {
+  //font-size:1vw;
+  dd {
+    padding:0;
+    margin:0;
+  }
+}
+
+nav.nav-cv {
+  height:100vh;
+  position: fixed;
+  text-align:center;
+  background:$dark;
+  padding:10vw $padding 0 $padding - ($padding / 3);
+  a {
+    padding:0.3rem;
+    margin-top:-0.2rem;
+    color:$light;
+  }
+}
+
+.nav-back {
+  font-size: 2vw;
+}
+
+.nav-language {
+  position: absolute;
+  bottom: $padding;
+  //font-size:1rem;
+  letter-spacing: 1px;
+    a {
+      display:block;
+      //margin-top:0.5rem;
+      border:$stroke-width solid transparent;
+    }
+    a:hover, .nav-active {
+      border:$stroke-width solid $light;
+    }
+}
+
+
+li.en a.en {
+  @extend .nav-active;
+}
+
+li.no a.no {
+  @extend .nav-active;
+}
+
+
+.--nav-rotate {
+    //-webkit-writing-mode: vertical-lr;
+    //transform: rotate(90deg);
+    //width: 100vh;
+    //transform-origin: 0 130%;
+    display: block;
+    overflow: hidden;
+    li {
+      /* float: left; */
+    }
+    a {
+      /* float: left;
+      display: inline;
+      width: 200px; */
+    }
+}
+
+.list-padding li {
+  padding-bottom:1rem;
+}

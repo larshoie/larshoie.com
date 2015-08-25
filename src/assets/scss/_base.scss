@@ -1,5 +1,9 @@
-/* .project-info, .project-list, .item {
-  box-shadow: -5vw 0 25vw 0 blue;
+/* .project-info, .project-list {
+  box-shadow: 0vw 0vw 100vw 10vw red;
+} */
+
+/* .ingress, .ingress-project {
+  box-shadow: 0vw 0vw 1vw 1vw red;
 } */
 
 body {
@@ -7,8 +11,8 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   //padding: $padding;
-  background: yellow;
-  background: blue;
+  //background: yellow;
+  //background: blue;
   background: $light;
 
   // Font

@@ -43,8 +43,14 @@
     position:absolute!important;
   }
 
+  $stroke-width:0.2rem;
+
    %underlined {
-      border-bottom: 0.2rem solid $light;
+      border-bottom: $stroke-width solid $light;
+      display:inline;
+   }
+   %underlined-dark {
+      border-bottom: $stroke-width solid $dark;
       display:inline;
    }
 
@@ -98,6 +104,11 @@
      }
    }
 
+   @mixin print {
+     @media print {
+       @content;
+     }
+   }
 
    // universal padding (grid etc.)
       $padding:2vw;

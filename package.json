@@ -4,7 +4,7 @@
   "description": "Gulpfile for larshoie.com",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "surge": "surge -p build -d larshoie.com"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/larshoie/larshoie.com/issues"
   },
-  "homemorphbutton": "https://github.com/larshoie/larshoie.com",
   "devDependencies": {
     "bower": "^1.4.1",
     "browser-sync": "^2.0.0",
@@ -35,6 +34,7 @@
     "gulp-kit": "^0.1.1",
     "gulp-minify-css": "^1.1.6",
     "gulp-minify-html": "^1.0.3",
+    "gulp-npm-run": "0.0.1",
     "gulp-order": "^1.1.1",
     "gulp-plumber": "^0.6.6",
     "gulp-pretty-url": "^0.1.1",
@@ -49,6 +49,7 @@
     "vinyl": "^0.4.6"
   },
   "dependencies": {
-    "critical": "^0.5.7"
+    "critical": "^0.5.7",
+    "surge": "^0.14.3"
   }
 }

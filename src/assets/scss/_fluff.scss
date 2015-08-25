@@ -6,6 +6,12 @@
   animation-name: fadeIn;
 }
 
+.container .project-info.group a {
+  animation:none!important;
+  opacity:1!important;
+}
+
+
 // .container.is-exiting .project-info {
 //   animation-direction: reverse;
 //   animation-duration: 5s;
