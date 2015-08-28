@@ -1,23 +1,149 @@
 $light: #fcfcfc;
 //$light: yellowgreen;
-//$light: pink;
 $dark: #1a1a1a;
-//$dark: pink;
+//$dark: green;
+
 $padding: 2vw;
+$stroke-width:0.22vw;
+
+
+
+  $layer1: 10;
+  $layer2: 20;
+  $layer3: 30;
+  $layer4: 40;
+  $layer5: 50;
+  $layer6: 60;
+  $layer7: 70;
+  $layer8: 80;
+  $layer9: 90;
+ $layer10: 100;
+ $layer11: 110;
+
+
+
+
+// Breakpoints
+   $mobile-width: 500px;
+   $tablet-width: 800px;
+   $screen-width: 960px;
+
+   @mixin mobil {
+     @media (min-width: $mobile-width) {
+       @content;
+     }
+   }
+
+   @mixin tablet {
+     @media (min-width: $tablet-width) {
+       @content;
+     }
+   }
+
+   @mixin skjerm {
+     @media (min-width: $screen-width) {
+       @content;
+     }
+   }
+
+   @mixin print {
+     @media print {
+       @content;
+     }
+   }
+
+
+
+
+// Font-face
+  @font-face {
+      font-family: 'RT Obligat';
+      src: url('/css/fonts/rt_obligat.woff2') format('woff2'),
+           url('/css/fonts/rt_obligat.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+  @font-face {
+    font-family: 'RT Obligat Outlined';
+    src: url('/css/fonts/rt_obligat_outlined.woff2') format('woff2'),
+         url('/css/fonts/rt_obligat_outlined.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+// Font-stacks
+   $sans-serif:"RT Obligat", "Helvetica Neue", sans-serif;
+   $serif:"Times New Roman", serif;
+   $outlined: "RT Obligat Outlined", "Helvetica Neue", sans-serif;
+
+
+
+
+   @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+     ::-webkit-scrollbar {
+         width:  $size;
+         height: $size;
+     }
+
+     ::-webkit-scrollbar-thumb {
+         background: $foreground-color;
+     }
+
+     ::-webkit-scrollbar-track {
+         background: $background-color;
+     }
+
+     // For Internet Explorer
+     body {
+       scrollbar-face-color: $foreground-color;
+       scrollbar-track-color: $background-color;
+     }
+   }
+
+   @include scrollbars(0px, transparent, transparent);
+
 
 #__bs_notify__ {
   display:none!important;
 }
 
+
+// Windows Phone/Tablet/Metro responsive tags
+@-ms-viewport {
+width: device-width;
+}
+
+@viewport {
+width: device-width;
+}
+
+
+
+
+
 html, body {
-    height: 100%;
-    overflow: hidden;
-    margin: 0;
-    font-size: 2vw;
-    color:$dark;
-    line-height:1.25;
-    font-family:RT obligat;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  font-size: 2vw;
+  color:$dark;
+  line-height:1.25;
+  font-family:RT obligat;
   letter-spacing: 0.08vw;
+
+  // Kerning
+  //font-feature-settings: "kern" 1; //hmm?
+  text-rendering: optimizeLegibility; /* optional: for older browsers */
+  -moz-font-feature-settings: "kern=1"; /* pre-Firefox 14+ */
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern"; /* Firefox 14+ */
+  font-feature-settings: "kern"; /* standard */
+  font-kerning: normal; /* Safari 7+, Firefox 24+, Chrome 33(?)+, Opera 21+*/
+
+  // Ligatures
+  text-rendering: optimizeLegibility; /* optional: for older browsers */
+  -webkit-font-variant-ligatures: common-ligatures; /* for iOS and Safari 6 */
+  font-variant-ligatures: common-ligatures; /* for up-to-date browsers, including IE10 and Opera 21 */
 }
 
 .container, .content {
@@ -40,6 +166,7 @@ ul,li {
 
 
 
+
 .col1, .col2 {
   float:left;
   width:50%;
@@ -55,21 +182,26 @@ ul,li {
 .col1 {
   background: $dark;
   color: $light;
+  a { color: $light;}
 }
 
 .col2 {
   background: $light;
-  //position: relative;
-  //z-index:9999;
 }
 
 .col1:hover, .col2:hover {
   position: relative;
-  z-index:999999;
+  z-index:$layer10;
 }
+
+// .col1:hover {
+//   position: relative;
+//   z-index:999999;
+// }
 
 h2 {
   padding-top: 0;
+  margin-top: 6vh;
   text-align: center;
   font-size: 16vw;
   line-height:0.9;
@@ -83,7 +215,7 @@ h3 {
 
 ul.images {
   position: fixed;
-  z-index: 999;
+  z-index: $layer9;
   left:10vw;
   top: 10vh;
   right:10vw;
@@ -92,6 +224,7 @@ ul.images {
   display:flex;
   flex-direction:column;
   height:80vh;
+  &:hover {z-index: $layer11;}
   li {
     overflow:hidden;
     height:100%;
@@ -109,7 +242,7 @@ ul.images {
     object-fit: cover;
     pointer-events:none;
     position:fixed;
-    z-index:999;
+    z-index:$layer10;
     top:10vh;
     bottom:10vh;
   }
@@ -124,6 +257,8 @@ ul.images {
 
 
 
+
+
 header {
   a {display:block; padding: 1vh 0.7vw;}
 }
@@ -133,7 +268,7 @@ header {
   float: left;
   padding: 0vh $padding;
   position: relative;
-  z-index: 999999;
+  z-index: 999999991;
 }
 
 .logo {
@@ -146,6 +281,7 @@ header {
   }
   li:last-child {
     float: right;
+    display: none;
   }
 }
 nav ul{
@@ -153,6 +289,8 @@ nav ul{
   float: left;
   li {
     float: left;
+    //width:30%;
+    //padding-right:2vw;
   }
   li:last-child {
     float: right;
@@ -164,12 +302,13 @@ nav ul{
 
 
 .ingress {
-  font-size: 5.7vw;
+  font-size: 5.66vw;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 0.15vw;
-  padding-top: 14vh;
-  padding-top: 22vh;
-  padding-top: 0;
+  -webkit-text-stroke-width: $stroke-width;
+  //padding-top: 14vh;
+  //padding-top: 22vh;
+  padding-top: 1vh;
+  margin-top: 6vh;
   //padding-left: 0.7vw;
   margin-bottom: 1em;
 }
@@ -179,7 +318,7 @@ nav ul{
 }
 .london:hover img {
   display: block;
-  z-index: 9999999;
+  z-index: $layer10;
   position: fixed;
   //width: 80vw;
   height: 80vh;
@@ -209,20 +348,22 @@ nav ul{
 
 
 
+
 .projects-link-menu, .projects {
   display: block;
   position: fixed;
   width: 90%;
-  z-index: 99999;
+  z-index: 99999999; //!!!! hmm
   //background: $light;
   height:100vh;
   overflow-y: scroll;
   overflow-x: hidden;
   right:0;
-  left:10vw;
+  //left:10vw;
   padding: 2vh $padding 0;
   //top:2vw;
   >ul {
+    overflow-y: scroll;
     //width: 46vw; //??????
     position: relative;
     right: -44.2%;
@@ -235,7 +376,7 @@ nav ul{
     padding-top: 10.35vw;
     //padding-top: 36vh;
 }
-  img {
+  img, .slides {
     object-fit: cover;
     pointer-events: none;
     position:fixed;
@@ -249,7 +390,12 @@ nav ul{
     display: none;
   }
 }
-
+.projects {
+  pointer-events: none;
+}
+.projects>ul {
+  pointer-events: initial;
+}
 .project-meta li {
   float: left;
   display: block;
@@ -262,8 +408,9 @@ nav ul{
   margin-bottom: -0.35vw;
   width:46vw;
 }
-.project-link:hover {
+.project-link:hover, .project-link:focus {
   border-color: $dark;
+  outline: none;
 }
 .project-link:hover img {
   display: block;
@@ -279,4 +426,43 @@ li.project-year {
 
 .hidden {
   display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.zzz {
+  position: relative;
+  z-index: 999!important;
+}
+
+
+
+.hidethatshit {
+  position: fixed;
+  top: 10vh;
+  bottom: 10vh;
+  right:10vw;
+  width:38%;
+  //height: 80vh;
+  background: transparent;
+  //background: red;
+  z-index: 9999;
+  opacity: 0.5;
+  //pointer-events: none;
 }

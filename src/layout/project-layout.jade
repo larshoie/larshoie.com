@@ -28,6 +28,7 @@ html
             include includes/list_of_projects.jade
         .col1
           include includes/about.jade
+          block column_one
         .col2
           h2 #{Title}
           block project_info
@@ -36,6 +37,7 @@ html
               //-block prev
             //-li.next
               //-block next
+        .hidethatshit
         ul.images
           block project
     include includes/footer.jade

@@ -1,12 +1,29 @@
 function init() {
 
   //project menu hover
-  $('.projects-link, .projects-link-menu').mouseenter(function() {
+  $('.projects-link, .projects-link-menu, .projects').mouseenter(function() {
     $('.projects-link-menu').removeClass('hidden');
   });
-  $('.projects-link, .projects-link-menu').mouseleave(function() {
+  $('.projects-link, .projects-link-menu, .projects').mouseleave(function() {
     $('.projects-link-menu').addClass('hidden');
   });
+
+  //images hover cockblock
+  $('.hidethatshit').mouseenter(function() {
+    $('.col2').addClass('zzz');
+  });
+  $('.hidethatshit').mouseleave(function() {
+    $('.col2').removeClass('zzz');
+  });
+
+  // //images hover cockblock
+  // $('.hidethatshit, .projects-link-menu, .projects').mouseenter(function() {
+  //   $('.col2').addClass('zzz');
+  // });
+  // $('.hidethatshit, .projects-link-menu, .projects').mouseleave(function() {
+  //   $('.col2').removeClass('zzz');
+  // });
+
 
 
   // //click??
@@ -17,24 +34,27 @@ function init() {
   //   $('.projects-link-menu').addClass('hidden');
   // });
 
+
+
   //slides på forsiden
-  $('.project-list')
-    .find('.project-image')
-    .clone()
-    .wrapAll("<div class='wrap'></div>")
-    .appendTo('.about')
-    .css({'display' : 'block', 'opacity': '1'})
 
-  $('.about .project-image').wrapAll("<div class='slides'><div class='inner'></div></div>");
-  $('.inner').attr('data-timeout', '3000').tcycle();
-  //$('.inner').hide().attr('data-timeout', '3000').tcycle().fadeIn('fast');
-
-  $('.project, .about, .ingress').mouseenter(function() {
-    $('.slides').addClass('hide');
-  });
-  $('.project, .about, .ingress').mouseleave(function() {
-    $('.slides').removeClass('hide');
-  });
+  // $('.projects-link-menu')
+  //   .find('.project-image')
+  //   .clone()
+  //   .wrapAll("<div class='wrap'></div>")
+  //   .appendTo('.about')
+  //   .css({'display' : 'block', 'opacity': '1'})
+  //
+  // $('.about .project-image').wrapAll("<div class='slides'><div class='inner'></div></div>");
+  // $('.inner').attr('data-timeout', '3000').tcycle();
+  // //$('.inner').hide().attr('data-timeout', '3000').tcycle().fadeIn('fast');
+  //
+  // $('.project, .about, .ingress').mouseenter(function() {
+  //   $('.slides').addClass('hidden');
+  // });
+  // $('.project, .about, .ingress').mouseleave(function() {
+  //   $('.slides').removeClass('hidden');
+  // });
 
 
 
@@ -102,23 +122,25 @@ $(function(){
 
 
 
-      (function($) {
-          $('.ingress').addClass('stacking-transition');
-          $('li').first().addClass('stacking-transition');
-          $('.col2').addClass('stacking-transition');
-
-          setTimeout(function () {
-           $('.ingress').removeClass('stacking-transition'); //then after all that go back to normal
-           $('li').first().removeClass('stacking-transition');
-           $('.col2').removeClass('stacking-transition');
-         }, 450);
-
-      })(jQuery);
-
-
+      // (function($) {
+      //     $('.col1').addClass('stacking-transition');
+      //     $//('li').first().addClass('stacking-transition');
+      //     $('.col2').addClass('stacking-transition');
+      //
+      //     setTimeout(function () {
+      //      $('.col1').removeClass('stacking-transition'); //then after all that go back to normal
+      //      //$('li').first().removeClass('stacking-transition');
+      //      $('.col2').removeClass('stacking-transition');
+      //    }, 450);
+      //
+      // })(jQuery);
 
 
-      $('.col2').removeClass('bottom');
+
+
+      //$('.col2').removeClass('bottom');
+
+      //$('.col2').addClass('zzz');
 
 
 

@@ -103,7 +103,7 @@ gulp.task('scripts', function () {
         .pipe(order([
           'js/jquery-2.1.4.min.js',
           'js/jquery.smoothState.js',
-          //'js/jquery.tcycle.js',
+          'js/jquery.tcycle.js',
           //'js/jquery.waypoints.min.js',
           'js/respimage.min.js',
           'js/scripts.js'
