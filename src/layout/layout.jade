@@ -12,7 +12,20 @@ html
   body
     #main.container
       .content
-        include includes/header.jade
+        header
+          ul.logo
+            li
+              a(href='/') Lars Høie
+            li
+              a(href='#') Call +47 924 44 762 for a good time
+          nav(role='navigation')
+            ul
+              li
+                a(href='/') Projects
+              li
+                a(href='#') Process
+          ul.projects(role='navigation')
+            include includes/list_of_projects.jade
         .col1
           include includes/about.jade
         .col2

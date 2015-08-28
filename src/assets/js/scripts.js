@@ -8,6 +8,15 @@ function init() {
     $('.projects-link-menu').addClass('hidden');
   });
 
+
+  // //click??
+  // $('.projects-link').click(function() {
+  //   $('.projects-link-menu').removeClass('hidden');
+  // });
+  // $('.projects-link').click(function() {
+  //   $('.projects-link-menu').addClass('hidden');
+  // });
+
   //slides på forsiden
   $('.project-list')
     .find('.project-image')
