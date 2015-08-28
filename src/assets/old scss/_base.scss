@@ -7,7 +7,8 @@
 } */
 
 body {
-  overflow-x:hidden;
+  //overflow-x:hidden;
+  //overflow: hidden;
   box-sizing: border-box;
   margin: 0 auto;
   //padding: $padding;
@@ -111,14 +112,15 @@ body[data-direction='down'] {
 }
 
 .control {
-width: 50%!important;
-height:100%!important;
-color: transparent;
-background: transparent;
-position: fixed;
-z-index: 9;
-top: 0;
-left: 0;
+  display:none;
+  width: 50%!important;
+  height:100%!important;
+  color: transparent;
+  background: transparent;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
 }
 
 // Lists
@@ -159,8 +161,8 @@ img {
   float:none;
   @include skjerm {
     width:50%;
-    float:none;
-    //margin-left:-50%;
+    float:left;
+    position: relative;
   }
 }
 
@@ -169,16 +171,13 @@ img {
   padding:$padding;
   width:100%;
   float:none;
-  overflow:hidden;
   @include skjerm {
     color:$light;
     background:$light;
-    position: fixed;
-    overflow:visible;
-    z-index:1;
     width:50%;
     min-height:100vh;
-    top:0;
-    right:0;
+    float:left;
+    position: relative;
+    z-index: 99999999;
   }
 }

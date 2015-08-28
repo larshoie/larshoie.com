@@ -1,7 +1,27 @@
-header.contact
-  nav
-    .logo
+header
+  ul.logo
+    li
       a(href='/') Lars Høie
-      span.call  &#8594; Call 
-      a(href="tel:+4792444762", class="me") +47 924 44 762 
-      span.goodtime  for a good time!
+    li
+      a(href='#') Call +47 924 44 762 for a good time
+  nav(role='navigation')
+    ul
+      li
+        a.projects-link(href='/') Projects
+      li
+        a(href='#') Process
+        
+  div.projects-link-menu.hidden
+    ul
+      li 
+        +list_of_projects("Throw up","throw-up","Publication","2015", "1")
+      li
+        +list_of_projects("Old school A—Z","old-school-a-z","Lettering","2014", "1")
+      li
+        +list_of_projects("News for our generation","news-for-our-generation","Editorial","2014", "1")
+      li
+        +list_of_projects("Design is everything","design-is-everything","Publication","2014", "3")
+      li
+        +list_of_projects("Bold magazine","bold","Editorial","2014", "1")
+      li
+        +list_of_projects("Haandbryggeriet","haandbryggeriet","Branding","2013", "2")

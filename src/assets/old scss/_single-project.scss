@@ -1,26 +1,21 @@
 .group {
-  @include skjerm {
-    display:block;
-    position: fixed;
-    top:0;
-    left:50%;
-    padding:2vw;
-    width: 50%;
-    }
-    //mobil
-    //display:none;
     display:flex;
     flex-direction: column;
     flex-wrap:wrap;
     justify-content:space-between;
     align-items: flex-start;
     align-content: space-between;
-
     margin-bottom:1rem;
     position: static;
     width: 100%;
-    //float: none;
-    //
+    @include skjerm {
+      display:block;
+      position: fixed;
+      top:0;
+      left:50%;
+      padding:2vw;
+      width: 50%;
+      }
     .arrow:after {
       font-family:inherit;
       content:"\2193";
@@ -69,7 +64,6 @@ object-fit: cover;
 }
 
 .project-info {
-    //animation: fadeIn .025s;
     position:relative;
     margin-top:50vh;
     width:100%;
@@ -87,7 +81,6 @@ object-fit: cover;
     top:0;
     right:0;
     width:50%;
-    overflow: hidden;
     background: $light;
     color: $dark;
     z-index: 0;
@@ -98,6 +91,10 @@ object-fit: cover;
         //animation: infoFade .5s;
       }
   }
+  h2 {
+    font-size:18vw;
+    text-align: center;
+  }
 }
 
 .project-info.bottom {
@@ -107,18 +104,10 @@ object-fit: cover;
   //animation: fadeIn .25s reverse;
 }
 
-/* @keyframes infoFade {
-  from {
-    z-index: 0;
-  }
-  to {
-    z-index: 99999;
-    }
-} */
 
 .meta { //li
   & :not(p) {
-    display: none;
+    //display: none;
   }
   //float:left;
   //width:100%;
@@ -164,38 +153,10 @@ object-fit: cover;
   }
 }
 
-/* .project-main-photo {
-  position: fixed;
-  //z-index:-1; //
-  top:0;
-    @include skjerm {
-      //display:none;
-      padding:0;
-      margin:0;
-      z-index:-999;
-      position: fixed;
-      overflow:hidden;
-      top:15vmin;
-      left:10vmin;
-      bottom:10vmin;
-      //right:10vmin;
-      right:50%;
-      //margin: 0 0 0 -25vmin;
-      pointer-events:none;
-         img {
-          object-fit: cover;
-          min-height: 70vmin;
-          width:auto;
-          //margin-left:-25vmin;
-        }
-    }
-
-} */
-
-@keyframes project-slide-up {
- from {margin-top:100vh; opacity:0;}
- to {margin-top: $top * 3; opacity:1;}
-}
+// @keyframes project-slide-up {
+//  from {margin-top:100vh; opacity:0;}
+//  to {margin-top: $top * 3; opacity:1;}
+// }
 
 .project-content {
     position: relative;
@@ -209,21 +170,8 @@ object-fit: cover;
     float:left;
     padding:0;
     margin:0;
-    //animation: project-slide-up 0.5s 1;
-    //margin-top: $top * 3; //HHHHHEEEYYYYY
     padding-bottom:10vmin;
   }
-  /* &:before {
-    content:'hei';
-    width: 50%;
-    position:absolute;
-    //top: $top;
-    background:red;
-    height:100%;
-    bottom:0;
-    left:0;
-    z-index:-1;
-    } */
     &:before {
       @include skjerm {
         content:'';
@@ -249,29 +197,3 @@ object-fit: cover;
       }
     }
 }
-
-/* .project-background-white {
-  //display: none;
-  @include skjerm {
-    //display: block;
-    height:100%;
-    width:50%;
-    background:$dark;
-    position:absolute;
-    left:0;
-    top:0;
-    z-index:-1;
-  }
-}
-.project-background-black {
-  //display: none;
-  @include skjerm {
-    height:100%;
-    width:50%;
-    background:$light;
-    position:absolute;
-    right:0;
-    top:0;
-    z-index:-1;
-  }
-} */

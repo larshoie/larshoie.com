@@ -103,8 +103,8 @@ gulp.task('scripts', function () {
         .pipe(order([
           'js/jquery-2.1.4.min.js',
           'js/jquery.smoothState.js',
-          'js/jquery.tcycle.js',
-          'js/jquery.waypoints.min.js',
+          //'js/jquery.tcycle.js',
+          //'js/jquery.waypoints.min.js',
           'js/respimage.min.js',
           'js/scripts.js'
         ], { base: '/' }))
@@ -121,19 +121,6 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('build/js'))
 });
 
-
-
-gulp.task('polyfill-js', function() {
-   gulp.src('src/assets/polyfill/*.js')
-   //.pipe(uglify())
-   .pipe(gulp.dest('build/polyfill/'));
-});
-
-gulp.task('polyfill-css', function() {
-   gulp.src('src/assets/polyfill/*.css')
-   //.pipe(minifyCss())
-   .pipe(gulp.dest('build/polyfill/'));
-});
 
 // Images
 // Fuckin' generate images for srcset!!!
@@ -233,7 +220,9 @@ gulp.task
   [
   'sass',
   'html',
-  'scripts'
+  'scripts',
+  'fonts',
+  'images'
   ],
 function () {
 
@@ -254,20 +243,20 @@ gulp.task
   //'polyfill-js',
   //'polyfill-css',
   //'webp',
-  'images',
-  'fonts',
-  'CNAME',
+  //'images',
+  //'fonts',
+  //'CNAME',
   //'critical',
   'browser-sync'
   //'deploy'
   ],
 function () {
   gulp.watch('src/assets/scss/**/*.scss', ['sass']);
-  gulp.watch('src/assets/fonts', ['fonts']);
+  //gulp.watch('src/assets/fonts', ['fonts']);
   gulp.watch('src/assets/js/**/*.js', ['scripts']);
   //gulp.watch('src/assets/polyfill/**/*.js', ['polyfill-js']);
   //gulp.watch('src/assets/polyfill/**/*.css', ['polyfill-css']);
   //gulp.watch('src/assets/images/**/*.jpg', ['webp']);
-  gulp.watch('src/assets/images/**/*.jpg', ['images']);
+  //gulp.watch('src/assets/images/**/*.jpg', ['images']);
   gulp.watch('src/**/*.jade', ['html']);
 });

@@ -22,9 +22,7 @@
 }
 
 .project {
-  overflow: hidden;
   width: 100%;
-  //height:50vh;
   display: block;
   &:nth-child(even) {
     //background:$light;
@@ -50,54 +48,36 @@
   padding:0;
   margin:0;
   position: fixed;
-  overflow:hidden;
   pointer-events:none;
   right: 50%;
   bottom: 0;
   left:10vw;
   top:10vh;
-  //max-width: 96%;
-  //max-width:48%;
+  overflow: hidden;
      img {
       height: 80vh;
-      //width: calc(100vw - 2%);
       width: calc(100vw - 0.25rem);
       max-width:calc(80vw - 0.25rem);
-      //width: 150%;
       object-fit: contain;
     }
   }
 }
 .projects h1 {
   color: $dark;
-  //border:0!important;
   display:inline;
   border-top: 0.2vw solid transparent;
   border-bottom: 0.3vw solid $dark;
   padding: 0!important;
   margin: 0;
   font-size: inherit;
-  //margin-left:-0.15vw;
-  //border-color: transparent;
 }
-/* a:hover.project-nav-link {
-    //color:red!important;
-    border:0;
-    padding:0!important;
-    margin:0!important;
-    //margin-left:-0.15vw;
-    //border-color: transparent;
-    //border-bottom: 0.3vw solid;
-    //border-bottom-color:$dark;
-    border-bottom: 0.3vw solid transparent;
-} */
+
 .project-list {
   background: $light;
   color:$dark;
   padding:0 6vw 15vw;
   margin-top:50vh;
   min-height:105vh;
-  //@include skjerm {padding:0 6vw 20vh;}
   a {
     color:$dark;
     margin-left:-1vw;
@@ -106,12 +86,10 @@
       line-height: 1.4;
       border: 0.3vw solid transparent;
       padding: 0.1vw 0.2vw 0.2vw 0.6vw;
-      //transition: 0.06s;
     }
     &:hover, &:focus {
       outline: none;
       border-color: $dark;
-      //color:$light;
     }
   }
   @extend .right-page;
@@ -120,7 +98,6 @@
       margin-top:0;
       padding:$padding;
       padding-top:$top;
-      //padding-top:calc(25vh + 2vw)!important; //$top 25vh
       color: $light;
     }
 

@@ -16,13 +16,5 @@ html
         .col1
           include includes/about.jade
         .col2
-          h2 #{Title}
-          block project_info
-          ul.other-projects  
-            li.prev
-              block prev
-            li.next
-              block next
-        ul.images
-          block project
+          block column_two
     include includes/footer.jade

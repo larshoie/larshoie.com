@@ -1,43 +1,21 @@
-extends layout/index-layout.jade
+extends layout/layout.jade
 
 block variables
-  - var Title = 'Lars Høie'
+  - var Title = 'INDEXXXXX'
   - var Description = 'Graphic designer studying at CSM.'
-    
-block about
-  .about
-    .contact I'm always up for new projects, ideas and colla&#173;borations.  
-      | Find me on 
-      a(href='http://twitter.com/larshoie') twitter
-      |, 
-      a(href='http://behance.com/larshoie') behance
-      |, 
-      a(href='http://instagram.com/larshoie') instagram
-      |, 
-      a(href='mailto:larshoie@gmail.com') e-mail
-      |  or 
-      a(href='tel:+47-92444762') call me, maybe?
-    
-    ul.education
-      li
-        h2 Education
-      li
-        ul
-          li 2014 &ndash; 2016 
-          li B.A. (Hons) Graphic Design,
-          li Central Saint Martins, United&nbsp;Kingdom.
-      li 
-        br
-        ul
-          li 2012 &ndash; 
-          li B.A. Visual Communication,
-          li Høgskolen i Buskerud og Vestfold, Norway.
-    
-    ul.experience
-      li
-        h2 Experience
-      li 
-        ul 
-          li Op designstudio, Norway 
-          li Internship, June &ndash; Sept 2014.
-          li Freelance Graphic Designer, 2012&nbsp;&ndash;
+
+block column_two
+  #projects
+    +list_of_projects("Hovden kunsthandel","hovden-kunsthandel","Interactive","2015", "1")
+    +list_of_projects("Throw up","throw-up","Publication","2015", "1")
+    +list_of_projects("So-called-collective","so-called","Branding","2015", "1")
+    //-+list_of_projects("Oh my God! It's a bird...","oh-my-god-its-a-bird","Publication","2015", "2")
+    +list_of_projects("Shoot first!","shoot-first","Publication","2015", "1")
+    +list_of_projects("Scarcity","scarcity","Interactive","2015", "1")
+    +list_of_projects("The art of getting lost","the-art-of-getting-lost","Interactive","2015", "1")
+    +list_of_projects("Jump around","jump-around","Interactive","2015", "1")
+    +list_of_projects("Old school A—Z","old-school-a-z","Lettering","2014", "1")
+    +list_of_projects("News for our generation","news-for-our-generation","Editorial","2014", "1")
+    +list_of_projects("Design is everything","design-is-everything","Publication","2014", "3")
+    +list_of_projects("Bold magazine","bold","Editorial","2014", "1")
+    +list_of_projects("Haandbryggeriet","haandbryggeriet","Branding","2013", "2")

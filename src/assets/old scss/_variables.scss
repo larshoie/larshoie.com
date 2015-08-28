@@ -1,43 +1,27 @@
 // colors
    $light: #fcfcfc;
-   //$dark: blue;
-   //$light: #fcfcfc;
    $dark: #1a1a1a;
-   //$light: gold;
-   //$light: white;
-   //$light: #1c1c1c;
-
-
-   //$light: white;
-
-
 
 // Font-face
-    @font-face {
-        font-family: 'RT Obligat';
-        src: url('/css/fonts/rt_obligat.woff2') format('woff2'),
-             url('/css/fonts/rt_obligat.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-
-    }
-
+  @font-face {
+      font-family: 'RT Obligat';
+      src: url('/css/fonts/rt_obligat.woff2') format('woff2'),
+           url('/css/fonts/rt_obligat.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
   @font-face {
     font-family: 'RT Obligat Outlined';
     src: url('/css/fonts/rt_obligat_outlined.woff2') format('woff2'),
          url('/css/fonts/rt_obligat_outlined.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
-}
-
-
+  }
 
 // Font-stacks
    $sans-serif:"RT Obligat", "Helvetica Neue", sans-serif;
    $serif:"Times New Roman", serif;
    $outlined: "RT Obligat Outlined", "Helvetica Neue", sans-serif;
-
 
   .absolute {
     position:absolute!important;
@@ -112,7 +96,4 @@
 
    // universal padding (grid etc.)
       $padding:2vw;
-      //$top:25vh;
-      $top:14vh;
       $top:10vw;
-      //$top:4vh;
