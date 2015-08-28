@@ -1,0 +1,20 @@
+.zzz {
+  position: relative;
+  z-index: 999!important;
+}
+
+
+
+.hidethatshit {
+  position: fixed;
+  top: 10vh;
+  bottom: 10vh;
+  right:10vw;
+  width:38%;
+  //height: 80vh;
+  background: transparent;
+  //background: red;
+  z-index: 9999;
+  opacity: 0.5;
+  //pointer-events: none;
+}

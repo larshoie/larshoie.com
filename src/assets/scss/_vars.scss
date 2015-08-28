@@ -1,0 +1,118 @@
+$light: #fcfcfc;
+//$light: yellowgreen;
+$dark: #1a1a1a;
+//$dark: green;
+
+$padding: 2vw;
+$stroke-width:0.22vw;
+
+
+
+  $layer1: 10;
+  $layer2: 20;
+  $layer3: 30;
+  $layer4: 40;
+  $layer5: 50;
+  $layer6: 60;
+  $layer7: 70;
+  $layer8: 80;
+  $layer9: 90;
+ $layer10: 100;
+ $layer11: 110;
+
+
+
+
+// Breakpoints
+   $mobile-width: 500px;
+   $tablet-width: 800px;
+   $screen-width: 960px;
+
+   @mixin mobil {
+     @media (min-width: $mobile-width) {
+       @content;
+     }
+   }
+
+   @mixin tablet {
+     @media (min-width: $tablet-width) {
+       @content;
+     }
+   }
+
+   @mixin skjerm {
+     @media (min-width: $screen-width) {
+       @content;
+     }
+   }
+
+   @mixin print {
+     @media print {
+       @content;
+     }
+   }
+
+
+
+
+// Font-face
+  @font-face {
+      font-family: 'RT Obligat';
+      src: url('/css/fonts/rt_obligat.woff2') format('woff2'),
+           url('/css/fonts/rt_obligat.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+  @font-face {
+    font-family: 'RT Obligat Outlined';
+    src: url('/css/fonts/rt_obligat_outlined.woff2') format('woff2'),
+         url('/css/fonts/rt_obligat_outlined.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+// Font-stacks
+   $sans-serif:"RT Obligat", "Helvetica Neue", sans-serif;
+   $serif:"Times New Roman", serif;
+   $outlined: "RT Obligat Outlined", "Helvetica Neue", sans-serif;
+
+
+
+
+   @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+     ::-webkit-scrollbar {
+         width:  $size;
+         height: $size;
+     }
+
+     ::-webkit-scrollbar-thumb {
+         background: $foreground-color;
+     }
+
+     ::-webkit-scrollbar-track {
+         background: $background-color;
+     }
+
+     // For Internet Explorer
+     body {
+       scrollbar-face-color: $foreground-color;
+       scrollbar-track-color: $background-color;
+     }
+   }
+
+   @include scrollbars(0px, transparent, transparent);
+
+
+#__bs_notify__ {
+  display:none!important;
+}
+
+
+// Windows Phone/Tablet/Metro responsive tags
+@-ms-viewport {
+width: device-width;
+}
+
+@viewport {
+width: device-width;
+}

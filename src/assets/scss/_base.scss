@@ -1,0 +1,77 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  font-size: 2vw;
+  color:$dark;
+  line-height:1.25;
+  font-family:RT obligat;
+  letter-spacing: 0.08vw;
+
+  // Kerning
+  //font-feature-settings: "kern" 1; //hmm?
+  text-rendering: optimizeLegibility; /* optional: for older browsers */
+  -moz-font-feature-settings: "kern=1"; /* pre-Firefox 14+ */
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern"; /* Firefox 14+ */
+  font-feature-settings: "kern"; /* standard */
+  font-kerning: normal; /* Safari 7+, Firefox 24+, Chrome 33(?)+, Opera 21+*/
+
+  // Ligatures
+  text-rendering: optimizeLegibility; /* optional: for older browsers */
+  -webkit-font-variant-ligatures: common-ligatures; /* for iOS and Safari 6 */
+  font-variant-ligatures: common-ligatures; /* for up-to-date browsers, including IE10 and Opera 21 */
+}
+
+.container, .content {
+    height: 100%;
+  }
+
+* { box-sizing: border-box }
+
+a {
+  text-decoration: none;
+  color: $dark;
+}
+
+ul,li {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+
+
+
+
+.col1, .col2 {
+  float:left;
+  width:50%;
+  padding:2vw;
+  padding: 2vw 2vw 10vh 2.7vw;
+  height:100%;
+  overflow:scroll;
+  backface-visibility:hidden;
+  transform: translateZ(0);
+  padding-bottom: 10vh;
+}
+
+.col1 {
+  background: $dark;
+  color: $light;
+  a { color: $light;}
+}
+
+.col2 {
+  background: $light;
+}
+
+.col1:hover, .col2:hover {
+  position: relative;
+  z-index:$layer10;
+}
+
+// .col1:hover {
+//   position: relative;
+//   z-index:999999;
+// }

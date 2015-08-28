@@ -24,18 +24,6 @@ function init() {
   //   $('.col2').removeClass('zzz');
   // });
 
-
-
-  // //click??
-  // $('.projects-link').click(function() {
-  //   $('.projects-link-menu').removeClass('hidden');
-  // });
-  // $('.projects-link').click(function() {
-  //   $('.projects-link-menu').addClass('hidden');
-  // });
-
-
-
   //slides på forsiden
 
   // $('.projects-link-menu')

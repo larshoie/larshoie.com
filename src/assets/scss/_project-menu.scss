@@ -1,0 +1,78 @@
+.projects-link-menu, .projects {
+  display: block;
+  position: fixed;
+  width: 90%;
+  z-index: 99999999; //!!!! hmm
+  //background: $light;
+  height:100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  right:0;
+  //left:10vw;
+  padding: 2vh $padding 0;
+  //top:2vw;
+  >ul {
+    overflow-y: scroll;
+    //width: 46vw; //??????
+    position: relative;
+    right: -44.2%;
+    background-color: $light;
+    z-index: 9999999;
+    //height: 100%;
+    min-height: 100%;
+    padding-left: 2vw;
+    padding-top: 5.35vw;
+    padding-top: 10.35vw;
+    //padding-top: 36vh;
+}
+  img, .slides {
+    object-fit: cover;
+    pointer-events: none;
+    position:fixed;
+    width:40vw;
+    height:80vh;
+    top:10vh;
+    bottom:10vh;
+    left:10vw;
+    right:10vw;
+    z-index:9999;
+    display: none;
+  }
+}
+.projects {
+  pointer-events: none;
+}
+.projects>ul {
+  pointer-events: initial;
+}
+.project-meta li {
+  float: left;
+  display: block;
+}
+.project-link {
+  border: .35vw solid transparent;
+  //padding: 1vw 2vw 1.1vw;
+  padding: 0.2vw 0.5vw 0.3vw;
+  overflow: hidden;
+  margin-bottom: -0.35vw;
+  width:46vw;
+}
+.project-link:hover, .project-link:focus {
+  border-color: $dark;
+  outline: none;
+}
+.project-link:hover img {
+  display: block;
+  pointer-events: none;
+}
+
+.project-title {
+  width:60%;
+}
+li.project-year {
+  float: right;
+}
+
+.hidden {
+  display:none;
+}

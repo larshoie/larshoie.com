@@ -1,0 +1,36 @@
+.ingress {
+  font-size: 5.66vw;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: $stroke-width;
+  //padding-top: 14vh;
+  //padding-top: 22vh;
+  padding-top: 1vh;
+  margin-top: 6vh;
+  //padding-left: 0.7vw;
+  margin-bottom: 1em;
+}
+
+.london img {
+  display: none;
+}
+.london:hover img {
+  display: block;
+  z-index: $layer10;
+  position: fixed;
+  //width: 80vw;
+  height: 80vh;
+  top: 4vh;
+  left: 10vw;
+  right: 0;
+  bottom: 10vh;
+  pointer-events: none;
+  object-fit: cover;
+}
+
+.experience, .education {
+  width: 50%;
+  font-size: 1.5vw;
+  padding-bottom: 1em;
+  float: left;
+  ul {padding-bottom: 1em;}
+}
