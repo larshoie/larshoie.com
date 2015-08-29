@@ -150,8 +150,8 @@ gulp.task('images', function () {
       })
     )
     //errorOnEnlargement: false
-    //withoutEnlargement: true
-    //.pipe(plumber())
+    //withoutEnlargement: false
+    .pipe(plumber())
     .pipe(gulp.dest('build/images'));
 });
 

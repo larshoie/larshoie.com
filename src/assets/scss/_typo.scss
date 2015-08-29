@@ -1,3 +1,12 @@
+p {
+  margin:0; //
+  padding:0; //
+}
+
+h1 {
+
+}
+
 h2 {
   padding-top: 0;
   margin-top: 6vh;
@@ -8,6 +17,60 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5vw;
-  margin-bottom:1em;
+  font-size: $s-text;
+  @extend %underline-dark; //
 }
+
+.about h3 {
+  font-size: $s-text;
+  @extend %underline-light;
+}
+
+
+
+
+%underline-light {
+  display: inline-block;
+  // background: linear-gradient($light, $light) no-repeat;
+  // background-size: 100% 0.18em;
+  // background-position: 0 1.33em;
+  // line-height: 1.5;
+  // text-shadow: .05em 0 $dark, -.05 0 $dark;
+  border-bottom: 0.25vw solid $light;
+  padding-bottom: 0.16em;
+}
+
+%underline-dark {
+  display: inline-block;
+  // background: linear-gradient($dark, $dark) no-repeat;
+  // background-size: 100% 0.18em;
+  // background-position: 0 1.33em;
+  // line-height: 1.5;
+  // text-shadow: .05em 0 $light, -.05 0 $light;
+  border-bottom: 0.25vw solid $dark;
+  padding-bottom: 0.16em;
+}
+
+
+
+
+
+.meta {
+   padding-top: 1em;
+   font-size: $s-text;
+   width: 100%;
+   columns: 2; //
+ }
+
+dl.meta {
+  padding-top: 0;
+  width:75%;
+  dt, dd {width:50%; margin:0; padding:0;}
+  dt {float: left;}
+  dd {float: right;}
+}
+
+// .meta p, .meta h3  {
+//   float: left; //
+//   width: 50%; //
+// }

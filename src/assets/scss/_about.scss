@@ -1,3 +1,5 @@
+
+
 .ingress {
   font-size: 5.66vw;
   -webkit-text-fill-color: transparent;
@@ -10,26 +12,44 @@
   margin-bottom: 1em;
 }
 
-.london img {
+span.csm span, span.london span {
   display: none;
 }
-.london:hover img {
+
+.lars span {
+  //opacity: 0.95;
+}
+
+.lars span, .csm:hover span, .london:hover span {
   display: block;
-  z-index: $layer10;
-  position: fixed;
-  //width: 80vw;
-  height: 80vh;
-  top: 4vh;
-  left: 10vw;
+  z-index: -1;
+  position: absolute;
+  /* width: 40vw; */
+  height: 70vh;
+  //top: 1.17vw;
+  top: 4vw;
+  left: 13vw;
   right: 0;
-  bottom: 10vh;
+  bottom: 7.92vw;
+  //bottom: 8.7vw;
+  //background-color: red;
   pointer-events: none;
+  overflow: hidden;
   object-fit: cover;
+  img  {
+    //display: block;
+    height: 77vh;
+    min-width:120%;
+    max-width:200%;
+    //height: auto;
+    //width: 100%;
+    object-fit: cover;
+  }
 }
 
 .experience, .education {
   width: 50%;
-  font-size: 1.5vw;
+  font-size: $s-text;
   padding-bottom: 1em;
   float: left;
   ul {padding-bottom: 1em;}

@@ -32,6 +32,14 @@ html
         .col2
           h2 #{Title}
           block project_info
+          block project_meta
+          .meta
+            h3 Brief
+            p
+              block brief
+            h3 Context
+            p
+              block context
           //-ul.other-projects  
             //-li.prev
               //-block prev

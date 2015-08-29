@@ -1,7 +1,7 @@
 extends ../layout/project-layout.jade
 
 block variables
-  - var Title = 'Future of news'
+  - var Title = 'Future of print'
   - var Type =  'Editorial'
   - var Year =  '2014'
   - var Description = 'Graphic designer studying at CSM.'
@@ -10,16 +10,18 @@ block project
   +project_image("news-for-our-generation","1"," ", "item")
   +project_image("news-for-our-generation","2"," ", "item")
   +project_image("news-for-our-generation","5"," ", "item")
-  //.half--right Lorum ipsum solor sit amet. Lorum ipsum solor sit amet. Lorum ipsum solor sit amet. Lorum ipsum solor sit amet. Lorum ipsum solor sit amet. 
   +project_image("news-for-our-generation","3"," ", "item")
-  //+project_image("news-for-our-generation","2"," ", "item")
   +project_image("news-for-our-generation","4"," ", "item")
-  //.quote Bold
-  //.quote Editorial
-  
 
 block project_info
   | A meta-newspaper exploring implications of algorithmic content models on design and communication in the future of printed news. 
+
+block project_meta
+  dl.meta
+    dt Duration:
+    dd Two weeks
+    dt Tutor: 
+    dd Jaap de Maat
 
 
 block prev
