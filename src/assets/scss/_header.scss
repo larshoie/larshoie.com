@@ -1,37 +1,36 @@
 header {
   a {display:block; padding: 1vh 0.7vw;}
-}
-
-.logo, nav ul {
-  width:50%;
-  float: left;
-  padding: 0vh $padding;
-  position: relative;
-  z-index: 999999991;
-}
-
-.logo {
-  background: $dark;
-  a {
-    color: $light;
-  }
-  li:first-child {
+  .logo, .main ul {
+    width:50%;
     float: left;
+    padding: 0vh $padding;
+    position: relative;
+    z-index: 999999991;
   }
-  li:last-child {
-    float: right;
-    display: none;
+
+  .logo {
+    background: $dark;
+    a {
+      color: $light;
+    }
+    li:first-child {
+      float: left;
+    }
+    li:last-child {
+      float: right;
+      display: none;
+    }
   }
-}
-nav ul{
-  background: $light;
-  float: left;
-  li {
+  .main ul{
+    background: $light;
     float: left;
-    //width:30%;
-    //padding-right:2vw;
-  }
-  li:last-child {
-    float: right;
+    li {
+      float: left;
+      //width:30%;
+      //padding-right:2vw;
+    }
+    li:last-child {
+      float: right;
+    }
   }
 }

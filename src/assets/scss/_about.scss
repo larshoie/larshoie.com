@@ -12,6 +12,14 @@
   margin-bottom: 1em;
 }
 
+@supports not ( -webkit-text-stroke-width: 20px ) {
+  .ingress {
+    font-family: $outlined!important;
+    color:$light!important;
+    //display:none!important;
+  }
+}
+
 span.csm span, span.london span {
   display: none;
 }

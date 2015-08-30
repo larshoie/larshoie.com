@@ -1,12 +1,26 @@
 function init() {
 
-  //project menu hover
-  $('.projects-link, .projects-link-menu, .projects').mouseenter(function() {
-    $('.projects-link-menu').removeClass('hidden');
+  // //project menu hover
+  $('.projects-link, .projects-container').mouseenter(function() {
+    $('.projects').removeClass('hidden');
   });
-  $('.projects-link, .projects-link-menu, .projects').mouseleave(function() {
-    $('.projects-link-menu').addClass('hidden');
+  $('.projects-link, .projects-container').mouseleave(function() {
+    $('.projects').addClass('hidden');
   });
+
+
+
+
+
+
+
+  // // //project menu hover
+  // $('.projects-link, .projects-link-menu, .projects').mouseenter(function() {
+  //   $('.projects-link-menu').removeClass('hidden');
+  // });
+  // $('.projects-link, .projects-link-menu, .projects').mouseleave(function() {
+  //   $('.projects-link-menu').addClass('hidden');
+  // });
 
   //images hover cockblock
   $('.hidethatshit').mouseenter(function() {
