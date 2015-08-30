@@ -17,4 +17,7 @@
   z-index: 9999;
   opacity: 0.5;
   //pointer-events: none;
+  @include mobil {
+    display: none;
+  }
 }

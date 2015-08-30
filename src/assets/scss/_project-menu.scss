@@ -5,6 +5,9 @@ nav.projects {
   position: fixed;
   pointer-events: none;
   overflow: hidden;
+  @include mobil {
+    height: auto;
+  }
 }
 
 ul.projects-container, ul.projects-container-home { // hover denne i js!!??
@@ -16,6 +19,18 @@ ul.projects-container, ul.projects-container-home { // hover denne i js!!??
   width: 50%;
   background-color: $light; //farge for alt
   padding: 0 1.6vw 21.3vh;
+  @include mobil {
+    background-color: yellow;
+    position: relative;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: visible;
+    height: auto;
+    width: 100%;
+    display: block;
+  }
 }
 
 .projects-inner { //viktig for padding top!
@@ -70,6 +85,9 @@ ul.projects-container, ul.projects-container-home { // hover denne i js!!??
   right:10vw;
   z-index:9999;
   overflow: hidden;
+  @include mobil {
+    display: none;
+  }
   img {
     object-fit: cover;
     pointer-events: none;
@@ -89,6 +107,10 @@ ul.projects-container, ul.projects-container-home { // hover denne i js!!??
 
 .project-title {
   width:60%;
+  @include mobil {
+    width: 100%;
+    font-size: 23vw;
+  }
 }
 li.project-year {
   float: right;

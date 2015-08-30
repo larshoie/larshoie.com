@@ -12,6 +12,9 @@ h2 {
   margin-top: 6vh;
   text-align: center;
   font-size: 16vw;
+  @include mobil {
+    font-size: 28vw;
+  }
   line-height:0.9;
   padding-bottom: 0vmin;
 }
@@ -58,11 +61,14 @@ h3 {
 .meta {
    padding-top: 1em;
    font-size: $s-text;
+   @include mobil {
+     font-size: 5vw;
+   }
    width: 100%;
    columns: 2; //
  }
 
-dl.meta {
+dl.meta { //TODO: mobil
   padding-top: 0;
   width:75%;
   dt, dd {width:50%; margin:0; padding:0;}

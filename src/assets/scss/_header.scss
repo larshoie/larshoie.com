@@ -1,5 +1,13 @@
 header {
-  a {display:block; padding: 1vh 0.7vw;}
+  @include mobil {
+    position: fixed; //problem for mobile nav!! Bah.
+    top: 0;
+    z-index: 999;
+    width: 100%;
+  }
+  a {
+    display:block; padding: 1vh 0.7vw;
+  }
   .logo, .main ul {
     width:50%;
     float: left;
@@ -10,8 +18,15 @@ header {
 
   .logo {
     background: $dark;
+    @include mobil {
+      background-color: $light;
+      width: 45%;
+    }
     a {
       color: $light;
+      @include mobil {
+        color: $dark;
+      }
     }
     li:first-child {
       float: left;
@@ -24,6 +39,11 @@ header {
   .main ul{
     background: $light;
     float: left;
+    @include mobil {
+      width: 55%;
+      padding: 0;
+      padding-right: 2vw;
+    }
     li {
       float: left;
       //width:30%;

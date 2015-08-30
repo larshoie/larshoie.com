@@ -1,7 +1,15 @@
-
+.about {
+  @include mobil {
+    overflow: hidden;
+    height: 100%;
+  }
+}
 
 .ingress {
   font-size: 5.66vw;
+  @include mobil {
+    font-size: 12vw;
+  }
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: $stroke-width;
   //padding-top: 14vh;
@@ -60,5 +68,11 @@ span.csm span, span.london span {
   font-size: $s-text;
   padding-bottom: 1em;
   float: left;
+  @include mobil {
+    font-size: 7vw;
+    width: 100%;
+    float: none;
+    color: $light;
+  }
   ul {padding-bottom: 1em;}
 }

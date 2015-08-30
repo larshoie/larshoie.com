@@ -24,18 +24,18 @@ $stroke-width:0.22vw;
 
 
 // Breakpoints
-   $mobile-width: 500px;
+   $mobile-width: 600px;
    $tablet-width: 800px;
    $screen-width: 960px;
 
    @mixin mobil {
-     @media (min-width: $mobile-width) {
+     @media (max-width: $mobile-width) {
        @content;
      }
    }
 
    @mixin tablet {
-     @media (min-width: $tablet-width) {
+     @media (min-width: $mobile-width) and (max-width: $screen-width) {
        @content;
      }
    }
