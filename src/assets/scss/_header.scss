@@ -1,18 +1,21 @@
 header {
   @include mobil {
-
-    display: none;
-
+    //display: none;
     position: fixed; //problem for mobile nav!! Bah.
     top: 0;
     z-index: 999;
     width: 100%;
-    background: $dark;
+    background: $light;
     padding: 2vh 0;
   }
   a {
     display:block; padding: 1vh 0.7vw;
-    @include mobil {color: $light;}
+    @include mobil {
+      color: $dark;
+      font-size: 5.5vw;
+      letter-spacing: 0.1vw;
+      padding: 3vw;
+    }
   }
   .logo, .main ul {
     width:50%;
@@ -26,10 +29,14 @@ header {
     background: $dark;
     @include mobil {
       background-color: transparent;
-      width: 45%;
+      width: auto;
+      padding: 0 $mpadding - 3vw;
     }
     a {
       color: $light;
+      @include mobil {
+        color: $dark;
+      }
     }
     li:first-child {
       float: left;
@@ -43,10 +50,10 @@ header {
     background: $light;
     float: left;
     @include mobil {
+      float: right;
       background: transparent;
-      width: 55%;
-      padding: 0;
-      padding-right: 2vw;
+      width: auto;
+      padding-right: $mpadding - 3vw;
     }
     li {
       float: left;
@@ -55,20 +62,23 @@ header {
     }
     li:last-child {
       float: right;
+      //padding-left: 3vw;
     }
   }
 }
 
 
 header.title {
-  display: block;
-  background: $light;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-  img {
-    @include mobil {
-      padding-top: 12vh;
+  @include mobil {
+    display: block;
+    background: $light;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    img {
+      @include mobil {
+        padding-top: 12vh;
+      }
     }
   }
 }

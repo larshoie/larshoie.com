@@ -1,3 +1,29 @@
+%underline-light {
+  display: inline-block;
+  // background: linear-gradient($light, $light) no-repeat;
+  // background-size: 100% 0.18em;
+  // background-position: 0 1.33em;
+  // line-height: 1.5;
+  // text-shadow: .05em 0 $dark, -.05 0 $dark;
+  border-bottom: 0.25vw solid $light;
+  padding-bottom: 0.16em;
+  @include mobil {
+    border-bottom: 1.2vw solid;
+    //line-height: 2em;
+  }
+}
+
+%underline-dark {
+  display: inline-block;
+  // background: linear-gradient($dark, $dark) no-repeat;
+  // background-size: 100% 0.18em;
+  // background-position: 0 1.33em;
+  // line-height: 1.5;
+  // text-shadow: .05em 0 $light, -.05 0 $light;
+  border-bottom: 0.25vw solid $dark;
+  padding-bottom: 0.16em;
+}
+
 p {
   margin:0; //
   padding:0; //
@@ -16,60 +42,39 @@ h2 {
   padding-bottom: 0vmin;
   @include mobil {
     font-size: 28vw;
-    margin-top: 10vh;
+    margin-top: 15vh;
     margin-bottom: 0;
     min-height: 30vh;
+    padding: 0 $mpadding;
+    letter-spacing: 0;
   }
 }
 
 h3 {
   font-size: $s-text;
   @extend %underline-dark; //
+  @include mobil {
+    font-size: 5vw;
+  }
 }
 
 .about h3 {
   font-size: $s-text;
   @extend %underline-light;
+  @include mobil {
+    font-size: 5vw;
+  }
 }
-
-
-
-
-%underline-light {
-  display: inline-block;
-  // background: linear-gradient($light, $light) no-repeat;
-  // background-size: 100% 0.18em;
-  // background-position: 0 1.33em;
-  // line-height: 1.5;
-  // text-shadow: .05em 0 $dark, -.05 0 $dark;
-  border-bottom: 0.25vw solid $light;
-  padding-bottom: 0.16em;
-}
-
-%underline-dark {
-  display: inline-block;
-  // background: linear-gradient($dark, $dark) no-repeat;
-  // background-size: 100% 0.18em;
-  // background-position: 0 1.33em;
-  // line-height: 1.5;
-  // text-shadow: .05em 0 $light, -.05 0 $light;
-  border-bottom: 0.25vw solid $dark;
-  padding-bottom: 0.16em;
-}
-
-
-
-
 
 .meta {
    padding-top: 1em;
    font-size: $s-text;
+   width: 100%;
+   columns: 2;
    @include mobil {
      font-size: 5vw;
-     padding: $padding;
+     columns: 1;
    }
-   width: 100%;
-   columns: 2; //
  }
 
 dl.meta { //TODO: mobil
@@ -80,15 +85,41 @@ dl.meta { //TODO: mobil
   dd {float: right;}
 }
 
-// .meta p, .meta h3  {
-//   float: left; //
-//   width: 50%; //
-// }
-
-
-
-.meta, .col1 p, .col2 p {
+.col1 p, .col2 p{
   @include mobil {
-    padding: 8vw;
+    padding: $mpadding;
+  }
+}
+
+
+
+
+
+
+
+
+
+.Haandbryggeriet {
+  .col1, .logo {
+    //background: darkblue;
+  }
+  .title {
+    //background: $dark;
+  }
+  h2 {
+    font-size: 6vw;
+    margin-top: 10vh;
+    //-webkit-text-stroke: 0.1vw $dark;
+    //-webkit-text-fill-color: transparent;
+    margin-bottom: 15vh;
+    min-height: 30vh;
+    // transform: rotate(-45deg);
+    // padding: 0 18vw;
+    // transform-origin: bottom right;
+    @include mobil {
+      font-size: 12vw;
+      //-webkit-text-stroke: 0.5vw;
+      //color: $dark;
+    }
   }
 }

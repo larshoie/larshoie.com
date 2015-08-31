@@ -7,10 +7,6 @@
 
 .ingress {
   font-size: 5.66vw;
-  @include mobil {
-    font-size: 12vw;
-    -webkit-text-stroke-width: 0.45vw;
-  }
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: $stroke-width;
   //padding-top: 14vh;
@@ -19,6 +15,10 @@
   margin-top: 6vh;
   //padding-left: 0.7vw;
   margin-bottom: 1em;
+  @include mobil {
+    font-size: 12vw;
+    -webkit-text-stroke-width: 0.45vw;
+  }
 }
 
 @supports not ( -webkit-text-stroke-width: 20px ) {
@@ -34,32 +34,24 @@ span.csm span, span.london span {
 }
 
 .lars span {
-  //opacity: 0.95;
 }
 
 .lars span, .csm:hover span, .london:hover span {
   display: block;
   z-index: -1;
   position: absolute;
-  /* width: 40vw; */
   height: 70vh;
-  //top: 1.17vw;
   top: 4vw;
   left: 13vw;
   right: 0;
   bottom: 7.92vw;
-  //bottom: 8.7vw;
-  //background-color: red;
   pointer-events: none;
   overflow: hidden;
   object-fit: cover;
   img  {
-    //display: block;
     height: 77vh;
     min-width:120%;
     max-width:200%;
-    //height: auto;
-    //width: 100%;
     object-fit: cover;
   }
 }
@@ -70,10 +62,11 @@ span.csm span, span.london span {
   padding-bottom: 1em;
   float: left;
   @include mobil {
-    font-size: 7vw;
+    font-size: 6vw;
     width: 100%;
     float: none;
     color: $light;
+    padding: 0 $mpadding;
   }
   ul {padding-bottom: 1em;}
 }
