@@ -23,17 +23,16 @@ html
               li
                 a.projects-link(href='/') Projects
               li
-                a(href='#') Process
+                a(href='#') Blog
           nav.projects.hidden
             ul.projects-container
               li.projects-inner
                 include includes/list_of_projects.jade
-        .col1
-          include includes/about.jade
-          block column_one
         .col2
-          h2 #{Title}
-          block project_info
+          header.title
+            h2 #{Title}
+          p
+            block project_info
           block project_meta
           .meta
             h3 Brief
@@ -47,7 +46,11 @@ html
               //-block prev
             //-li.next
               //-block next
-        .hidethatshit
         ul.images
           block project
+        .col1
+          include includes/about.jade
+          block column_one
+        .hidethatshit
+        
     include includes/footer.jade

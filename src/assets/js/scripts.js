@@ -60,6 +60,30 @@ function init() {
 
 
 
+  //coverbilde på mobil
+
+  $('.images')
+    .find('img')
+    .first()
+    .clone()
+    .addClass('cover')
+    //.wrap("<div class='cover'></div>")
+    .appendTo('header.title')
+    //.css({'display' : 'block', 'opacity': '1'})
+
+  // $('.about .project-image').wrapAll("<div class='slides'><div class='inner'></div></div>");
+  // $('.inner').attr('data-timeout', '3000').tcycle();
+  // //$('.inner').hide().attr('data-timeout', '3000').tcycle().fadeIn('fast');
+  //
+  // $('.project, .about, .ingress').mouseenter(function() {
+  //   $('.slides').addClass('hidden');
+  // });
+  // $('.project, .about, .ingress').mouseleave(function() {
+  //   $('.slides').removeClass('hidden');
+  // });
+
+
+
   $('.gif').tcycle(); //gifshit
 
 

@@ -23,7 +23,8 @@ html, body {
   font-variant-ligatures: common-ligatures; /* for up-to-date browsers, including IE10 and Opera 21 */
 
   @include mobil {
-    font-size: 7vw;
+    font-size: 8vw;
+    line-height:1.35;
     overflow: visible;
   }
 
@@ -51,7 +52,7 @@ ul,li {
 
 
 .col1, .col2 {
-  float:left;
+  float:right;
   width:50%;
   padding:2vw;
   padding: 2vw 2vw 10vh 2.7vw;
@@ -61,6 +62,7 @@ ul,li {
   transform: translateZ(0);
   padding-bottom: 10vh;
   @include mobil {
+    padding: 0;
     width: 100%;
     float: none;
     height: auto;
