@@ -239,9 +239,45 @@ li.project-year {
 
 
 
-.projects-container-home {
-  display: block!important;
-  //visibility: hidden;
-  height: auto;
-  overflow: auto;
+// .projects-container-home {
+//   display: block!important;
+//   //visibility: hidden;
+//   height: auto;
+//   overflow: auto;
+// }
+
+
+
+
+
+
+//fixxx
+
+ul.projects-container, ul.projects-container-home {
+    right: 0;
+    position: fixed;
+    z-index: 9999;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+    width: 100vw;
+    padding: 0 1.6vw 21.3vh;
+    pointer-events: none;
+}
+
+.projects-inner, .projects-inner-home {
+    width: 50vw;
+    /* overflow: scroll; */
+    right: 0;
+    position: absolute;
+    background: #fcfcfc;
+    pointer-events: none;
+    /* height: auto; */
+}
+
+.list-of-projects {
+    width: 100%;
+    height: 100vh;
+    padding: 14vh 2vw;
+    pointer-events: initial;
+    overflow: scroll;
 }
