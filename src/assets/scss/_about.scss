@@ -17,8 +17,9 @@
   //padding-left: 0.7vw;
   margin-bottom: 1em;
   @include mobil {
-    font-size: 10.7vw;
-    -webkit-text-stroke-width: 0.65vw;
+    font-size: 10vw;
+    -webkit-text-stroke-width: 0.45vw;
+    letter-spacing: 0.35vw;
   }
 }
 
@@ -58,7 +59,7 @@ span.csm span, span.london span {
   }
   @include mobil {
     top: 0;
-    opacity: 0.6;
+    //opacity: 0.6;
     width: 87.01vw;
   }
 }
