@@ -49,12 +49,15 @@ header {
     background: $light;
     float: left;
     @include mobil {
+      // float: right;
+      // background: transparent;
+      // width: auto;
+      // //padding-right: $mpadding - 3vw;
+      // padding-right: 8.5vw;
+      // padding-right: 10.5vw;
       float: right;
-      background: transparent;
-      width: auto;
-      //padding-right: $mpadding - 3vw;
-      padding-right: 8.5vw;
-      padding-right: 10.5vw;
+      width: 62vw;
+      padding-right: 6vw;
     }
     li {
       float: left;
