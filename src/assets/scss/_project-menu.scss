@@ -123,9 +123,9 @@ ul.projects-container, ul.projects-container-home { // hover denne i js!!??
   z-index:9999;
   overflow: hidden;
   display: none;
-  // @include mobil {
-  //   display: none;
-  // }
+    @include mobil {
+      display: none;
+    }
   img {
     object-fit: cover;
     pointer-events: none;
@@ -144,6 +144,9 @@ ul.projects-container, ul.projects-container-home { // hover denne i js!!??
   display: block;
   pointer-events: none;
   overflow: visible;
+  @include mobil {
+    display: none;
+  }
 }
 
 li.project-title {
@@ -223,6 +226,10 @@ li.project-year {
 //   height: auto;
 //   overflow: auto;
 // }
+
+
+
+
 
 
 
