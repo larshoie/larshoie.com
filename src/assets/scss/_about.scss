@@ -2,6 +2,7 @@
   @include mobil {
     overflow: hidden;
     height: 100%;
+    padding-bottom: 15vh;
   }
 }
 
@@ -16,8 +17,8 @@
   //padding-left: 0.7vw;
   margin-bottom: 1em;
   @include mobil {
-    font-size: 12vw;
-    -webkit-text-stroke-width: 0.45vw;
+    font-size: 10.7vw;
+    -webkit-text-stroke-width: 0.65vw;
   }
 }
 
@@ -54,6 +55,10 @@ span.csm span, span.london span {
     max-width:200%;
     object-fit: cover;
   }
+  @include mobil {
+    top: 0;
+    opacity: 0.9;
+  }
 }
 
 .experience, .education {
@@ -62,10 +67,10 @@ span.csm span, span.london span {
   padding-bottom: 1em;
   float: left;
   @include mobil {
-    font-size: 6vw;
+    font-size: 5vw;
     width: 100%;
     float: none;
-    color: $light;
+    color: $dark;
     padding: 0 $mpadding;
   }
   ul {padding-bottom: 1em;}

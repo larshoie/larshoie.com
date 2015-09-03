@@ -23,13 +23,15 @@ html
               li
                 a(href='/') Projects
               li
-                a(href='#') Blog
+                a(href='#') Process
           nav.projects
             ul.projects-container-home
               li.projects-inner
                 include includes/list_of_projects.jade
         .col2
           block column_two
+        .mobil-nav
+          include includes/list_of_projects.jade
         .col1
           include includes/about.jade
           block column_one

@@ -4,8 +4,9 @@ html, body {
   margin: 0;
   font-size: 2vw;
   color:$dark;
+  background: $light;
   line-height:1.25;
-  font-family:RT obligat;
+  font-family:$sans-serif;
   letter-spacing: 0.08vw;
 
   // Kerning
@@ -27,8 +28,8 @@ html, body {
     line-height:1.35;
     overflow: visible;
   }
-
 }
+
 
 .container, .content {
     height: 100%;
@@ -46,10 +47,6 @@ ul,li {
   padding:0;
   list-style:none;
 }
-
-
-
-
 
 .col1, .col2 {
   float:right;
@@ -74,6 +71,13 @@ ul,li {
   background: $dark;
   color: $light;
   a { color: $light;}
+
+  @include mobil {
+    background: $light;
+    color: $dark;
+    a { color: $dark;}
+  }
+
 }
 
 .col2 {

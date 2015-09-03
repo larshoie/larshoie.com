@@ -99,7 +99,7 @@ dl.meta { //TODO: mobil
 
 
 
-.Haandbryggeriet {
+.haandbryggeriet {
   .col1, .logo {
     //background: darkblue;
   }
@@ -123,3 +123,29 @@ dl.meta { //TODO: mobil
     }
   }
 }
+
+// .design-is-everything {
+//   .col1, .logo {
+//     //background: darkblue;
+//   }
+//   .title {
+//     //background: $dark;
+//   }
+//   h2 {
+//     font-size: 10vw;
+//     //letter-spacing: 20px;
+//     margin-top: 10vh;
+//     //-webkit-text-stroke: 0.1vw $dark;
+//     //-webkit-text-fill-color: transparent;
+//     margin-bottom: 15vh;
+//     min-height: 30vh;
+//     // transform: rotate(-45deg);
+//     // padding: 0 18vw;
+//     // transform-origin: bottom right;
+//     @include mobil {
+//       font-size: 12vw;
+//       //-webkit-text-stroke: 0.5vw;
+//       //color: $dark;
+//     }
+//   }
+// }

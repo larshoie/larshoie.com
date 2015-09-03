@@ -11,7 +11,7 @@ html
     include includes/mixins.jade
   body
     #main.container
-      .content(class="#{Title}")
+      .content(class="#{slug}")
         header
           ul.logo
             li
@@ -23,7 +23,7 @@ html
               li
                 a.projects-link(href='/') Projects
               li
-                a(href='#') Blog
+                a(href='#') Process
           nav.projects.hidden
             ul.projects-container
               li.projects-inner
@@ -48,7 +48,9 @@ html
               //-block next
         ul.images
           block project
-        .col1
+        .mobil-nav
+          include includes/list_of_projects.jade
+        .col1.hide-m
           include includes/about.jade
           block column_one
         //-.hidethatshit //trenger den ikke hvis 40% bilder

@@ -1,7 +1,8 @@
 $light: #fcfcfc;
-//$light: yellowgreen;
 $dark: #1a1a1a;
-//$dark: green;
+
+// $light: pink;
+// $dark: red;
 
 $padding: 2vw;
 $mpadding: 8vw;
@@ -24,19 +25,21 @@ $stroke-width:0.22vw;
 
 
 
+
+
 // Breakpoints
    $mobile-width: 600px;
    $tablet-width: 800px;
    $screen-width: 960px;
 
    @mixin mobil {
-     @media (max-width: $mobile-width) {
+     @media (max-width: $tablet-width) {
        @content;
      }
    }
 
    @mixin tablet {
-     @media (min-width: $mobile-width) and (max-width: $screen-width) {
+     @media (min-width: $tablet-width) {
        @content;
      }
    }
@@ -53,6 +56,29 @@ $stroke-width:0.22vw;
      }
    }
 
+   @mixin define-breakpoint($name) {
+       &:after {
+         content: $name;
+         display: none;
+       }
+   }
+
+
+
+
+body {
+  @include mobil(){
+      @include define-breakpoint("mobil");
+  }
+
+  @include tablet(){
+      @include define-breakpoint("tablet");
+  }
+
+  @include skjerm(){
+      @include define-breakpoint("skjerm");
+  }
+}
 
 
 
@@ -73,9 +99,9 @@ $stroke-width:0.22vw;
   }
 
 // Font-stacks
-   $sans-serif:"RT Obligat", "Helvetica Neue", sans-serif;
+   $sans-serif:"RT Obligat", "Helvetica Neue", "Helvetica", sans-serif;
    $serif:"Times New Roman", serif;
-   $outlined: "RT Obligat Outlined", "Helvetica Neue", sans-serif;
+   $outlined: "RT Obligat Outlined", "Helvetica Neue", "Helvetica", sans-serif;
 
    $s-text:   1.3vmax;
    $m-text:   2vw;
