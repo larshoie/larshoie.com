@@ -1,25 +1,46 @@
 nav.projects {
-  width: 100%;
-  height: 100vh;
-  z-index: 99999;
-  position: fixed;
-  pointer-events: none;
-  overflow: hidden;
+  // width: 100%;
+  // height: 100vh;
+  // z-index: 99999;
+  // position: fixed;
+  // pointer-events: none;
+  // overflow: hidden;
+  //
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    position: fixed;
+    pointer-events: none;
+    overflow: visible;
+
   @include mobil {
     height: auto;
   }
 }
 
 ul.projects-container, ul.projects-container-home { // hover denne i js!!??
-  right: 0;
-  position: fixed;
-  z-index: 99999;
-  height: 100vh;
-  overflow: scroll;
-  pointer-events: initial;
-  width: 50%;
-  background-color: $light; //farge for alt
-  padding: 0 1.6vw 21.3vh;
+  // right: 0;
+  // position: fixed;
+  // z-index: 99999;
+  // height: 100vh;
+  // overflow: scroll;
+  // pointer-events: initial;
+  // width: 50%;
+  // background-color: $light; //farge for alt
+  // padding: 0 1.6vw 21.3vh;
+  //
+    right: 0;
+    position: fixed;
+    z-index: 99999;
+    height: 100vh;
+    overflow: scroll;
+    pointer-events: initial;
+    width: 100vw;
+    padding: 0 1.6vw 21.3vh;
+//
+    pointer-events: none; //wooooooowwoowo viktig. bah.
+
+
   @include mobil {
     background-color: yellow;
     position: relative;
@@ -36,9 +57,22 @@ ul.projects-container, ul.projects-container-home { // hover denne i js!!??
 }
 
 .projects-inner { //viktig for padding top!
+  // padding-top: 8vw;
+  // pointer-events: initial;
+  // height: 100%;
+  //
   padding-top: 8vw;
-  pointer-events: initial;
-  height: 100%;
+  //pointer-events: initial;
+  width: 50vw;
+  overflow: hidden;
+  right: 0;
+  position: absolute;
+  //
+  //height: 100%;
+  //min-height: 99.99vh;
+  background: $light;
+  //
+  pointer-events:none;
 }
 
 .list-of-projects {
@@ -46,6 +80,10 @@ ul.projects-container, ul.projects-container-home { // hover denne i js!!??
   height: 100%;
   //display: flex; //hmm
   //flex-direction: column; //hmm
+  //
+  padding: 7vh 2vw;
+  pointer-events:initial;
+
   @include mobil {
     width: initial;
     height:initial;
@@ -91,11 +129,14 @@ ul.projects-container, ul.projects-container-home { // hover denne i js!!??
   img {
     object-fit: cover;
     pointer-events: none;
-    height:100vh;
-    width:100vw;
     top:0;
     bottom:0;
     left:0;
+    // height:100vh;
+    // width:100vw;
+    //
+    height: 100%;
+    width: 100%;
   }
 }
 
