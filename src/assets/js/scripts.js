@@ -53,7 +53,13 @@ function init() {
 
 
 
-
+      //project menu hover
+      $('.projects-link, .projects-inner').mouseenter(function() {
+        $('.projects').removeClass('hidden');
+      });
+      $('.projects-link, .projects-inner').mouseleave(function() {
+        $('.projects').addClass('hidden');
+      });
 
 
 
@@ -89,13 +95,7 @@ function init() {
       if(breakpoint === 'skjerm') {
 
 
-        // //project menu hover
-        $('.projects-link, .projects-inner').mouseenter(function() {
-          $('.projects').removeClass('hidden');
-        });
-        $('.projects-link, .projects-inner').mouseleave(function() {
-          $('.projects').addClass('hidden');
-        });
+
 
 
       }
