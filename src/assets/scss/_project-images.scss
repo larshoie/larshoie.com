@@ -24,10 +24,15 @@ ul.images {
 
   li {
     overflow:hidden;
-
     width:40.01vw;
     height: 80vh;
     //position: static;
+
+    @include mobil {
+      position: static;
+      width: 100vw;
+      height: 50vh;
+      }
   }
 
   .crop {
@@ -53,7 +58,13 @@ ul.images {
     height: 80vh;
     pointer-events:none;
     overflow: hidden;
-  }
+
+    @include mobil {
+      position: static;
+      width: 100%;
+      height: 100%;
+      }
+    }
 
   img {
     min-width: 100%;
@@ -95,5 +106,11 @@ ul.images {
 ul.images li:first-child {
   @include mobil {
     display:none;
+  }
+}
+
+.gif {
+  @include mobil {
+    overflow: visible!important;
   }
 }
