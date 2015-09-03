@@ -175,34 +175,6 @@ li.project-year {
   float: none;
   overflow: hidden;
 
-  // .test {
-  //   // position: fixed;
-  //   // z-index: -1;
-  //   // width: 60vw;
-  //   // height: 60vw;
-  //   // top: 30%;
-  //   // left: 20vw;
-  //   // bottom: 0;
-  //   // right: 0;
-  //   // opacity: 1;
-  //
-  //   position: fixed;
-  //   z-index: -1;
-  //   //width: 60vw;
-  //   height: 100vh;
-  //   top: 0;
-  //   left: 0;
-  //   bottom: 0;
-  //   right: 0;
-  //   opacity: 0.3;
-  //   filter: blur(10px);
-  //   img {
-  //     width: auto;
-  //     height: 100%;
-  //     object-fit:cover;
-  //   }
-  // }
-
   a {color: $dark;}
   li {}
   ul, li, li:first-child {
@@ -220,6 +192,12 @@ li.project-year {
     letter-spacing: .2vw;
     float: right;
     width: 25%;
+  }
+  .list-of-projects {
+      width: 100%;
+      height: 100%;
+      //padding: 14vh 2vw;
+      pointer-events: initial;
   }
   .project-link {
     border: none;
