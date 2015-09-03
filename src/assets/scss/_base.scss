@@ -54,7 +54,8 @@ ul,li {
   padding:2vw;
   padding: 2vw 2vw 10vh 2.7vw;
   height:100%;
-  overflow:scroll;
+  overflow-y:scroll;
+  overflow-x:hidden;
   backface-visibility:hidden;
   transform: translateZ(0);
   padding-bottom: 10vh;

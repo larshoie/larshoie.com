@@ -114,7 +114,7 @@ ul.projects-container, ul.projects-container-home { // hover denne i js!!??
 .project-image {
   pointer-events: none;
   position:fixed;
-  width:40vw;
+  width:40.01vw;
   height:80vh;
   top:10vh;
   bottom:10vh;
@@ -173,12 +173,12 @@ li.project-year {
 
 
 .mobil-nav {
-  padding: 20vh 8vw;
-  background: $light;
+  padding: 20vh 6vw;
+  background: $dark;
   float: none;
   overflow: hidden;
 
-  a {color: $dark;}
+  a {color: $light;}
   li {}
   ul, li, li:first-child {
     overflow: hidden;
@@ -265,4 +265,7 @@ ul.projects-container, ul.projects-container-home {
     padding: 14vh 2vw;
     pointer-events: initial;
     overflow: scroll;
+    @include mobil {
+      padding-top: 8vh;
+    }
 }

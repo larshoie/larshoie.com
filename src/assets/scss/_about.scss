@@ -42,6 +42,7 @@ span.csm span, span.london span {
   z-index: -1;
   position: absolute;
   height: 70vh;
+  width: 40.01vw;
   top: 4vw;
   left: 13vw;
   right: 0;
@@ -57,7 +58,8 @@ span.csm span, span.london span {
   }
   @include mobil {
     top: 0;
-    opacity: 0.9;
+    opacity: 0.6;
+    width: 87.01vw;
   }
 }
 

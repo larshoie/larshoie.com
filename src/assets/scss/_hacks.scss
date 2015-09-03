@@ -32,3 +32,28 @@
     }
   }
 }
+
+
+
+
+
+
+
+
+.fifty-fifty {
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $dark;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+// header {
+//   @include mobil {
+//     background: transparent;
+//   }
+// }

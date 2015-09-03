@@ -1,3 +1,13 @@
+h1, h3, h4, h5, h6 {
+  font-weight:normal;
+}
+
+h2 {
+  @include mobil {
+    font-weight:normal;
+  }
+}
+
 %underline-light {
   display: inline-block;
   // background: linear-gradient($light, $light) no-repeat;
@@ -6,9 +16,9 @@
   // line-height: 1.5;
   // text-shadow: .05em 0 $dark, -.05 0 $dark;
   border-bottom: 0.25vw solid $light;
-  padding-bottom: 0.16em;
+  padding-bottom: 0.1em;
   @include mobil {
-    border-bottom: 1.2vw solid;
+    border-bottom: 0.9vw solid;
     //line-height: 2em;
   }
 }
@@ -37,16 +47,17 @@ h2 {
   padding-top: 0;
   margin-top: 6vh;
   text-align: center;
-  font-size: 16vw;
+  font-size: 15vw;
   line-height:0.9;
   padding-bottom: 0vmin;
   @include mobil {
+    letter-spacing: -0.5vw;
     font-size: 28vw;
     margin-top: 15vh;
     margin-bottom: 0;
     min-height: 30vh;
     padding: 0 $mpadding;
-    letter-spacing: 0;
+    //letter-spacing: 0;
   }
 }
 
