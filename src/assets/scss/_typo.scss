@@ -15,11 +15,10 @@ h2 {
   // background-position: 0 1.33em;
   // line-height: 1.5;
   // text-shadow: .05em 0 $dark, -.05 0 $dark;
-  border-bottom: 0.25vw solid $light;
+  border-bottom: 0.2vw solid $light;
   padding-bottom: 0.1em;
   @include mobil {
     border-bottom: 0.9vw solid;
-    //line-height: 2em;
   }
 }
 
@@ -30,13 +29,33 @@ h2 {
   // background-position: 0 1.33em;
   // line-height: 1.5;
   // text-shadow: .05em 0 $light, -.05 0 $light;
-  border-bottom: 0.25vw solid $dark;
-  padding-bottom: 0.16em;
+
+
+  // border-bottom: 0.25vw solid $dark;
+  // padding-bottom: 0.16em;
+
+  border-bottom: 0.2vw solid $dark;
+  padding-bottom: 0.1em;
+  @include mobil {
+    border-bottom: 0.9vw solid;
+  }
 }
 
 p {
   margin:0; //
   padding:0; //
+}
+
+p.project-info {
+  width: 70%;
+  float: right;
+  //font-size: 3vw;
+  //line-height: 1.1;
+  @include mobil {
+    width: 100%;
+    float: none;
+    font-size: 1rem; //hmm
+  }
 }
 
 h1 {
@@ -72,21 +91,87 @@ h3 {
 .about h3 {
   font-size: $s-text;
   @extend %underline-light;
+  border-color: $light;
   @include mobil {
     font-size: 5vw;
   }
 }
 
+.meta h3 {
+  margin-bottom: 0.2em;
+  font-size: 1vw;
+  @include mobil {
+    font-size: 8vw;
+    width: 100%;
+    float: none;
+    display: inline;
+    line-height: 2em;
+    //columns: 1;
+  }
+}
+
 .meta {
-   padding-top: 1em;
-   font-size: $s-text;
-   width: 100%;
-   columns: 2;
+  //  padding-top: 1em;
+  //  font-size: $s-text;
+  //  width: 100%;
+   //columns: 2;
+      //
+    margin-top: -0.6vw;
+    font-size: 1vw;
+    width: 30%;
+    float: left;
+
    @include mobil {
-     font-size: 5vw;
-     columns: 1;
+     font-size: 8vw;
+     width: 100%;
+     float: none;
+     padding: 0  8vw;
+     //columns: 1;
    }
  }
+
+.more-info {
+  position: relative;
+  width: 70%;
+  margin-left: 30%;
+  @include mobil {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    padding: 0 8vw;
+  }
+
+
+  //font-size: 1.5vw;
+  ul {
+    //width: 50%;
+    //float: left;
+    //padding-right: 2vw;
+    p {
+      @include mobil {
+        padding: 0 0 3em 0!important;
+        margin: 0;
+        float: none;
+        }
+      }
+  }
+  h3 {
+    //padding:1em 0;
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+}
+
+.meta li ul {
+  height: auto;
+  overflow: hidden;
+}
+.meta li {
+
+}
+
+
+
 
 dl.meta { //TODO: mobil
   padding-top: 0;
@@ -95,6 +180,10 @@ dl.meta { //TODO: mobil
   dt {float: left;}
   dd {float: right;}
 }
+
+
+
+
 
 .col1 p, .col2 p{
   @include mobil {
@@ -135,28 +224,55 @@ dl.meta { //TODO: mobil
   }
 }
 
-// .design-is-everything {
-//   .col1, .logo {
-//     //background: darkblue;
-//   }
-//   .title {
-//     //background: $dark;
-//   }
-//   h2 {
-//     font-size: 10vw;
-//     //letter-spacing: 20px;
-//     margin-top: 10vh;
-//     //-webkit-text-stroke: 0.1vw $dark;
-//     //-webkit-text-fill-color: transparent;
-//     margin-bottom: 15vh;
-//     min-height: 30vh;
-//     // transform: rotate(-45deg);
-//     // padding: 0 18vw;
-//     // transform-origin: bottom right;
-//     @include mobil {
-//       font-size: 12vw;
-//       //-webkit-text-stroke: 0.5vw;
-//       //color: $dark;
-//     }
-//   }
-// }
+
+.design-is-everything {
+  .title {
+    @include skjerm {
+      // width: 100%;
+      // height: 100vh;
+      width: 50vw;
+      //overflow: hidden;
+      min-height: 40vmax;
+      max-height: 50vmax;
+      position: relative;
+      margin-left: -2.8vw;
+    }
+  }
+  h2 {
+    font-size: 8vw;
+    margin-top: 1vh;
+    //padding-top: 10vh;
+    //-webkit-text-stroke: 0.1vw $dark;
+    //-webkit-text-fill-color: transparent;
+    @include mobil {
+      padding-top: 15vh;
+      height: 20vh;
+      font-size: 18vw;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 0.5vw $dark;
+    }
+    .word1 {
+    transform: rotate(100deg)!important;
+    display: block;
+    position: absolute;
+    top: 0vw;
+    left: 8vw;
+    }
+    .word2 {
+      transform: rotate(80deg)!important;
+      display: block;
+      position: absolute;
+      top: -8vw;
+      left: -2vw;
+      display: block;
+    }
+    .word3 {
+      transform: rotate(30deg)!important;
+      display: block;
+      position: absolute;
+      top: -8vw;
+      left: -3vw;
+    }
+  }
+
+}

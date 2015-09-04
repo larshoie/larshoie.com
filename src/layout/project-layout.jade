@@ -31,16 +31,18 @@ html
         .col2
           header.title
             h2 #{Title}
-          p
+          p.project-info
             block project_info
           block project_meta
-          .meta
-            h3 Brief
-            p
-              block brief
-            h3 Context
-            p
-              block context
+          
+          ul.more-info
+            li
+              ul.brief
+                block brief
+            li
+              ul.context
+                block context
+                    
           //-ul.other-projects  
             //-li.prev
               //-block prev

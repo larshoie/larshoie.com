@@ -37,6 +37,7 @@ ul.projects-container, ul.projects-container-home { // hover denne i js!!??
     pointer-events: initial;
     width: 100vw;
     padding: 0 1.6vw 21.3vh;
+
 //
     pointer-events: none; //wooooooowwoowo viktig. bah.
 
@@ -269,6 +270,8 @@ ul.projects-container, ul.projects-container-home {
     padding: 14vh 2vw;
     pointer-events: initial;
     overflow: scroll;
+    //
+    padding: 23vh 2vw;
     @include mobil {
       padding-top: 8vh;
       padding-top: 0;

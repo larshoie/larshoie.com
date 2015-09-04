@@ -40,7 +40,11 @@ html, body {
 a {
   text-decoration: none;
   color: $dark;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+// a:hover {
+//   @extend %underline-dark;
+// }
 
 ul,li {
   margin:0;
@@ -58,7 +62,7 @@ ul,li {
   overflow-x:hidden;
   backface-visibility:hidden;
   transform: translateZ(0);
-  padding-bottom: 10vh;
+  padding-bottom: 20vh;
   @include mobil {
     padding: 0;
     width: 100%;
