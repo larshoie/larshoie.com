@@ -19,7 +19,11 @@
   @include mobil {
     font-size: 10vw;
     -webkit-text-stroke-width: 0.45vw;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-fill-color: $dark;
+    color:$dark;
     letter-spacing: 0.35vw;
+    letter-spacing: 0.15vw;
     margin-top: 20vh;
   }
 }
@@ -37,6 +41,15 @@ span.csm span, span.london span {
 }
 
 .lars span {
+}
+
+.london {
+  @include mobil {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.95vw;
+    //-webkit-text-fill-color: $dark;
+    color:$dark;
+  }
 }
 
 .lars span, .csm:hover span, .london:hover span {
