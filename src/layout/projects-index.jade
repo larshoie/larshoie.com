@@ -5,7 +5,7 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=device-width')
-    title Lars Høie — #{Title} 
+    title Lars Høie — Projects 
     include includes/meta.jade
     include includes/assets.jade
     include includes/mixins.jade
@@ -28,11 +28,11 @@ html
             ul.projects-container-home
               li.projects-inner-home
                 include includes/list_of_projects.jade
+        .mobil-nav
+          include includes/list_of_projects.jade
         .col2
           block column_two
         .col1
           include includes/about.jade
           block column_one
-        .mobil-nav
-          include includes/list_of_projects.jade
     include includes/footer.jade

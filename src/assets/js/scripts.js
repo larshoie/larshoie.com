@@ -25,7 +25,21 @@ function init() {
   // });
 
 
-
+  // function jump( _selector, _speed ){
+  //
+  //     _speed = parseInt(_speed, 10) === _speed ? _speed : 300;
+  //
+  //     $( _selector ).on('click', function(event){
+  //         event.preventDefault();
+  //         var url = $(this).attr('href'); //cache the url.
+  //
+  //         // Animate the jump
+  //         $("html, body").animate({
+  //             scrollTop: parseInt( $(url).offset().top ) - 50
+  //         }, _speed);
+  //
+  //     });
+  // }
 
 
   // //slides på forsiden
@@ -53,58 +67,84 @@ function init() {
 
 
 
-      //project menu hover
-      $('.projects-link, .projects-inner').mouseenter(function() {
-        $('.projects').removeClass('hidden');
-      });
-      $('.projects-link, .projects-inner').mouseleave(function() {
-        $('.projects').addClass('hidden');
-      });
-
-
-
-// mediaqueries i js
-// http://zerosixthree.se/detecting-media-queries-with-javascript/
-"use strict";var Z63=function(e,t){var n=function(){this.afterElement=window.getComputedStyle?window.getComputedStyle(document.body,":after"):!1,this.currentBreakpoint="",this.lastBreakpoint="",this.init()};return n.prototype={init:function(){var e=this;e.afterElement&&e._resizeListener()},_resizeListener:function(){var e=this;t(window).on("resize orientationchange load",function(){e.currentBreakpoint=e.afterElement.getPropertyValue("content").replace(/^["']|["']$/g,""),e.currentBreakpoint!==e.lastBreakpoint&&(t(window).trigger("breakpoint-change",e.currentBreakpoint),e.lastBreakpoint=e.currentBreakpoint)})}},e.mediaqueryListener=e.mediaqueryListener||new n,e}(Z63||{},jQuery);
-
-  $(window).on('breakpoint-change', function(e, breakpoint) {
-
-      if(breakpoint === 'mobil') {
-
-        // $('.about .project-image').wrapAll("<div class='slides'><div class='inner'></div></div>");
-        // $('.inner').attr('data-timeout', '3000').tcycle();
-        // //$('.inner').hide().attr('data-timeout', '3000').tcycle().fadeIn('fast');
-        //
-        // $('.project, .about, .ingress').mouseenter(function() {
-        //   $('.slides').addClass('hidden');
-        // });
-        // $('.project, .about, .ingress').mouseleave(function() {
-        //   $('.slides').removeClass('hidden');
-        // });
-
-
+      if (window.innerWidth && window.innerWidth >= 960) {
+          //project menu hover
+          $('.projects-link, .projects-inner').mouseenter(function() {
+            $('.projects').removeClass('hidden');
+          });
+          $('.projects-link, .projects-inner').mouseleave(function() {
+            $('.projects').addClass('hidden');
+          });
       }
+      // else {
+      //
+      // }
 
-      if(breakpoint === 'tablet') {
+      // jump( '.mobil-nav', 500);
 
-      }
-
-
-
-
-      if(breakpoint === 'skjerm') {
-
-
-
-
-
-      }
-
-
+      // if (window.innerWidth && window.innerWidth < 960) {
+      //     //project menu hover
+      //
+      //     $('.projects-link, .projects-link-home').on('click', function(event) {
+      //     //   smoothState.load('/');
+      //         scrollTo = $('#mobil-nav');
+      //     });
+      //
+      // }
 
 
 
-  });
+
+      //project menu klikk for å fikse shit på mob.......
+      // $('.projects-link').touchend(function() {
+      //   smoothState.load('/');
+      // });
+
+
+
+
+// // mediaqueries i js
+// // http://zerosixthree.se/detecting-media-queries-with-javascript/
+// "use strict";var Z63=function(e,t){var n=function(){this.afterElement=window.getComputedStyle?window.getComputedStyle(document.body,":after"):!1,this.currentBreakpoint="",this.lastBreakpoint="",this.init()};return n.prototype={init:function(){var e=this;e.afterElement&&e._resizeListener()},_resizeListener:function(){var e=this;t(window).on("resize orientationchange load",function(){e.currentBreakpoint=e.afterElement.getPropertyValue("content").replace(/^["']|["']$/g,""),e.currentBreakpoint!==e.lastBreakpoint&&(t(window).trigger("breakpoint-change",e.currentBreakpoint),e.lastBreakpoint=e.currentBreakpoint)})}},e.mediaqueryListener=e.mediaqueryListener||new n,e}(Z63||{},jQuery);
+//
+//   $(window).on('breakpoint-change', function(e, breakpoint) {
+//
+//       if(breakpoint === 'mobil') {
+//
+//
+//
+//
+//
+//         // $('.about .project-image').wrapAll("<div class='slides'><div class='inner'></div></div>");
+//         // $('.inner').attr('data-timeout', '3000').tcycle();
+//         // //$('.inner').hide().attr('data-timeout', '3000').tcycle().fadeIn('fast');
+//         //
+//         // $('.project, .about, .ingress').mouseenter(function() {
+//         //   $('.slides').addClass('hidden');
+//         // });
+//         // $('.project, .about, .ingress').mouseleave(function() {
+//         //   $('.slides').removeClass('hidden');
+//         // });
+//
+//
+//       }
+//
+//       if(breakpoint === 'tablet') {
+//           //
+//       }
+//
+//
+//
+//
+//       if(breakpoint === 'skjerm') {
+//           //
+//       }
+//
+//
+//
+//
+//
+//   });
 
 
 

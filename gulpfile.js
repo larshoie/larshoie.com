@@ -105,7 +105,7 @@ gulp.task('scripts', function () {
           'js/jquery.smoothState.js',
           'js/jquery.tcycle.js',
           //'js/jquery.waypoints.min.js',
-          'js/respimage.min.js',
+          //'js/respimage.min.js',
           'js/scripts.js'
         ], { base: '/' }))
 
