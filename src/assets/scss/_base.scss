@@ -104,3 +104,9 @@ ul,li {
 //   position: relative;
 //   z-index:999999;
 // }
+
+video {
+  width: 80vw;
+  height: 80vh;
+  object-fit: cover;
+}

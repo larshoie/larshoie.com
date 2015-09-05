@@ -114,3 +114,19 @@ ul.images li:first-child {
     overflow: visible!important;
   }
 }
+
+
+#playButton, #play-pause {
+  position: absolute;
+  z-index: 9999999;
+  font-size: 37vw;
+  height: 80vh;
+  top: 0;
+  left: 0;
+  width: 40vw;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  //-webkit-text-fill-color: transparent;
+  //-webkit-text-stroke: 0.5vw $light;
+}

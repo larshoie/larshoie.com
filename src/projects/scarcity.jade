@@ -1,13 +1,19 @@
 extends ../layout/project-layout.jade
 
 block variables
-  - var Title = 'Scarcity'
-  - var Type =  'Installation'
+  - var Title = 'Nectarine Boogie Woogie'
+  - var Type =  'Interactive'
   - var Year =  '2015'
   - var Description = 'Graphic designer studying at CSM.'
 
 block project
-  +video('images/scarcity/installation_720p.mp4','full')  
+  li
+    .crop
+      video(id="video" preload autoplay src="/images/scarcity/installation.mp4" type="video/mp4")
+      //button(type="button" id="play-pause") Play
+      //-poster="posterimage.jpg"
 
 block project_info
-  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis maiores aperiam quam deleniti atque adipisci, cupiditate laudantium labore, numquam incidunt pariatur non aliquam harum quas dolore eveniet nam iste soluta!
+
+block meta
+  
