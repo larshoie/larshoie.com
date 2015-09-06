@@ -122,13 +122,15 @@ ul.projects-container, ul.projects-container-home { // hover denne i js!!??
   left:10vw;
   right:10vw;
   z-index:9999;
-  overflow: hidden;
+  overflow: hidden!important;
   display: none;
     @include mobil {
       display: none;
     }
+
   img {
-    object-fit: cover;
+    //position: relative;
+    //object-fit: cover;
     pointer-events: none;
     top:0;
     bottom:0;
@@ -136,8 +138,9 @@ ul.projects-container, ul.projects-container-home { // hover denne i js!!??
     // height:100vh;
     // width:100vw;
     //
-    height: 100%;
-    width: 100%;
+    //
+    width: auto;
+    min-height: 100%;
   }
 }
 

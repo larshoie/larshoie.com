@@ -23,6 +23,9 @@ html, body {
   -webkit-font-variant-ligatures: common-ligatures; /* for iOS and Safari 6 */
   font-variant-ligatures: common-ligatures; /* for up-to-date browsers, including IE10 and Opera 21 */
 
+  // IE-Edge autohiding scrollbars
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
   @include mobil {
     font-size: 8vw;
     line-height:1.35;
@@ -63,6 +66,10 @@ ul,li {
   backface-visibility:hidden;
   transform: translateZ(0);
   padding-bottom: 20vh;
+
+  // IE-Edge autohiding scrollbars
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
   @include mobil {
     padding: 0;
     width: 100%;
