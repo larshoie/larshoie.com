@@ -112,6 +112,7 @@ ul.images li:first-child {
 }
 
 .gif {
+  //liten bug i ie edge. Den mottar ikke hover på lik måte som de andre. Tror det har med nestingen av li ul? Ikke så viktig.
   @include mobil {
     overflow: visible!important;
   }
